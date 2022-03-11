@@ -6,4 +6,3 @@ esto es texto
 
 * esto es un bullet
 * otro bullet
-* otro bullet
