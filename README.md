@@ -23,4 +23,8 @@ Hemos plasmamos nuestras ideas en un Modelo Canvas, donde se encuentran detallad
 
 ![_hazte_premium_descarga_alta_resolucion_designed_with_EDIT org](https://user-images.githubusercontent.com/100170383/158075610-201f9896-e655-4a71-ae50-25b9700ad523.jpg)
 
+### Sitios Web de Referencia
 
+* https://www.taskrabbit.com/: Plataforma para buscar y contratar ayuda para tareas específicas. Recientemente adquirido por IKEA.
+* https://zolvers.com/: Plataforma para contratar personal doméstico, así como también otras tareas, basada en Argentina.
+* 
