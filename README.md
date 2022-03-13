@@ -25,6 +25,6 @@ Hemos plasmado nuestras ideas en un Modelo Canvas, donde se encuentran detallado
 
 ## Sitios Web de Referencia
 
-- https://www.taskrabbit.com/: Plataforma para buscar y contratar ayuda para tareas específicas. Recientemente adquirido por IKEA.
-- https://zolvers.com/: Plataforma para contratar personal doméstico, así como también otras tareas, basada en Argentina.
+- https://www.taskrabbit.com/: Plataforma para buscar y contratar ayuda para tareas específicas. Recientemente adquirido por IKEA. Referencia exitosa del tipo de negocio que se busca implementar aquí. Nos interesó entender cómo se mostraban los distintos proveedores en la plataforma.
+- https://zolvers.com/: Plataforma para contratar personal doméstico, así como también otras tareas, basada en Argentina. Tomamos de referencia para entender cómo funcionaría este tipo de modelo en Argentina.
 - https://homesolution.net/ar/: Plataforma para contratar servicios temporarios, con presencia en distintos países de LATAM.
