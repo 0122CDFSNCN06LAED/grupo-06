@@ -27,4 +27,6 @@ Hemos plasmado nuestras ideas en un Modelo Canvas, donde se encuentran detallado
 
 - https://www.taskrabbit.com/: Plataforma para buscar y contratar ayuda para tareas específicas. Recientemente adquirido por IKEA. Referencia exitosa del tipo de negocio que se busca implementar aquí. Nos interesó entender cómo se mostraban los distintos proveedores en la plataforma.
 - https://zolvers.com/: Plataforma para contratar personal doméstico, así como también otras tareas, basada en Argentina. Tomamos de referencia para entender cómo funcionaría este tipo de modelo en Argentina.
-- https://homesolution.net/ar/: Plataforma para contratar servicios temporarios, con presencia en distintos países de LATAM.
+- https://homesolution.net/ar/: Plataforma para contratar servicios temporarios, con presencia en distintos países de LATAM. Estructura similar a las dos anteriores, se toma de referencia para implementar la sección de "Precios de referencia".
+- https://www.mercadolibre.com.ar/: Plataforma de compra/venta, una de las de mayor éxito local. Si bien tiene una sección de servicios, nos interesamos en el diseño del home, el carrousel de ofertas y sugerencias por búsqueda.
+- https://www.askfortask.com/: Plataforma canadiense, cuenta con un diseño simple facilitando la navegación por el sitio.
