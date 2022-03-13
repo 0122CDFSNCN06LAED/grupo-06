@@ -9,7 +9,7 @@
 * Alexander Coleman:
 * Isabel Restrepo
 
-### A continuación daremos una Daremos unas breves definiciones de Modelo de Negocios, Modelo Canvas y Plataforma Multilátera.
+### A continuación daremos unas breves definiciones de Modelo de Negocios, Modelo Canvas y Plataforma Multilátera.
 
 * “Un modelo de negocios nos permite definir la forma en que una organización genera, entrega y captura valor” (Osterwalder,2011, p. 14)
 * El Modelo Canvas presenta nueve bloques para entender cuál es la lógica con la que una organización va a generar ingresos. Estos bloques cubren cuatro áreas principales de los negocios: clientes/consumidores, oferta, infraestructura y viabilidad financiera. Los nueve bloques se relacionan entre sí y permiten explicar prácticamente cualquier negocio existente. Este modelo, a su vez, ayuda a definir cuáles son los elementos que todo negocio debe tener en cuenta para nacer y desarrollarse, y facilita el entendimiento de su estructura, procesos y sistemas.
