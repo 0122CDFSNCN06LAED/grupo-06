@@ -2,6 +2,11 @@
 
 En el presente trabajo, desarrollaremos un sitio web en sobre el cual se montará un Modelo de Negocio de Plataforma Multilateral, a través de la cual, se conectarán personas que deseen ofrecer sus servicios de diferentes oficios y personas que requieran los mismos; provistos por personas de confianza y con comprobada reputación.
 
+Por medio de la plataforma, llegaremos a nuestros dos tipos de público objetivo, que serán los oferentes de servicios y quienes desean contratarlos. En el mismo sitio, se podrán registrar y conectarse de una manera sencilla, eficiente y segura. 
+
+Como propuesta de valor para nuestro público, brindaremos a los prestadores de servicio, un lugar donde ofrecer su trabajo a miles de potenciales clientes y por el lado de aquellos que deseen contratarlos, disponer de una amplia y detallada oferta de profesionales. 
+
+
 ## Quienes somos
 
 - José Ignacio Paolini: Licenciado en Administración, con formación en Data Science y Data Analytics. Actualmente trabajando como Analista de Inventario Regional en Pedidos Ya. También posee experiencia en implementación de sistemas de Gestión Documental y Personal en el ámbito del Gobierno de la Provincia de Buenos Aires.
