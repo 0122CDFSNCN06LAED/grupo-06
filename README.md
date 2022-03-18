@@ -35,3 +35,7 @@ Hemos plasmado nuestras ideas en un Modelo Canvas, donde se encuentran detallado
 - https://homesolution.net/ar/: Plataforma para contratar servicios temporarios, con presencia en distintos países de LATAM. Estructura similar a las dos anteriores, se toma de referencia para implementar la sección de "Precios de referencia".
 - https://www.mercadolibre.com.ar/: Plataforma de compra/venta. Si bien tiene una sección de servicios, nos interesamos en el diseño del home, el carrousel de ofertas y sugerencias por búsqueda.
 - https://www.askfortask.com/: Plataforma canadiense, cuenta con un diseño simple facilitando la navegación por el sitio.
+
+## Tablero
+
+- https://trello.com/b/emzVN6fJ/proyecto
