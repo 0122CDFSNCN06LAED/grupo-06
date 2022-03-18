@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "grupo-06",
+  "description": "Proyecto Integrador Digital House",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0122CDFSNCN06LAED/grupo-06.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0122CDFSNCN06LAED/grupo-06/issues"
+  },
+  "homepage": "https://github.com/0122CDFSNCN06LAED/grupo-06#readme"
+}
