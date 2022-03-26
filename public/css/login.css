@@ -1,11 +1,7 @@
 * {
     font-family: roboto;
-}
-
-.header {
-    background-color: white;
-    padding:5px;
-    border-bottom: solid 5px #1f3c88
+    margin:0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,26 +11,14 @@ body {
 .login-box {
     font-family: roboto;
     border-radius:5px;
-    width:15%;
+    width:20%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding:15px;
+    padding:5px;
     margin-top:10%;
     box-shadow: 5px 5px 10px 0px rgb(137, 134, 211);
     background-color:white
-}
-
-.login-box i {
-    color:black;
-    font-size:18px;
-    display:inline;
-}
-
-
-.login-box h1{
-    font-size: 16px;
-    color: black;
 }
 
 .remember-password{
@@ -79,32 +63,20 @@ body {
 
 }
 
-.registrate{
-    font-size: 12px;
-    color: white;
-    border-radius:3px;
-    background-color: #1f3c88;
-    width: 50%;
-    padding:5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:10px;
-    margin-bottom:10px;   
-    border:1px;
-}
-
 .login-box p{
     font-size: 10px;
     color: black;
     padding: 3px;
+    margin-top:20px;
 }
 
 
 
-.login-box a{
+.login-text {
     font-size: 10px;
     color: black;
-    padding: 3px;
+    padding: 10px;
+    border-bottom:solid lightgray 1px;
 }
 .footer {
     background-color: #81adde;
