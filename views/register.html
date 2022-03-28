@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="register-box">
+            <img src="./images/logo4.png" alt="" width=35%>
+            <form class="register-form" action="/register">
+                <div class="form-section">
+                    <p class="section-header">Datos Personales</p>
+                    <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" required> 
+                    <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials" required>
+                    <input type="text" name="Telefono de Contacto" placeholder="Teléfono de Contacto" class="enter-credentials" required>
+                </div>
+                <div class="form-section">
+                    <p class="section-header">Datos de Dirección</p>
+                    <input type="text" name="Calle" placeholder="Calle" class="enter-credentials" required>
+                    <input type="text" name="Numero" placeholder="Numero" class="enter-credentials" required>
+                    <input type="text" name="Barrio" placeholder="Barrio" class="enter-credentials" required>
+                    <input type="text" name="Provincia" placeholder="Provincia" class="enter-credentials" required>
+                    <input type="text" name="Codigo Postal" placeholder="Código Postal" class="enter-credentials" required>
+                </div>
+                <div class="form-section">
+                    <p class="section-header">Usuario y Contraseña</p>
+                    <input type="mail" name="Correo" placeholder="Correo" class="enter-credentials" required>
+                    <input type="mail" name="Confirmar Correo" placeholder="Confirmar Correo" class="enter-credentials" required>
+                    <input type="password" name="Contraseña" placeholder="Contraseña" class="enter-credentials" required>
+                    <input type="password" name="Confirmar Contraseña" placeholder="Confirmar Contraseña" class="enter-credentials" required>
+                </div>
+                <div class="form-section">
+                    <button type="reset" class = "reset-button">Reestablecer</button>
+                    <button type="submit" class = "submit-button" >Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
