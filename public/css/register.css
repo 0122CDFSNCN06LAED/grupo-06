@@ -88,6 +88,11 @@ body {
     font-weight: bold;
 }
 
+input:focus{
+    outline: none;
+    border: #1f7a8cff 2px solid;
+}
+
 
 
 .register-text {

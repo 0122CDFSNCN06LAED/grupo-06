@@ -18,7 +18,7 @@ body {
     margin-right: auto;
     padding:5px;
     margin-top:10%;
-    background-color:#f0f1f3ff
+    background-color:#f0f1f3ff;
 }
 
 .remember-password{
@@ -61,6 +61,11 @@ body {
     margin-bottom:15px;   
     border:1px;
 
+}
+
+input:focus{
+    outline: none;
+    border: #1f7a8cff 2px solid;
 }
 
 .login-box p{
