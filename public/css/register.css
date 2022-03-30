@@ -1,0 +1,106 @@
+* {
+    font-family: roboto;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+}
+
+
+
+.register-box {
+    font-family: roboto;
+    border-radius:5px;
+    width:50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    margin-top:2%;
+    background-color:#f0f1f3ff;
+}
+
+.section-header{
+        display:block;
+        width:100%;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.form-section{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.enter-credentials {
+    color: black;
+    background-color: white;
+    font-size: 10px;
+    border: solid 1px #f0f1f3ff;
+    border-radius:3px;
+    width: 48%;
+    padding:5px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin:5px;
+}
+
+.reset-button {
+    font-size: 12px;
+    color: black;
+    border-radius:3px;
+    background-color: lightgray;
+    width: 25%;
+    padding:5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    margin-bottom:15px;   
+    border:solid 1px lightgray;
+}
+
+.submit-button {
+    font-size: 12px;
+    color: white;
+    border-radius:3px;
+    background-color: #0d2c54;
+    width: 25%;
+    padding:5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    margin-bottom:15px;   
+    border:1px;
+
+}
+
+.register-box p{
+    font-size: 12px;
+    color: black;
+    padding: 3px;
+    margin-top:20px;
+    text-align: left;
+    margin-left:2px;
+    font-weight: bold;
+}
+
+input:focus{
+    outline: none;
+    border: #1f7a8cff 2px solid;
+}
+
+
+
+.register-text {
+    font-size: 10px;
+    color: black;
+    padding: 10px;
+    border-bottom:solid lightgray 1px;
+}
+.footer {
+    background-color: #81adde;
+}
