@@ -1,0 +1,128 @@
+* {
+  font-family: roboto;
+}
+header {
+  height: 150px ;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+.field {
+  display: flex;
+  margin: 5em auto;
+  width: 40%;
+  flex-direction: row;
+  box-shadow: 1px 1px 0 #1f7a8cff, 2px 2px 0 #1f7a8cff, 3px 3px 0 #1f7a8cff,
+    4px 4px 0 #1f7a8cff, 5px 5px 0 #1f7a8cff, 6px 6px 0 #1f7a8cff,
+    7px 7px 0 #1f7a8cff;
+}
+.search-field {
+  display: flex;
+  width: 100%;
+  background-color: #183153ff;
+
+}
+.field > input[type="text"],
+.field > button {
+  display: block;
+  font: 1.2em "Montserrat Alternates";
+}
+
+.field > input[type="text"] {
+  flex: 1;
+  padding: 0.6em;
+  border: 0.2em solid #1f7a8cff;
+}
+
+.field > button {
+  padding: 0.6em 0.8em;
+  background-color: #1f7a8cff;
+  color: white;
+  border: none;
+}
+body {
+  background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+}
+.login {
+  border-radius: 5px;
+  padding-top: 5px;
+  text-decoration: none;
+  width: 180px;
+  height: 45px;
+  background-color: #eaeaea;
+  color: #000;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+.login:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.register {
+  border-radius: 5px;
+  padding-top: 5px;
+  text-decoration: none;
+  width: 180px;
+  height: 45px;
+  background-color: #000;
+  color: white;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+.register:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+#most_requested_jobs {
+  display: flex;
+  background-color: #183153ff;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+#oficios {
+  display: flex;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+#porque_elegirnos {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.search{
+  background-color: #183153ff;
+  padding: 40px;
+}
+#searchterm{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+.mas-oficios{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  background-color: white;
+  padding-top: 5px;
+
+}
