@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 12px;
+  margin: auto 0;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  /* conserva la forma de los elementos */
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  color: #f0f8ff;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fas,
+.fab,
+.fi {
+  font-size: 20px;
+  /* margin: auto 0; */
+}
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+}
+
+.professional {
+  /* flex-wrap: wrap; */
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.professionalLogo {
+  font-size: 80px;
+}
+
+.payMethod {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.comment {
+  width: 100%;
+  display: flex;
+
+  padding: 30px;
+  flex-direction: column;
+}
+
+.dataFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 150px;
+  height: 45px;
+}
+
+.center {
+  text-align: center;
+}
+
+.warranty {
+  flex-direction: column;
+  width: 90%;
+  margin: 20px;
+  padding: 50px;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.checkOut {
+  /* display: flex; */
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 15px;
+}
+.buttonStyle {
+  background-color: #183153;
+  border-radius: 7px;
+  text-decoration: none;
+  width: 40%;
+  font-size: 15px;
+  align-self: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.total {
+  border-top: solid 1px #183153;
+  text-align: end;
+  padding: 20px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.formatForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.whiteLetter {
+  color: #f0f1f3;
+}
+
+.blueCyan {
+  background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+}
+.grayLetter {
+  color: #6e7074;
+}
+
+.blueLetter {
+  color: #183153;
+}
+
+.blue {
+  background-color: #183153;
+}
+
+.blueGreen {
+  background-color: rgb(31, 122, 140);
+}
+
+/* tablet */
+
+@media (min-width: 480px) {
+}
+
+/* laptop */
+@media (min-width: 768px) {
+  .professional,
+  .checkOut {
+    width: 45%;
+  }
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .formatForm {
+    width: 55%;
+    align-self: center;
+  }
+  .buttonStyle {
+    background-color: #183153;
+    border-radius: 7px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    right: 136px;
+    top: 293px;
+    width: 25%;
+    font-size: 12px;
+  }
+}
+
+.formato {
+  display: flex;
+  justify-content: center;
+}
