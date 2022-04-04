@@ -29,6 +29,6 @@ app.get("/register", function (req, res) {
 
 app.get("/check-out", function (req, res) {
   //           console.log(__dirname);
-  let htmlPath = path.join(__dirname, "./views/productDetail.html");
+  let htmlPath = path.join(__dirname, "./views/check-out.html");
   res.sendFile(htmlPath);
 });
