@@ -97,6 +97,11 @@ body {
   height:200px;
 }
 
+.articulo-trabajo-mas-buscado{
+  width: 300px;
+}
+
+
 .trabajos-mas-buscados{
   background-color:#183153ff;
 }
@@ -107,6 +112,7 @@ body {
   color: white;
   text-align: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 #oficios {
   display: flex;
