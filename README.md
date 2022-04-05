@@ -39,3 +39,4 @@ Hemos plasmado nuestras ideas en un Modelo Canvas, donde se encuentran detallado
 ## Tablero
 
 - https://trello.com/b/emzVN6fJ/proyecto
+- https://trello.com/invite/espaciodetrabajo06718934/b1c5a5705d918311c55bcec4dc34dfc5
