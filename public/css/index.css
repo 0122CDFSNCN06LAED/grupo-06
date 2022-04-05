@@ -1,5 +1,7 @@
 * {
   font-family: roboto;
+  margin:0;
+  box-sizing:border-box;
 }
 header {
   height: 150px ;
