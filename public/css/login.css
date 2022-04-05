@@ -53,7 +53,7 @@ a {
 
 
 .remember-password{
-    font-size: 10px;
+    font-size: 12px;
     color: #183153ff;
     padding: 3px;
     text-align:center;
@@ -67,7 +67,7 @@ a {
 .enter-credentials {
     color: #183153ff;
     background-color: white;
-    font-size: 10px;
+    font-size: 12px;
     border: solid 1px darkgray;
     border-radius:3px;
     width: 50%;
@@ -100,7 +100,7 @@ input:focus{
 }
 
 .login-box p{
-    font-size: 10px;
+    font-size: 12px;
     color: #183153ff;
     padding: 3px;
     margin-top:20px;
@@ -109,7 +109,7 @@ input:focus{
 
 
 .login-text {
-    font-size: 10px;
+    font-size: 12px;
     color: #183153ff;
     padding: 10px;
     border-bottom:solid lightgray 1px;
