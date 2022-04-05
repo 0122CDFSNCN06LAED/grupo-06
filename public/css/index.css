@@ -5,13 +5,22 @@
 }
 
 header {
-  /* display: flex; */
+  display: flex;
   flex-wrap: wrap;
   /* conserva la forma de los elementos */
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
+  align-items:center;
   margin-bottom: 0px;
   padding: 20px;
+}
+
+.login-section{
+  display:flex;
+  width:85;
+  justify-content:right;
+  align-items:center;
+  margin-left:auto;
 }
 
 .field {
@@ -53,35 +62,35 @@ body {
 }
 .login {
   border-radius: 5px;
-  padding-top: 5px;
+  padding-top: 8px;
   text-decoration: none;
-  width: 180px;
-  height: 45px;
-  background-color: #eaeaea;
+  width: 100px;
+  height: 35px;
+  background-color: #1f7a8cff;
   color: #000;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-}
-.login:hover {
-  background-color: #1a73e8;
-  color: #fff;
-}
+  text-align:center;
+  color:white;
+  font-weight:bolder;
+  margin-right:10px;
+} 
 
 .register {
   border-radius: 5px;
-  padding-top: 5px;
+  padding-top: 8px;
   text-decoration: none;
-  width: 180px;
-  height: 45px;
-  background-color: #000;
-  color: white;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-}
+  width: 100px;
+  height: 35px;
+  background-color: white;
+  color: #000;
+  text-align:center;
+  border: solid 1px #183153;
+  /* font-weight:bolder */
+} 
 
 .register:hover {
-  background-color: #1a73e8;
-  color: #fff;
+  color:white;
+  background-color:#183153;
+  border:none;
 }
 
 .section-header {
@@ -138,8 +147,7 @@ body {
 
 
 .seccion-trabajos-requeridos{
-  background-color:#183153ff;
-  padding-bottom:40px;
+background-image: linear-gradient(to bottom, #183153ff 0%, #1f7a8cff 100%);  padding-bottom:40px;
   padding-top:30px;
 }
 
@@ -211,6 +219,8 @@ body {
   border-radius: 5px;
   text-align: center;
   font-size: 14px;
+  border:none;
+  height:40px;
 }
 
 .mas-oficios{
