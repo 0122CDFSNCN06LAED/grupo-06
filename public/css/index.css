@@ -82,12 +82,31 @@ body {
   color: #fff;
 }
 
+.section-header {
+  width: 100%;
+  margin-left: auto;
+  margin-right:auto;
+  color:white;
+  text-align:center;
+  margin-top:0px;
+  font-size:18px;
+}
+
+.imagen-trabajo {
+  border-radius:5px;
+  height:200px;
+}
+
+.trabajos-mas-buscados{
+  background-color:#183153ff;
+}
+
 #most_requested_jobs {
   display: flex;
-  background-color: #183153ff;
   padding: 20px;
   color: white;
   text-align: center;
+  justify-content: space-evenly;
 }
 #oficios {
   display: flex;
