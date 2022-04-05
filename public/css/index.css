@@ -179,13 +179,13 @@ footer {
 
 @media (min-width: 480px) {
   .imagen-trabajo {
-    height: 220px;
+    height: 200px;
   }
 }
 
 @media (min-width: 768px) {
   .imagen-trabajo {
-    height: 300px;
+    height: 320px;
   }
 }
 
