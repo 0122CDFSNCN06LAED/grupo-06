@@ -101,6 +101,12 @@ body {
 
 .articulo-trabajo-mas-buscado{
   width: 300px;
+  margin-bottom:35px;
+}
+
+.articulo-trabajo-mas-buscado p {
+  margin-top:10px;
+  font-size:16px;
 }
 
 
