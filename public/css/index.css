@@ -15,6 +15,11 @@ header {
   padding: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
 .login-section{
   display:flex;
   width:85;
@@ -58,7 +63,7 @@ header {
   border: none;
 }
 body {
-  background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+  background-image:linear-gradient(to top, #183153ff 0%, #1f7a8cff 100%);
 }
 .login {
   border-radius: 5px;
@@ -190,7 +195,17 @@ background-image: linear-gradient(to bottom, #183153ff 0%, #1f7a8cff 100%);  pad
   margin-right:auto;
 }
 
+.blue {
+  background-color: #183153;
+}
 
+.center {
+  text-align: center;
+}
+
+.whiteLetter {
+  color: #f0f1f3;
+}
 
 
 
@@ -206,6 +221,7 @@ background-image: linear-gradient(to bottom, #183153ff 0%, #1f7a8cff 100%);  pad
   padding: 25px;
   color: white;
   text-align: center;
+  background-image:linear-gradient(to top, #183153ff 0%, #1f7a8cff 100%);
 }
 .search{
   background-color: #183153ff;
