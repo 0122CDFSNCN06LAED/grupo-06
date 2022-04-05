@@ -141,6 +141,7 @@ main {
   flex-direction: column;
   text-align: center;
   width: 100%;
+  
 }
 
 .white {
@@ -190,6 +191,8 @@ main {
 
 }
 
+
+
 /* laptop */
 @media (min-width: 768px) {
   .professional,
@@ -199,26 +202,31 @@ main {
   .details {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
+    justify-content: space-evenly;
+    
   }
 
   .formatForm {
     width: 55%;
     align-self: center;
   }
+ 
+}
+
+@media(min-width: 889px){
   .buttonStyle {
     background-color: #183153;
     border-radius: 7px;
     text-decoration: none;
     display: block;
     position: absolute;
-    right: 136px;
+    right: 27%;
     top: 293px;
-    width: 25%;
+   width: fit-content;
     font-size: 12px;
   }
 
-
+  .checkOut{
+  position: relative;
+  }
 }
-
