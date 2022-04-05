@@ -113,6 +113,9 @@ body {
   text-align: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
 }
 #oficios {
   display: flex;
@@ -164,5 +167,17 @@ footer {
   justify-content: space-evenly;
   padding: 20px;
   color: #f0f8ff;
+}
+
+@media (min-width: 480px) {
+  .imagen-trabajo {
+    height: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .imagen-trabajo {
+    height: 300px;
+  }
 }
 
