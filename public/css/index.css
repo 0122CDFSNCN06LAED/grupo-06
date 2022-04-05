@@ -91,6 +91,7 @@ body {
   color:white;
   text-align:center;
   margin-top:0px;
+  margin-bottom:20px;
   font-size:18px;
 }
 
@@ -110,11 +111,19 @@ body {
 }
 
 
-.trabajos-mas-buscados{
+.seccion-trabajos-requeridos{
   background-color:#183153ff;
+  padding-bottom:40px;
+  padding-top:30px;
 }
 
-#most_requested_jobs {
+.seccion-trabajos-catalogo{
+  background-color:white;
+  padding-bottom:40px;
+  padding-top:30px;
+}
+
+.sub-seccion-trabajos-requeridos {
   display: flex;
   padding: 20px;
   color: white;
@@ -125,6 +134,34 @@ body {
   margin-left:auto;
   margin-right:auto;
 }
+
+.seccion-trabajos-catalogo .section-header {
+  width: 100%;
+  margin-left: auto;
+  margin-right:auto;
+  color: #183153ff;
+  text-align:center;
+  margin-top:20pxpx;
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+.sub-seccion-trabajos-catalogo {
+  display: flex;
+  padding: 20px;
+  color: #183153ff;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+
+
 #oficios {
   display: flex;
   padding: 40px;
@@ -151,6 +188,7 @@ body {
   text-align: center;
   font-size: 14px;
 }
+
 .mas-oficios{
   margin-left: auto;
   margin-right: auto;
@@ -159,8 +197,9 @@ body {
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
-  background-color: white;
+  background-color: #183153ff;
   padding-top: 5px;
+  color:white;
 
 }
 
@@ -185,7 +224,12 @@ footer {
 
 @media (min-width: 768px) {
   .imagen-trabajo {
-    height: 320px;
+    height: 250px;
+  }
+
+  .articulo-trabajo-mas-buscado{
+    width: 300px;
+    margin-bottom:35px;
   }
 }
 
