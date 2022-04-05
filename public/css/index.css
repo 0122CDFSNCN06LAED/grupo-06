@@ -4,7 +4,7 @@
 header {
   height: 150px ;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: white;
   font-size: 28px;
   margin-bottom: 15px;
@@ -23,6 +23,7 @@ header {
 }
 .search-field {
   display: flex;
+  justify-content: center;
   width: 100%;
   background-color: #183153ff;
 
@@ -84,20 +85,20 @@ body {
 #most_requested_jobs {
   display: flex;
   background-color: #183153ff;
-  padding: 10px;
+  padding: 20px;
   color: white;
   text-align: center;
 }
 #oficios {
   display: flex;
-  padding: 10px;
+  padding: 40px;
   color: white;
   text-align: center;
 }
 #porque_elegirnos {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 25px;
   color: white;
   text-align: center;
 }
@@ -126,3 +127,17 @@ body {
   padding-top: 5px;
 
 }
+
+.dataFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  color: #f0f8ff;
+}
+
