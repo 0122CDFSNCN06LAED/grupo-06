@@ -3,17 +3,17 @@
   margin:0;
   box-sizing:border-box;
 }
+
 header {
-  height: 150px ;
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 15px;
-  text-align: center;
-  box-sizing: border-box;
-  align-items: center;
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* conserva la forma de los elementos */
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding: 20px;
 }
+
 .field {
   display: flex;
   margin: 5em auto;
@@ -230,6 +230,19 @@ body {
 .dataFooter {
   display: flex;
   flex-direction: column;
+}
+
+.logo {
+  width: 150px;
+  height: 45px;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.blueLetter {
+  color: #183153;
 }
 
 footer {
