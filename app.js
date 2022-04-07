@@ -32,3 +32,10 @@ app.get("/check-out", function (req, res) {
   let htmlPath = path.join(__dirname, "./views/check-out.html");
   res.sendFile(htmlPath);
 });
+
+app.get("/productDetail", function (req, res) {
+  //           console.log(__dirname);
+  let htmlPath = path.join(__dirname, "./views/productDetail.html");
+  res.sendFile(htmlPath);
+});
+
