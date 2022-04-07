@@ -278,12 +278,15 @@ background-image: linear-gradient(to bottom, #183153ff 0%, #1f7a8cff 100%);  pad
   width: 100%;
 }
 .porque_elegirnos-texto{
-  width: 300px;
+  width: 450px;
   padding: 40px;
+  line-height: 25px;
 }
 .porque_elegirnos-imagen{
-  width: 300px;
-  padding-top: 40px;
+  width: 350px;
+  margin-top: 40px;
+  border-radius: 5%;
+  border: none;
 }
 
 footer {
