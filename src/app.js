@@ -14,12 +14,9 @@ app.use("/user", rutasUser);
 const rutasProducts = require("./routes/products");
 app.use("/products", rutasProducts);
 
+const rutasMain = require("./routes/main");
+app.use("/", rutasMain);
+
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
-});
-
-app.get("/", function (req, res) {
-  //           console.log(__dirname);
-  let htmlPath = path.resolve(__dirname, "./views/index.ejs");
-  res.sendFile(htmlPath);
 });

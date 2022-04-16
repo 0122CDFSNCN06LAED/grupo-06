@@ -2,16 +2,17 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-router.get("/login", function (req, res) {
+router.get("", function (req, res) {
   //           console.log(__dirname);
-  let htmlPath = path.resolve("./views/user/login.ejs");
+  let htmlPath = path.resolve("./views/main/index.ejs");
   res.render(htmlPath);
 });
 
-router.get("/register", function (req, res) {
+router.get("/check-out", function (req, res) {
   //           console.log(__dirname);
-  let htmlPath = path.resolve("./views/user/register.ejs");
+  let htmlPath = path.resolve("./views/main/check-out.ejs");
   res.render(htmlPath);
 });
+
 
 module.exports = router;
