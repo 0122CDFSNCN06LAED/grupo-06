@@ -2,16 +2,9 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-router.get("/login", function (req, res) {
-  //           console.log(__dirname);
-  let htmlPath = path.resolve("./views/user/login.ejs");
-  res.render(htmlPath);
-});
+const userController = require("../controllers/userController.js");
 
-router.get("/register", function (req, res) {
-  //           console.log(__dirname);
-  let htmlPath = path.resolve("./views/user/register.ejs");
-  res.render(htmlPath);
-});
+router.get("/login", userController.login);
+router.get("/register", userController.register);
 
 module.exports = router;
