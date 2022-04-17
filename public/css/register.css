@@ -41,12 +41,12 @@ main {
     background-color:#f0f1f3ff;
 }
 
-.section-header{
+/* .section-header{
         display:block;
         width:100%;
         justify-content: space-between;
         align-items: center;
-}
+} */
 
 .form-section{
     /* display:flex; */
