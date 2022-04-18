@@ -1,6 +1,6 @@
 * {
     font-family: roboto;
-    margin:0 auto;
+    /* margin:0 auto; cambié el margin para el footer*/
     box-sizing: border-box;
 }
 
