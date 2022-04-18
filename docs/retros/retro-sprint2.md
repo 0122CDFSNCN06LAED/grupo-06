@@ -6,7 +6,7 @@
 
 En primer lugar, valoramos el haber logrado cumplir con la fecha de entrega. Nos propusimos retomar la unificación de una paleta de coleres para todas las vistas.
 
-Como aprendizaje del primer sprint, nos llegamos que debemos tomarnos más tiempo para unir cada una de las partes realizadas individualmente por cada uno de los integrantes del grupo. En este sentido, buscamos mejorar la comunicación a través de un diálogo más fluido y revisiones constates de los commit realizados por cada uno. Estos deben ser más cortos y frecuentes.
+Como aprendizaje del segundo sprint, nos llegamos que debemos tomarnos más tiempo para unir cada una de las partes realizadas individualmente por cada uno de los integrantes del grupo. En este sentido, buscamos mejorar la comunicación a través de un diálogo más fluido y revisiones constates de los commit realizados por cada uno. Estos deben ser más cortos y frecuentes.
 
 Nos propusimos utilizar más Trello para coordinar las tareas.
 
