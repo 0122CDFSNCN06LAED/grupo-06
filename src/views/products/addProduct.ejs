@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%- include("../partials/head.ejs")%>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/addProduct.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <%- include("../partials/header.ejs")%>
+    
+    <form class = "bgGray">
+        <p class="header-form">Carga de Servicio</p>
+        <div class="wrap">
+         <label for="">
+                Nombre
+            </label>
+            <input type="text">
+        </div>
+                <div class="wrap">
+         <label for="">
+                Apellido
+            </label>
+            <input type="text">
+        </div>
+
+        <div class="wrap">
+
+            <label for="">
+                Detalle de Oficio 
+            </label>
+            <input type="text">
+        </div>
+
+        <div class="wrap">
+
+        <label for="">
+            Imagen
+        </label>
+        <input type="file">
+        </div>
+        
+        <div class="wrap">
+
+
+        <label for="">
+            Categoría
+        </label>
+        <input type="text">
+        </div>
+
+        <div class="wrap">
+
+        <label for="">
+            colores
+        </label>
+        <input type="color">
+        </div>
+
+        <div class="wrap">
+
+            <label for="">
+                Tarifa por Hora
+            </label>
+            <input type="number">
+            </div>
+
+    <button>
+        Cargar Helper
+    </button>
+</form> 
+
+
+            <%- include("../partials/footer.ejs")%>
+
+
+</body>
+</html>
