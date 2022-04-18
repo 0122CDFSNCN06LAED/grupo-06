@@ -2,11 +2,11 @@ const path = require("path");
 
 const userController = {
   login: function (req, res) {
-    let htmlPath = path.resolve("./views/user/login.ejs");
+    let htmlPath = path.resolve("./src/views/user/login.ejs");
     res.render(htmlPath);
   },
   register: function (req, res) {
-    let htmlPath = path.resolve("./views/user/register.ejs");
+    let htmlPath = path.resolve("./src/views/user/register.ejs");
     res.render(htmlPath);
   }
 };

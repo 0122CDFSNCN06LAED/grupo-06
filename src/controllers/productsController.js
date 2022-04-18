@@ -2,7 +2,7 @@ const path = require("path");
 
 const productsController = {
   detail: function (req, res) {
-    let htmlPath = path.resolve("./views/products/productDetail.ejs");
+    let htmlPath = path.resolve("./src/views/products/productDetail.ejs");
     res.render(htmlPath);
   },
 };
