@@ -1,6 +1,6 @@
 ## Retrospectiva
 
-### Fecha de la reunión: viernes 13 de abril
+### Fecha de la reunión: miércoles 13 de abril
 
 ### Principales conclusiones
 
