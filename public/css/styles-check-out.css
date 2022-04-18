@@ -208,6 +208,10 @@ footer{
   padding-left: 10px;
   padding-right: 10px;
 }
+
+  .dataFooter{
+  align-items: baseline;
+}
   .details {
     display: flex;
     width: calc(50%-20px);
