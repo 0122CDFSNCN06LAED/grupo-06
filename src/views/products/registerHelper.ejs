@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/register.css">
+    </head>
+
+
+    <body>
+        <%- include("../partials/header.ejs")%>
+            <main>
+                <div class="register-box">
+                    <form class="register-form" action="/register">
+                        <div class="form-section">
+                            <p class="section-header">Datos Personales</p>
+                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" required>
+                            <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials"
+                                required>
+                            <input type="text" name="Telefono de Contacto" placeholder="Teléfono de Contacto"
+                                class="enter-credentials" required>
+                        </div>
+                        <div class="form-section">
+                            <p class="section-header">Datos de Dirección</p>
+                            <input type="text" name="Calle" placeholder="Calle" class="enter-credentials" required>
+                            <input type="text" name="Numero" placeholder="Numero" class="enter-credentials" required>
+                            <input type="text" name="Barrio" placeholder="Barrio" class="enter-credentials" required>
+                            <input type="text" name="Provincia" placeholder="Provincia" class="enter-credentials"
+                                required>
+                            <input type="text" name="Codigo Postal" placeholder="Código Postal"
+                                class="enter-credentials" required>
+                        </div>
+                        <div class = "form-section">
+                            <p class="section-header">Datos de Oficio</p>
+                            <input type="text" name="Oficio" placeholder="Oficio" class="enter-credentials" required>
+                            <input type="text" name="Años-de-Experiencia" placeholder="Años de Experiencia" class="enter-credentials" required>
+                            <input type="text" name="Tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials" required>
+                        </div>
+                        <div class="form-section">
+                            <p class="section-header">Usuario y Contraseña</p>
+                            <input type="mail" name="Correo" placeholder="Correo" class="enter-credentials" required>
+                            <input type="mail" name="Confirmar Correo" placeholder="Confirmar Correo"
+                                class="enter-credentials" required>
+                            <input type="password" name="Contraseña" placeholder="Contraseña" class="enter-credentials"
+                                required>
+                            <input type="password" name="Confirmar Contraseña" placeholder="Confirmar Contraseña"
+                                class="enter-credentials" required>
+                        </div>
+                        <div class="button-section">
+                            <button type="reset" class="reset-button">Reestablecer</button>
+                            <button type="submit" class="submit-button">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+            <%- include("../partials/footer.ejs")%>
+    </body>
+
+</html>
