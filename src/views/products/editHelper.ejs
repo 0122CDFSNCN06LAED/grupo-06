@@ -12,30 +12,32 @@
                 <div class="register-box">
                     <form class="register-form" action="/register">
                         <div class="form-section">
-                            <p class="main-header">Registro de Helper</p>
+                            <p class="main-header">Editar Datos</p>                            
                             <p class="section-header">Datos Personales</p>
-                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" required>
-                            <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials"
+                            <input type="text" name="Nombre" value= "<%=helper.nombre %>" class="enter-credentials" required>
+                            <input type="text" name="Apellido" value= "<%=helper.apellido %>" class="enter-credentials"
                                 required>
-                            <input type="text" name="Telefono de Contacto" placeholder="Teléfono de Contacto"
+                            <input type="text" name="Telefono de Contacto" value="<%=helper.telefono%>"
                                 class="enter-credentials" required>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Dirección</p>
-                            <input type="text" name="Calle" placeholder="Calle" class="enter-credentials" required>
-                            <input type="text" name="Numero" placeholder="Numero" class="enter-credentials" required>
-                            <input type="text" name="Barrio" placeholder="Barrio" class="enter-credentials" required>
-                            <input type="text" name="Provincia" placeholder="Provincia" class="enter-credentials"
+                            <input type="text" name="Calle" value="<%= helper.calle %>" class="enter-credentials" required>
+                            <input type="text" name="Numero" value="<%= helper.numero %>" class="enter-credentials" required>
+                            <input type="text" name="Barrio" value="<%= helper.barrio %>" class="enter-credentials" required>
+                            <input type="text" name="Provincia" value="<%= helper.provincia %>" class="enter-credentials"
                                 required>
-                            <input type="text" name="Codigo Postal" placeholder="Código Postal"
+                            <input type="text" name="Codigo Postal" value="<%= helper.codigoPostal %>"
                                 class="enter-credentials" required>
                         </div>
-                        <div class = "form-section">
+                        <div class="form-section">
                             <p class="section-header">Datos de Oficio</p>
-                            <input type="text" name="Oficio" placeholder="Oficio" class="enter-credentials" required>
-                            <input type="text" name="Años-de-Experiencia" placeholder="Años de Experiencia" class="enter-credentials" required>
-                            <input type="text" name="Tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials" required>
-                            <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
+                            <input type="text" name="Oficio" value="<%= helper.oficio %>" class="enter-credentials" required>
+                            <input type="text" name="Años-de-Experiencia" value= "<%= helper.anosExperiencia %>"
+                                class="enter-credentials" required>
+                            <input type="text" name="Tarifa" value="<%= helper.tarifaHora%>"
+                                class="enter-credentials" required>
+                            <textarea name="descripcion" cols="10" rows="4" class="description"><%= helper.descripcion %></textarea>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Usuario y Contraseña</p>

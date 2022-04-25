@@ -28,6 +28,21 @@ main {
     margin-bottom:30px;
 }
 
+.description {
+    border:none;
+    width:100%;
+    margin-left: 5px;
+    margin-right:5px;
+    border-radius:3px;
+    font-size: 12px;
+    padding:10px;
+    padding-left:10px;
+}
+
+.register-box .main-header {
+    font-size:18px;
+    text-align:center;
+}
 
 .register-box {
     font-family: roboto;
@@ -113,6 +128,10 @@ input:focus{
     border: #1f7a8cff 2px solid;
 }
 
+textarea:focus {
+    outline: none;
+    border: #1f7a8cff 2px solid;
+}
 
 
 .register-text {
