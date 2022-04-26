@@ -11,6 +11,7 @@ router.get("/productDetail", productsController.detail);
 router.get("/registerHelper", productsController.add);
 
 router.get("/editHelper/:id", productsController.edit);
+router.put("/:id", productsController.update);
 
 router.delete("/delete/:id", productsController.erase);
 

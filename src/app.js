@@ -11,6 +11,9 @@ app.set("views", __dirname + "/src/views");
 
 app.use(methodOverride("_method"));
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 const rutasUser = require("./routes/user");
 app.use("/user", rutasUser);
 

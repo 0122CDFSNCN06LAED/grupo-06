@@ -10,11 +10,11 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box">
-                    <form class="register-form" action="/register">
+                    <form class="register-form" action="/products/<%= helper.id %>?_method=PUT" method="POST">
                         <div class="form-section">
                             <p class="main-header">Editar Datos</p>                            
                             <p class="section-header">Datos Personales</p>
-                            <input type="text" name="Nombre" value= "<%=helper.nombre %>" class="enter-credentials" required>
+                            <input type="text" name="nombre" id="nombre" value= "<%=helper.nombre %>" class="enter-credentials" required>
                             <input type="text" name="Apellido" value= "<%=helper.apellido %>" class="enter-credentials"
                                 required>
                             <input type="text" name="Telefono de Contacto" value="<%=helper.telefono%>"
@@ -51,7 +51,7 @@
                         </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
-                            <button type="submit" class="submit-button">Registrarse</button>
+                            <button type="submit" class="submit-button">Guardar Cambios</button>
                         </div>
                     </form>
                 </div>

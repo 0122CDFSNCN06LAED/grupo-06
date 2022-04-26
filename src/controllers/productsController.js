@@ -29,11 +29,28 @@ const productsController = {
 
   edit: function (req, res) {
     const id = req.params.id;
+    
     const helper = helpers.find((p) => id == p.id);
+    
     let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
     res.render(htmlPath, {
       helper,
     });
+  },
+  update: function (req,res){
+    const id = req.params.id;
+    
+    const helper = helpers.find((p) => id == p.id);
+
+    Object.assign(helper, {
+       ...req.body
+     });
+
+    const jsonTxt = JSON.stringify(helpers, null, 2);
+    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+
+    res.redirect("/products/");
+
   },
 
   erase: function (req, res) {
