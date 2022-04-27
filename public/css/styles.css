@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin: auto 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    /* conserva la forma de los elementos */
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    color: #f0f8ff;
+    flex-direction: column;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+body {
+    background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+}
+
+.dataFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: 45px;
+}
+
+.login {
+    border-radius: 5px;
+    padding-top: 8px;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    background-color: #1f7a8cff;
+    color: #000;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.register {
+    border-radius: 5px;
+    padding-top: 8px;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    color: #000;
+    text-align: center;
+    border: solid 1px #183153;
+    /* font-weight:bolder */
+}
+
+.register:hover {
+    color: white;
+    background-color: #183153;
+    border: none;
+}
+.login-section {
+    display: flex;
+    width: 85;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.whiteLetter {
+    color: #f0f1f3;
+}
+
+.blueCyan {
+    background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
+}
+
+.grayLetter {
+    color: #6e7074;
+}
+
+.bgGray {
+    background-color: #f0f1f3ff;
+}
+
+.blueLetter {
+    color: #183153;
+}
+.center {
+    text-align: center;
+}
+.blue {
+    background-color: #183153;
+}
+
+.blueGreen {
+    background-color: rgb(31, 122, 140);
+}
+@media (min-width: 768px) {
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .dataFooter {
+        align-items: baseline;
+    }
+}

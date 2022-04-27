@@ -27,7 +27,7 @@
                         <h4>Filtros</h4>
                     </div>
                     <div>Fecha</div>
-                    <div class="button_wrapper">
+                    <div class="button_wrapper center">
                         <button>Hoy</button>
                         <button>En 3 días</button>
                         <button>1 semana</button>
@@ -49,35 +49,32 @@
                             <div class="card__img_wrapper col-3" height="100%">
                                 <img class="img_card" src="/images/foto-perfil.png" alt="">
                             </div>
-                            <div class="card__body col-8">
-                                <a href="/products/<%=product.id%>" class="no-decoration">
+                            <div class="card__body centerWrap>
+                                <a href=" /detail/<%=product.id%>" class="no-decoration">
 
-                                    <div class="card__body__header">
-                                        <div>⭐⭐⭐⭐⭐</div>
+                                ⭐⭐⭐⭐⭐
 
-                                    </div>
-                                    <div>
-                                        <h4 class="blueLetter">
-                                            <%= product.nombre%>
-                                                <%= product.apellido%>
+                                <h4 class="blueLetter">
+                                    <%= product.nombre%>
+                                        <%= product.apellido%>
+                                </h4>
+                                <h4 class="blueLetter">
+                                    <%= product.tarifaHora%>
+                                </h4>
 
-                                        </h4>
-                                        <h4 class="blueLetter">
-                                            <%= product.tarifaHora%>
-                                        </h4>
-                                    </div>
-
+                                <div class="d-flex flex-row ">
+                                    <a class="blueLetter" href="/check-out"><i
+                                            class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
+                                    <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="white no-border">
+                                            <i class="fas fa-trash-alt icon-trash"></i>
+                                        </button>
+                                    </form>
+                                    <a href="/products/editHelper/<%= product.id%>"><i
+                                            class="fas fa-pen blueLetter icon-helper"></i></a>
+                                </div>
                             </div>
-                            <div class="d-flex flex-row">
-                                <a class="blueLetter" href="/check-out"><i
-                                        class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
-                                <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="white no-border">
-                                        <i class="fas fa-trash-alt icon-trash"></i>
-                                    </button>
-                                </form>
-                                <a href="/products/editHelper/<%= product.id%>"><i class="fas fa-pen blueLetter icon-helper"></i></a>
-                            </div>
+
 
                         </div>
                         <% }) %>
