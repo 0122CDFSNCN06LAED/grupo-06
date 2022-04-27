@@ -1,6 +1,6 @@
-##Retrospectiva
-#Fecha de la reunión: miércoles 20 de abril
-#Principales conclusiones
+## Retrospectiva
+# Fecha de la reunión: miércoles 20 de abril
+# Principales conclusiones
 
 Valoramos el haber logrado cumplir con la fecha de entrega. La reorganización del tablero de Trello, contribuyó a la coordinación del trabajo. Nos proponemos continuar utilizando la herramienta. 
 Se identifica como punto a tener en cuenta y para trabajar en los siguientes sprins, el haber terminado los requerimientos mínimos entregables, muy sobre la fecha. 
