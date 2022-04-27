@@ -10,6 +10,8 @@ router.get("/productDetail", productsController.detail);
 
 router.get("/registerHelper", productsController.add);
 
+router.post("/store", productsController.store);
+
 router.get("/editHelper/:id", productsController.edit);
 
 router.delete("/delete/:id", productsController.erase);

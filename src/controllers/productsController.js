@@ -26,6 +26,9 @@ const productsController = {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
     res.render(htmlPath);
   },
+  store: (req, res) => {
+    res.send(req.body);
+  },
 
   edit: function (req, res) {
     const id = req.params.id;
