@@ -1,3 +1,14 @@
+.no-decoration {
+	text-decoration:none;
+}
+
+.no-decoration:hover {
+	text-decoration:underline
+}
+
+h4 {
+	text-decoration:none;
+}
 
 .hr-border {
 	opacity:0;
@@ -128,12 +139,24 @@
 	flex-direction: row;
 	justify-content: space-between;
 	margin-top: 15px;
+	text-decoration:none;
 }
 
 .button_wrapper > button {
 	width: 40%;
 }
 
+.no-border {
+	border:none;
+	padding:10px;
+}
 .main_container__filters > div {
 	margin-top: 10px;
+}
+
+.icon-trash {
+	border:none;
+	color: rgb(131, 7, 7);
+	background-color:none;
+	padding:10;
 }

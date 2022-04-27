@@ -10,48 +10,48 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box">
-                    <form class="register-form" action="/register">
+                    <form class="register-form" action="/products/<%= helper.id %>?_method=PUT" method="POST">
                         <div class="form-section">
                             <p class="main-header">Editar Datos</p>                            
                             <p class="section-header">Datos Personales</p>
-                            <input type="text" name="Nombre" value= "<%=helper.nombre %>" class="enter-credentials" required>
-                            <input type="text" name="Apellido" value= "<%=helper.apellido %>" class="enter-credentials"
+                            <input type="text" name="nombre" id="nombre" value= "<%=helper.nombre %>" class="enter-credentials" required>
+                            <input type="text" name="apellido" value= "<%=helper.apellido %>" class="enter-credentials"
                                 required>
-                            <input type="text" name="Telefono de Contacto" value="<%=helper.telefono%>"
+                            <input type="text" name="telefono" value="<%=helper.telefono%>"
                                 class="enter-credentials" required>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Dirección</p>
-                            <input type="text" name="Calle" value="<%= helper.calle %>" class="enter-credentials" required>
-                            <input type="text" name="Numero" value="<%= helper.numero %>" class="enter-credentials" required>
-                            <input type="text" name="Barrio" value="<%= helper.barrio %>" class="enter-credentials" required>
-                            <input type="text" name="Provincia" value="<%= helper.provincia %>" class="enter-credentials"
+                            <input type="text" name="calle" value="<%= helper.calle %>" class="enter-credentials" required>
+                            <input type="text" name="numero" value="<%= helper.numero %>" class="enter-credentials" required>
+                            <input type="text" name="barrio" value="<%= helper.barrio %>" class="enter-credentials" required>
+                            <input type="text" name="provincia" value="<%= helper.provincia %>" class="enter-credentials"
                                 required>
-                            <input type="text" name="Codigo Postal" value="<%= helper.codigoPostal %>"
+                            <input type="text" name="codigoPostal" value="<%= helper.codigoPostal %>"
                                 class="enter-credentials" required>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Oficio</p>
-                            <input type="text" name="Oficio" value="<%= helper.oficio %>" class="enter-credentials" required>
-                            <input type="text" name="Años-de-Experiencia" value= "<%= helper.anosExperiencia %>"
+                            <input type="text" name="oficio" value="<%= helper.oficio %>" class="enter-credentials" required>
+                            <input type="text" name="anosExperiencia" value= "<%= helper.anosExperiencia %>"
                                 class="enter-credentials" required>
-                            <input type="text" name="Tarifa" value="<%= helper.tarifaHora%>"
+                            <input type="text" name="tarifaHora%" value="<%= helper.tarifaHora%>"
                                 class="enter-credentials" required>
                             <textarea name="descripcion" cols="10" rows="4" class="description"><%= helper.descripcion %></textarea>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Usuario y Contraseña</p>
-                            <input type="mail" name="Correo" placeholder="Correo" class="enter-credentials" required>
+                            <input type="mail" name="Correo" placeholder="Correo" class="enter-credentials" >
                             <input type="mail" name="Confirmar Correo" placeholder="Confirmar Correo"
-                                class="enter-credentials" required>
+                                class="enter-credentials" >
                             <input type="password" name="Contraseña" placeholder="Contraseña" class="enter-credentials"
-                                required>
+                                >
                             <input type="password" name="Confirmar Contraseña" placeholder="Confirmar Contraseña"
-                                class="enter-credentials" required>
+                                class="enter-credentials" >
                         </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
-                            <button type="submit" class="submit-button">Registrarse</button>
+                            <button type="submit" class="submit-button">Guardar Cambios</button>
                         </div>
                     </form>
                 </div>
