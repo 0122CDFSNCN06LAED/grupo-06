@@ -72,6 +72,7 @@ body {
     color: #000;
     text-align: center;
     border: solid 1px #183153;
+    margin-right:10px;
     /* font-weight:bolder */
 }
 
@@ -79,6 +80,28 @@ body {
     color: white;
     background-color: #183153;
     border: none;
+}
+
+.helper-register {
+    border-radius: 5px;
+    padding-top: 0px;
+    padding:2px;
+    font-size:13px;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    background-color: #183153;
+    color: white;
+    text-align: center;
+    border: solid 1px #183153;
+    margin-right: 10px;
+    /* font-weight:bolder */
+}
+
+.font-13 {
+    font-size:13px;
+    padding:2px;
+    padding-top:0px;
 }
 .login-section {
     display: flex;
