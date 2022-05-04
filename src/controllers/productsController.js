@@ -20,9 +20,18 @@ const productsController = {
   },
 
   detail: function (req, res) {
+    let productsFilePath = path.join(__dirname, "../database/products.json");
+    let helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+    const id = req.params.id;
+    const helper = helpers.find((product) => product.id == id);
+
     let htmlPath = path.resolve("./src/views/products/productDetail.ejs");
-    res.render(htmlPath);
+    res.render(htmlPath, {
+      product: helper,
+    });
   },
+
   add: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
     res.render(htmlPath);

@@ -7,9 +7,9 @@
 	margin: auto;
 }
 
-.no-decoration:hover {
+/* .no-decoration:hover {
 	text-decoration:underline
-}
+} */
 
 h4 {
 	text-decoration:none;
@@ -114,9 +114,7 @@ h4 {
 }
 
 .card, .row{
-	/* display: flex;
-	flex-direction: column; */
-	/* height: 200px; */
+	
 	width: 100%;
 	padding-top: 20px;
 	margin-bottom:20px;
@@ -126,6 +124,9 @@ h4 {
 	background-color: #fff;
 	border-radius: 20px;
 	padding-left: 30px;
+	display: flex;
+	align-items: center;
+	
 	
 }
 
@@ -184,6 +185,7 @@ width: 66.66666667%;
 
 
 }
+
 
 
 @media (min-width:900px) {

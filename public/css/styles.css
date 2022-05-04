@@ -127,9 +127,11 @@ body {
         justify-content: space-evenly;
         padding-left: 10px;
         padding-right: 10px;
+        margin: 0;
     }
 
     .dataFooter {
         align-items: baseline;
+        align-self: baseline
     }
 }

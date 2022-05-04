@@ -3,17 +3,17 @@
   margin:0;
   box-sizing:border-box;
 }
-
+/* 
 header {
   display: flex;
   flex-wrap: wrap;
-  /* conserva la forma de los elementos */
+ 
   flex-direction: row;
   justify-content: left;
   align-items:center;
   margin-bottom: 0px;
   padding: 20px;
-}
+} */
 
 a {
   text-decoration: none;

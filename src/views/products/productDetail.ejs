@@ -4,13 +4,12 @@
 <%- include("../partials/head.ejs")%>
 
 	<!-- head abierto en include -->
-	<link rel="stylesheet" href="/css/productDetail.css">
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="/css/productDetail.css">
 
 	</head>
-
 
 	<body>
 		<%- include("../partials/header.ejs")%>
@@ -40,62 +39,55 @@
 			<!-- END HEADER -->
 
 			<!-- INPUT BUSCAR -->
-			<div class="input_wrapper">
-				<input type="text">
-			</div>
+			<!-- <div class="input_wrapper">
+			<input type="text">
+		</div> -->
 
 			<div class="main_container d-flex flex-row">
-				<div class="main_container__filters">
-					<div>
-						<h4>Filtros</h4>
-					</div>
-					<div>Fecha</div>
-					<div class="button_wrapper">
-						<button>Hoy</button>
-						<button>En 3 días</button>
-						<button>1 semana</button>
-						<button>Elegir</button>
-					</div>
-					<div>Precio</div>
-					<div><input type="range"></div>
-					<div><input type="range"></div>
-					<div><input type="range"></div>
-					<div>Horario del día</div>
-					<div><input type="date"></div>
-				</div>
-				<div class="main_container__cards container d-flex flex-column">
 
-					<div class="card row">
-						<div class="card__img_wrapper col-3" height="100%">
-							<img class="img_card" src="/images/foto-perfil.png" alt="">
-						</div>
-						<div class="card__body col-8">
+				<div class="card row">
+
+					<div class="card__img_wrapper col-3" height="100%">
+						<img class="img_card" src="/images/foto-perfil.png" alt="">
+					</div>
+					<div class="card__body col-8">
+						<%product.id%>
+
 							<div class="card__body__header">
 								<div>⭐⭐⭐⭐⭐</div>
-								<div>400 $/hr</div>
+
 							</div>
-							<div>
-								<h4>Laura Perez</h4>
+							<div class="center">
+
+
+								<h4 class="no-decoration center">
+									<%= product.nombre%>
+										<%= product.apellido%>
+
+								</h4>
+								<p class="no-decoration">
+									<%= product.tarifaHora%>
+										<%= product.descripcion%>
+								</p>
 							</div>
-							<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sed, rem ea, earum ut
-								dolores
-								quo perferendis eius velit asperiores atque quod aut accusantium adipisci facere,
-								aliquam
-								sapiente totam numquam?</div>
-						</div>
+
+					</div>
+					<div>
 						<a class="blueLetter" href="/check-out"><i
 								class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
 					</div>
 
+
 				</div>
+
+
+
+
+			</div>
 
 			</div>
 
 			<%- include("../partials/footer.ejs")%>
-
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-					integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-					crossorigin="anonymous"></script>
 	</body>
 
 </html>
