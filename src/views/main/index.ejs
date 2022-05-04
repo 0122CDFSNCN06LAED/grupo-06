@@ -19,53 +19,31 @@
                     <button type="button" id="search">Buscar!</button>
                 </div>
             </section>
+            
+
+            
+                    
             <section class="seccion-trabajos-requeridos">
                 <h3 class="section-header">Helpers más Requeridos</h3>
                 <section class="sub-seccion-trabajos-requeridos">
+                    <% helpermasbuscados.forEach(helper =>{%>
+
+            
                     <div class="articulo-trabajo-mas-buscado">
-                        <p class="nombre-helper">Laura P.</p>
+                        <p class="nombre-helper"><%=helper.nombre%> <%=helper.apellido%></p>
                         <img class="imagen-trabajo" src="/images/foto-perfil.png" alt="">
-                        <p>Jardinería</p>
-                        <p>$400 /h</p>
+                        <p><%=helper.oficio%></p>
+                        <p><%=helper.tarifaHora%> /h</p>
                         <div class="interacciones">
                             <i class="fas fa-heart icon-helper"></i>
                             <i class="fas fa-share-alt icon-helper"></i>
                             <a href="/check-out"><i class="fas fa-shopping-cart icon-helper"></i></a>
                         </div>
                     </div>
-                    <div class="articulo-trabajo-mas-buscado">
-                        <p class="nombre-helper">Fabian B.</p>
-                        <img class="imagen-trabajo" src="/images/foto-perfil2.jpg" alt="">
-                        <p>Limpieza de vidrios</p>
-                        <p>$500 /h</p>
-                        <div class="interacciones">
-                            <i class="fas fa-heart icon-helper"></i>
-                            <i class="fas fa-share-alt icon-helper"></i>
-                            <a href="/check-out"><i class="fas fa-shopping-cart icon-helper"></i></a>
-                        </div>
-                    </div>
-                    <div class="articulo-trabajo-mas-buscado">
-                        <p class="nombre-helper">Mario B.</p>
-                        <img class="imagen-trabajo" src="/images/foto-perfil3.jpg" alt="">
-                        <p>Reparación de techos</p>
-                        <p>$450 /h</p>
-                        <div class="interacciones">
-                            <i class="fas fa-heart icon-helper"></i>
-                            <i class="fas fa-share-alt icon-helper"></i>
-                            <a href="/check-out"><i class="fas fa-shopping-cart icon-helper"></i></a>
-                        </div>
-                    </div>
-                    <div class="articulo-trabajo-mas-buscado">
-                        <p class="nombre-helper">Hugo P.</p>
-                        <img class="imagen-trabajo" src="/images/foto-perfil4.jpg" alt="">
-                        <p>Reparación de cañerías</p>
-                        <p>$600 /h</p>
-                        <div class="interacciones">
-                            <i class="fas fa-heart icon-helper"></i>
-                            <i class="fas fa-share-alt icon-helper"></i>
-                            <a href="/check-out"><i class="fas fa-shopping-cart icon-helper"></i></a>
-                        </div>
-                    </div>
+                <%})%>
+
+    
+                    
                 </section>
             </section>
             <section class="seccion-trabajos-catalogo">
