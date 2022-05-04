@@ -10,7 +10,7 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box">
-                    <form class="register-form" action="/register">
+                    <form class="register-form" action="/user/storeUser" method="POST">
                         <div class="form-section">
                             <p class="main-header">Registro de Usuario</p>
                             <p class="section-header">Datos Personales</p>
@@ -20,16 +20,7 @@
                             <input type="text" name="Telefono de Contacto" placeholder="Teléfono de Contacto"
                                 class="enter-credentials" required>
                         </div>
-                        <div class="form-section">
-                            <p class="section-header">Datos de Dirección</p>
-                            <input type="text" name="Calle" placeholder="Calle" class="enter-credentials" required>
-                            <input type="text" name="Numero" placeholder="Numero" class="enter-credentials" required>
-                            <input type="text" name="Barrio" placeholder="Barrio" class="enter-credentials" required>
-                            <input type="text" name="Provincia" placeholder="Provincia" class="enter-credentials"
-                                required>
-                            <input type="text" name="Codigo Postal" placeholder="Código Postal"
-                                class="enter-credentials" required>
-                        </div>
+
                         <div class="form-section">
                             <p class="section-header">Usuario y Contraseña</p>
                             <input type="mail" name="Correo" placeholder="Correo" class="enter-credentials" required>
