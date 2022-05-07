@@ -150,7 +150,6 @@
     "oficio": "limpieza del hogar",
     "anosExperiencia": 10,
     "tarifaHora": "$1.43",
-    "masbuscados": true,
     "descripcion": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
   },
   {
@@ -225,27 +224,9 @@
     "barrio": "Los Pinos",
     "oficio": "electricista",
     "anosExperiencia": 15,
+    "masbuscados": true,
     "tarifaHora": "$8.89",
     "descripcion": "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque."
-  },
-  {
-    "calle": "Camino centenario",
-    "numero": "323",
-    "barrio": "City Bell",
-    "provincia": "Buenos Aires",
-    "codigo Postal": "1900",
-    "oficio": "Herrero",
-    "años-de-Experiencia": "10",
-    "tarifa": "1000",
-    "descripcion": "Herrería de en general",
-    "fieldname": "avatar",
-    "originalname": "José Ignacio Paolini.jpg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "./public/images/avatars",
-    "filename": "1651950889536_img.jpg",
-    "path": "public\\images\\avatars\\1651950889536_img.jpg",
-    "size": 107576,
-    "id": 16
   }
+
 ]
