@@ -10,7 +10,7 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box">
-                    <form class="register-form" action="/products/store" method="POST">
+                    <form class="register-form" action="/products/store" method="POST" enctype="multipart/form-data">
                         <div class="form-section">
                             <p class="main-header">Registro de Helper</p>
                         </div>
@@ -31,6 +31,10 @@
                             <input type="text" name="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials" required>
                             <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
                         </div>
+                            <div>
+                                <label><b>Imagen de perfil:</b></label>
+                                <input type="file" name="avatar" placeholder="cargar imagen" class="enter-credentials" required>
+                            </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
                             <button type="submit" class="submit-button">Registrarse</button>

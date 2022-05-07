@@ -46,6 +46,7 @@ const productsController = {
 
     const newProduct = {
       ...req.body,
+      ...req.file,
       id: newId,
     };
 
