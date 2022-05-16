@@ -8,10 +8,8 @@
 header {
     display: flex;
     flex-wrap: wrap;
-    /* conserva la forma de los elementos */
     flex-direction: row;
     justify-content: space-between;
-    /* margin-bottom: 20px; */
     padding: 20px;
 }
 
@@ -32,9 +30,7 @@ main {
     width: 90%;
     margin: 0 auto;
 }
-body {
-    background-image: linear-gradient(to right, #183153ff 0%, #1f7a8cff 100%);
-}
+
 
 .dataFooter {
     display: flex;
@@ -144,6 +140,22 @@ body {
 .blueGreen {
     background-color: rgb(31, 122, 140);
 }
+
+.blackLetter{
+    color: rgb(22, 19, 19);
+}
+
+.border-line{
+border: 1px solid rgba(0, 0, 0, .125);
+
+}
+@media (min-width: 480px) {
+    .imagen-trabajo {
+        height: 200px;
+    }
+}
+
+
 @media (min-width: 768px) {
     footer{
         flex-direction: row;
@@ -156,5 +168,16 @@ body {
     .dataFooter {
         align-items: baseline;
         align-self: baseline
+    }
+
+/* Index */
+
+    .imagen-trabajo {
+        height: 250px;
+    }
+    
+    .articulo-trabajo-mas-buscado {
+        width: 300px;
+        margin-bottom: 35px;
     }
 }
