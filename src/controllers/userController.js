@@ -31,6 +31,7 @@ const userController = {
 
     const newUser = {
       ...req.body,
+      ...req.file,
       id: newUserID,
     };
 

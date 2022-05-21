@@ -19,8 +19,17 @@
                             <input type="text" name="calle" placeholder="Calle" class="enter-credentials" required>
                             <input type="text" name="numero" placeholder="Numero" class="enter-credentials" required>
                             <input type="text" name="barrio" placeholder="Barrio" class="enter-credentials" required>
-                            <input type="text" name="provincia" placeholder="Provincia" class="enter-credentials"
-                                required>
+                            <label><b>Seleccione una provincia</b></label>
+                            <select name="provincia" placeholder="Provincia">
+                                <option value="">Provincia</option>
+                                <% 
+                                    let provincias = [ "Buenos Aires","Córdoba","Santa Fe","Corrientes" ]
+                                 %> 
+                                <% for (const oneProvincias of provincias){ %>
+                                    <option value="<%= oneProvincias %>"> <%= oneProvincias %> </option> 
+                                <% } %>    
+                            </select>
+
                             <input type="text" name="codigo Postal" placeholder="Código Postal"
                                 class="enter-credentials" required>
                         </div>
