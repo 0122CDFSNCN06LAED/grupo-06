@@ -71,5 +71,6 @@
 {"id":15,
   "nombre":"Esteban",
   "apellido":"Castrosin",
-  "telefono":"84879987"
+  "telefono":"84879987",
+  "contraseña":"12345678"
   }]

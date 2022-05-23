@@ -3,6 +3,10 @@ const path = require("path");
 const app = express();
 const methodOverride = require("method-override");
 
+const session = require('express-session')
+const {check} = require("express-validator")
+
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -16,6 +20,9 @@ app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({
+  secret: 'helper crud'
+}))
 
 const rutasUser = require("./routes/user");
 app.use("/user", rutasUser);
