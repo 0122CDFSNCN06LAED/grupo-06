@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
+const { body } = require("express-validator");
+const loginValidations = require("../validations/loginValidations.js");
+const urlencoded = require("express");
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,6 +22,7 @@ const uploadFile = multer({ storage });
 const userController = require("../controllers/userController.js");
 
 router.get("/login", userController.login);
+
 router.get("/registerUser", userController.register);
 //router.get("/registerUserOrHelper", userController.registerUserOrHelper);
 //router.get("/registerUser", userController.addUser);

@@ -1,6 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const { text } = require("express");
+const { body } = require("express-validator");
+const { validationResult } = require("express-validator");
+const bcrypt = require("bcrypt");
 
 const userFilePath = path.join(__dirname, "../database/users.json");
 
@@ -11,6 +14,8 @@ const userController = {
     let htmlPath = path.resolve("./src/views/user/login.ejs");
     res.render(htmlPath);
   },
+ 
+
   register: function (req, res) {
     let htmlPath = path.resolve("./src/views/user/registerUser.ejs");
     res.render(htmlPath);
@@ -30,9 +35,14 @@ const userController = {
     const newUserID = biggestId + 1;
 
     const newUser = {
-      ...req.body,
-      ...req.file,
       id: newUserID,
+      Nombre: req.body.Nombre,
+      Apellido: req.body.Apellido,
+      Telefono: req.body.Telefono,
+      Correo: req.body.Correo,
+      Contraseña: bcrypt.hashSync(req.body.Contraseña, 10),
+      // ...req.body,
+      ...req.file,
     };
 
     user.push(newUser);
