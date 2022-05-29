@@ -26,6 +26,7 @@ const userController = {
           if (bcrypt.compareSync(req.body.password, user[i].password)) {
             usuarioAlloguearse = user[i].firstName + ' ' + user[i].lastName;
             req.session.usuariologueado = usuarioAlloguearse;
+            req.session.idUsuario = user[i].id;
             break;
           }
         }
@@ -89,6 +90,12 @@ const userController = {
     let htmlPath = path.resolve("./src/views/user/registerUserOrHelper.ejs");
     res.render(htmlPath, { user: req.session.usuariologueado });
   },
+
+  signOut: function(req, res) {
+    req.session.destroy(function () {
+      res.redirect("/user/login");
+    });
+  }
 };
 
 module.exports = userController;

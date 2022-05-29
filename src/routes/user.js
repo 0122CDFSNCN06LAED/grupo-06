@@ -12,6 +12,8 @@ const { body } = require("express-validator");
 const loginValidations = require("../validations/loginValidations.js");
 const urlencoded = require("express");
 
+const guestMiddleware = require("../middleware/guestMiddleware.js");
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -40,4 +42,7 @@ router.post(
   uploadFile.single("userImage"),
   userController.storeUser
 );
+
+router.get("/signOut", guestMiddleware, userController.signOut);
+
 module.exports = router;

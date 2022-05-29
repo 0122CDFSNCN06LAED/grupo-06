@@ -3,6 +3,9 @@ const router = express.Router();
 const path = require("path");
 const multer = require("multer");
 
+const guestMiddleware = require("../middleware/guestMiddleware.js");
+
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "./public/images/avatars");
@@ -21,11 +24,11 @@ router.get("/", productsController.index);
 
 router.get("/detail/:id", productsController.detail);
 
-router.get("/registerHelper", productsController.add);
+router.get("/registerHelper", guestMiddleware, productsController.add);
 
 router.post("/store", uploadFile.single("avatar"), productsController.store);
 
-router.get("/editHelper/:id", productsController.edit);
+router.get("/editHelper/:id", guestMiddleware, productsController.edit);
 router.put("/:id", productsController.update);
 
 router.delete("/delete/:id", productsController.erase);
