@@ -3,8 +3,9 @@ const router = express.Router();
 const path = require("path");
 const {check} = require("express-validator")
 const validations = [
-  check("email").notEmpty().withMessage("Email Invalido"),
-  check("password").notEmpty(),
+  check("email").notEmpty().withMessage("Ingrese Un Usuario"),
+  check("email").isEmail().withMessage("Email Invalido"),
+  check("password").notEmpty().withMessage("Ingrese una Contraseña"),
 ];
 const multer = require("multer");
 const { body } = require("express-validator");

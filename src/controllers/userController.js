@@ -32,10 +32,11 @@ const userController = {
       }
 
       if (usuarioAlloguearse == undefined) {
-        // res.render('login',{errors: [{
-        //   msg:('credenciales invalidas')
-        // }]});
-        res.send("credenciales invalidas");
+        let htmlPath = path.resolve("./src/views/user/login.ejs");
+        res.render(htmlPath,{errors: [{
+           msg:('credenciales invalidas')
+         }],
+        user : req.session.usuariologueado});
       }
       else {
         res.redirect("../");
@@ -43,7 +44,8 @@ const userController = {
     } 
       else 
     {
-      return res.render("login", { errors: error.errors });
+      let htmlPath = path.resolve("./src/views/user/login.ejs");
+      res.render(htmlPath, { errors: error.errors, user: req.session.usuariologueado });
     }
   },
 
