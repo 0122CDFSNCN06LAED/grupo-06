@@ -87,14 +87,24 @@
     "id": 15,
     "nombre": "Esteban",
     "apellido": "Castrosin",
-    "telefono": "84879987",
-    "contraseña": "12345678"
+    "telefono": "84879987"
   },
   {
-    "id": 16,
-    "firstName": "Alec",
-    "lastName": "Coleman",
-    "email": "acoleman85@gmail.com",
-    "password": "$2a$10$qA/k4BzA18GFfd771yXqeumzosUKyARiOA.cQzaTuf6ollGNE0w4e"
+    "Nombre": "jose ignacio",
+    "Apellido": "paolini",
+    "Telefono de Contacto": "216516516",
+    "Correo": "jose@gmail.com",
+    "Confirmar Correo": "jose@gmail.com",
+    "Contraseña": "123",
+    "Confirmar Contraseña": "123",
+    "fieldname": "userImage",
+    "originalname": "José Ignacio Paolini.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "./public/images/userImage",
+    "filename": "1653175612057_img.jpg",
+    "path": "public\\images\\userImage\\1653175612057_img.jpg",
+    "size": 107576,
+    "id": 16
   }
 ]

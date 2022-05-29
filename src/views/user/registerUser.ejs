@@ -10,15 +10,16 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box white">
-                    <form class="register-form" action="/user/storeUser" method="POST">
+                    <form class="register-form" action="/user/storeUser" method="POST" enctype="multipart/form-data">
                         <div class="form-section">
                             <p class="main-header">Registro de Usuario</p>
                             <p class="section-header">Datos Personales</p>
                             <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" required>
                             <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials"
                                 required>
-                            <input type="text" name="Telefono de Contacto" placeholder="Teléfono de Contacto"
+                            <input type="text" name="Telefono" placeholder="Teléfono de Contacto"
                                 class="enter-credentials" required>
+                            <input type="file" name="userImage" placeholder="cargar imagen" class="enter-credentials" required>
                         </div>
 
                         <div class="form-section">
