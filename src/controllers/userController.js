@@ -72,6 +72,7 @@ const userController = {
       phone: req.body.Telefono,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
+      ...req.file
     };
 
     user.push(newUser);

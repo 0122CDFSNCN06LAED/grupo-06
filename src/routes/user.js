@@ -27,12 +27,12 @@ const uploadFile = multer({ storage });
 const userController = require("../controllers/userController.js");
 
 router.get("/login", userController.login);
+router.post("/login", validations, userController.processLogin);
+
 
 router.get("/registerUser", userController.register);
 //router.get("/registerUserOrHelper", userController.registerUserOrHelper);
 //router.get("/registerUser", userController.addUser);
-router.post("/storeUser", userController.storeUser);
-router.post("/login", validations, userController.processLogin);
 
 router.post(
   "/storeUser",
