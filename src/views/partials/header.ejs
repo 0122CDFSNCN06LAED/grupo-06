@@ -1,8 +1,15 @@
 <header class="white blueLetter">
     <a href="/"><img class="logo" src="/images/logo4.png" width="15%" alt="Logo-Helpers"></a>
     <div class="login-section">
+        <% if (!user) {%> 
         <a class="login" href="/user/login">Ingresar</a>
         <a class="register" href="/user/registerUser">Registrarse</a>
+        <%} %>
+        <% if (user) {%>
+        <i class="fas fa-user"></i>
+        <p><%= user %></p>
         <a class="helper-register " href="/products/registerHelper">Convertite en Helper</a>
+        <a class="login" href="">Cerrar Sesión</a>
+        <% } %>
     </div>
 </header>

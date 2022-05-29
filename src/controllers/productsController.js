@@ -16,6 +16,7 @@ const productsController = {
     res.render(htmlPath, {
       products: helpers,
       //products porque se llama así en la vista
+      user: req.session.usuariologueado
     });
   },
 
@@ -29,12 +30,13 @@ const productsController = {
     let htmlPath = path.resolve("./src/views/products/productDetail.ejs");
     res.render(htmlPath, {
       product: helper,
+      user: req.session.usuariologueado
     });
   },
 
   add: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
-    res.render(htmlPath);
+    res.render(htmlPath, { user: req.session.usuariologueado });
   },
   store: (req, res) => {
     //res.send(req.body);
@@ -66,6 +68,7 @@ const productsController = {
     let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
     res.render(htmlPath, {
       helper,
+      user: req.session.usuariologueado
     });
   },
   update: function (req, res) {

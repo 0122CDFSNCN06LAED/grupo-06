@@ -11,11 +11,13 @@ const mainController = {
     let htmlPath = path.resolve("./src/views/main/index.ejs");
     res.render(htmlPath, {
       helpermasbuscados: helpermasbuscados,
+      user: req.session.usuariologueado
     });
   },
   checkout: function (req, res) {
     let htmlPath = path.resolve("./src/views/main/check-out.ejs");
-    res.render(htmlPath);
+    res.render(htmlPath,{
+      user: req.session.usuariologueado});
   },
 };
 

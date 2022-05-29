@@ -1,76 +1,100 @@
-[{"id":1,
-  "nombre":"Juan",
-  "apellido":"Gonzales",
-  "telefono":"113221455"},
-
-{"id":2,
-  "nombre":"Jorge",
-  "apellido":"Perez",
-  "telefono":"22116733"
+[
+  {
+    "id": 1,
+    "nombre": "Juan",
+    "apellido": "Gonzales",
+    "telefono": "113221455"
   },
-{"id":3,
-  "nombre":"Laura",
-  "apellido":"Albornoz",
-  "telefono":"318223687"
+  {
+    "id": 2,
+    "nombre": "Jorge",
+    "apellido": "Perez",
+    "telefono": "22116733"
   },
-{"id":4,
-  "nombre":"Paula",
-  "apellido":"Abal"
-  ,"telefono":"221257891"
+  {
+    "id": 3,
+    "nombre": "Laura",
+    "apellido": "Albornoz",
+    "telefono": "318223687"
   },
-{"id":5,
-  "nombre":"Agustin",
-  "apellido":"Castro",
-  "telefono":"11369855"
+  {
+    "id": 4,
+    "nombre": "Paula",
+    "apellido": "Abal",
+    "telefono": "221257891"
   },
-{"id":6,
-  "nombre":"Osvaldo",
-  "apellido":"Zabala",
-  "telefono":"54397566"
+  {
+    "id": 5,
+    "nombre": "Agustin",
+    "apellido": "Castro",
+    "telefono": "11369855"
   },
-{"id":7,
-  "nombre":"Alejandra",
-  "apellido":"Pelegrini",
-  "telefono":"221568761"
+  {
+    "id": 6,
+    "nombre": "Osvaldo",
+    "apellido": "Zabala",
+    "telefono": "54397566"
   },
-{"id":8,
-  "nombre":"Florencia",
-  "apellido":"Zabaletta",
-  "telefono":"113698874"
+  {
+    "id": 7,
+    "nombre": "Alejandra",
+    "apellido": "Pelegrini",
+    "telefono": "221568761"
   },
-{"id":9,
-  "nombre":"Manuel",
-  "apellido":"Rodriguez",
-  "telefono":"54369985"
+  {
+    "id": 8,
+    "nombre": "Florencia",
+    "apellido": "Zabaletta",
+    "telefono": "113698874"
   },
-{"id":10,
-  "nombre":"Hector",
-  "apellido":"Mas",
-  "telefono":"11397455"
+  {
+    "id": 9,
+    "nombre": "Manuel",
+    "apellido": "Rodriguez",
+    "telefono": "54369985"
   },
-{"id":11,
-  "nombre":"Rodolfo",
-  "apellido":"Mendez",
-  "telefono":"332312597"
+  {
+    "id": 10,
+    "nombre": "Hector",
+    "apellido": "Mas",
+    "telefono": "11397455"
   },
-{"id":12,
-  "nombre":"Ana",
-  "apellido":"Godoy",
-  "telefono":"54369851"
+  {
+    "id": 11,
+    "nombre": "Rodolfo",
+    "apellido": "Mendez",
+    "telefono": "332312597"
   },
-{"id":13,
-  "nombre":"Jorgelina",
-  "apellido":"Morel",
-  "telefono":"84369987"
+  {
+    "id": 12,
+    "nombre": "Ana",
+    "apellido": "Godoy",
+    "telefono": "54369851"
   },
-{"id":14,
-  "nombre":"Ezequiel",
-  "apellido":"Martinez",
-  "telefono":"49329687"
+  {
+    "id": 13,
+    "nombre": "Jorgelina",
+    "apellido": "Morel",
+    "telefono": "84369987"
   },
-{"id":15,
-  "nombre":"Esteban",
-  "apellido":"Castrosin",
-  "telefono":"84879987",
-  "contraseña":"12345678"
-  }]
+  {
+    "id": 14,
+    "nombre": "Ezequiel",
+    "apellido": "Martinez",
+    "telefono": "49329687"
+  },
+  {
+    "id": 15,
+    "nombre": "Esteban",
+    "apellido": "Castrosin",
+    "telefono": "84879987",
+    "contraseña": "12345678"
+  },
+  {
+    "id": 16,
+    "firstName": "Alec",
+    "lastName": "Coleman",
+    "email": "acoleman85@gmail.com",
+    "password": "$2a$10$qA/k4BzA18GFfd771yXqeumzosUKyARiOA.cQzaTuf6ollGNE0w4e"
+  }
+]
