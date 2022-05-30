@@ -10,100 +10,104 @@
 
         <%- include("../partials/header.ejs")%>
 
+            <p class="user margin10 blueLetter "> <%=user.firstName%>
+               Confirmá los datos de tu compra</p>
+
+                <main>
+                    <div class="wrapper">
+                        <section class="details">
 
 
+                            <article class="professional white">
+                                       <img class="professionalPicture blueLetter" src="/images/foto-perfil.png"
+                                    alt="Foto perfil">
+              
+                                    <p class="margin10"><%=helper.nombre%>
+                                    <%=helper.apellido%></p>
+                                   <p class="margin10"><%=helper.tarifaHora%></p> 
+                                   <p class="margin10"><%= helper.barrio%></p> 
+                                   <p class="margin10"><%= helper.provincia%></p> 
+                             
+                                    
+                                    <p class="margin10"><%= helper.descripcion%></p>
 
-            <main>
-                <div class="wrapper">
-                    <section class="details">
+                                    <p class="contact  white">Datos de contacto</p>
+                                    <i class="blueLetter fab fa-whatsapp"></i> <%= helper.telefono%>
+                                    <i class="blueLetter fas fa-envelope"></i> email@email.com
 
+                            </article>
 
-                        <article class="professional white">
-                            <img class="professionalPicture blueLetter" src="/images/foto-perfil.png" alt="Foto perfil">
-                            <p>Precio: $150</p>
-                            <p>Profesional: Laura Pérez</p>
-                            <p>Calificacion</p>
-                            <p>Descripción Persona: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                                aliquid
-                                rem
-                                cumque ipsa, sint quo dolor, officia aliquam obcaecati corrupti dolores provident neque
-                                ullam
-                                laborum quis esse porro nisi? Sequi!</p>
-
-                            <p class="contact  white">Datos de contacto</p>
-                            <i class="blueLetter fab fa-whatsapp"></i> 112345678
-                            <i class="blueLetter fas fa-envelope"></i> email@email.com
-
-                        </article>
-
-                        <article class="checkOut white">
-                            <p class="center underlined">Resumen de Compra</p>
-                            <p>Servicio:</p>
-                            <p>Fecha:</p>
-                            <p>Subtotal:</p>
-                            <p>Adicional:</p>
-                            <p class="total">Total</p>
+                            <article class="checkOut white">
+                                <p class="center underlined">Resumen de Compra</p>
+                                <p>Servicio:</p>
+                                <p>Fecha:</p>
+                                <p>Subtotal:</p>
+                                <p>Adicional:</p>
+                                <p class="total">Total</p>
 
 
-                        </article>
+                            </article>
+
+                           
+
+                        </section>
+
+                        <section class="formato">
+                            <form class="formatForm" action="" method="get">
+                                <div class="warranty blueGreen whiteLetter">
+                                    <label>¿Desea agregar un Seguro?</label>
+                                    <p> En caso de no presentarse o no estar satisfecho con el servicio, un nuevo Helper
+                                        irá
+                                        en
+                                        su
+                                        reemplazo
+                                    </p>
+
+                                    <input type="radio" name="warranty" id="Sí" value="Sí" required>
+                                    <label for="Sí">Sí</label>
+                                    <input type="radio" name="warranty" id="No" value="No">
+                                    <label for="No">No</label>
+                                </div>
+
+                                <div class="payMethod white">
+
+                                    <label>Método de Pago</label>
 
 
-
-                    </section>
-
-                    <section class="formato">
-                        <form class="formatForm" action="" method="get">
-                            <div class="warranty blueGreen whiteLetter">
-                                <label>¿Desea agregar un Seguro?</label>
-                                <p> En caso de no presentarse o no estar satisfecho con el servicio, un nuevo Helper irá
-                                    en
-                                    su
-                                    reemplazo
-                                </p>
-
-                                <input type="radio" name="warranty" id="Sí" value="Sí" required>
-                                <label for="Sí">Sí</label>
-                                <input type="radio" name="warranty" id="No" value="No">
-                                <label for="No">No</label>
-                            </div>
-
-                            <div class="payMethod white">
-
-                                <label>Método de Pago</label>
+                                    <label for="mercadoPago">Mercado Pago</label>
+                                    <img class="logoMP" src="/images/MP.png" alt="Mercado Pago" width="20px">
+                                    <input type="radio" name="medioDePago" id="mercadoPago" value="mercado pago"
+                                        required>
 
 
-                                <label for="mercadoPago">Mercado Pago</label>
-                                <img class="logoMP" src="/images/MP.png" alt="Mercado Pago" width="20px">
-                                <input type="radio" name="medioDePago" id="mercadoPago" value="mercado pago" required>
+                                    <label for="transferencia">Transferencia Bancaria</label>
+                                    <i class="blueLetter fi fi-rr-bank"></i>
+                                    <input type="radio" name="medioDePago" id="transferencia" value="transferencia"
+                                        required>
 
 
-                                <label for="transferencia">Transferencia Bancaria</label>
-                                <i class="blueLetter fi fi-rr-bank"></i>
-                                <input type="radio" name="medioDePago" id="transferencia" value="transferencia"
-                                    required>
+                                    <label for="efectivo">Efectivo</label>
+                                    <i class="blueLetter fi fi-rr-money"></i>
+                                    <input type="radio" name="medioDePago" id="efectivo" value="efectivo" required>
 
+                                </div>
+                                <div class="comment whiteLetter">
+                                    <label for="comment">Comentarios Adicionales</label>
+                                    <textarea class="grayLetter" name="comment" id="comement"
+                                        placeholder="Agregue su comentario"></textarea>
 
-                                <label for="efectivo">Efectivo</label>
-                                <i class="blueLetter fi fi-rr-money"></i>
-                                <input type="radio" name="medioDePago" id="efectivo" value="efectivo" required>
+                                </div>
 
-                            </div>
-                            <div class="comment whiteLetter">
-                                <label for="comment">Comentarios Adicionales</label>
-                                <textarea class="grayLetter" name="comment" id="comement"
-                                    placeholder="Agregue su comentario"></textarea>
+                                <button class="buttonStyle whiteLetter center" type="submit">Confirmar Selección
+                                </button>
 
-                            </div>
+                            </form>
+                        </section>
 
-                            <button class="buttonStyle whiteLetter center" type="submit">Confirmar Selección </button>
+                    </div>
+                </main>
 
-                        </form>
-                    </section>
-
-                </div>
-            </main>
-
-            <%- include("../partials/footer.ejs")%>
+                <%- include("../partials/footer.ejs")%>
 
     </body>
 

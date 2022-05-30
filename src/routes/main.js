@@ -9,7 +9,10 @@ const guestMiddleware = require("../middleware/guestMiddleware.js");
 const { route } = require("./user.js");
 
 router.get("", mainController.index);
-router.get("/check-out", guestMiddleware, mainController.checkout);
+router.get("/check-out/:id", guestMiddleware, mainController.checkout);
+
+
+router.get("/quienes-somos", mainController.info);
 
 
 

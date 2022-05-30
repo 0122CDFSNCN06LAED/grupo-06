@@ -11,13 +11,22 @@ const mainController = {
     let htmlPath = path.resolve("./src/views/main/index.ejs");
     res.render(htmlPath, {
       helpermasbuscados: helpermasbuscados,
-      user: req.session.usuariologueado
+      user: req.session.usuariologueado,
     });
   },
   checkout: function (req, res) {
     let htmlPath = path.resolve("./src/views/main/check-out.ejs");
-    res.render(htmlPath,{
-      user: req.session.usuariologueado});
+    const helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    const id = req.params.id;
+    const helper = helpers.find((h) => h.id == id);
+
+    res.render(htmlPath, { helper: helper, user: req.session.usuariologueado });
+  },
+  info: function (req, res) {
+    let htmlPath = path.resolve("./src/views/main/quienes-somos.ejs");
+    res.render(htmlPath, {
+      user: req.session.usuariologueado,
+    });
   },
 };
 

@@ -34,8 +34,8 @@
                                 <%=helper.nombre%>
                                     <%=helper.apellido%>
                             </p>
-                            <img class="imagen-trabajo" src="/images/foto-perfil.png" alt="">
-                            <p>
+                            <a href="http:/products/detail/<%=helper.id%>"><img class="imagen-trabajo" src="/images/foto-perfil.png" alt="">
+                            </a><p>
                                 <%=helper.oficio%>
                             </p>
                             <p>
@@ -45,7 +45,7 @@
                                 <i class="fas fa-heart icon-helper"></i>
                                 <i class="fas fa-share-alt icon-helper"></i>
                                 <% if (user) {%>
-                                <a href="/check-out"><i class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
+                                <a href="/check-out/<%=helper.id%>"><i class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
                                 <% } %>
                             </div>
                         </div>
