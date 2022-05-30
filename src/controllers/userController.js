@@ -3,28 +3,27 @@ const fs = require("fs");
 const bcrypt = require("bcryptjs");
 const { text } = require("express");
 const { validationResult } = require("express-validator");
-
 const userFilePath = path.join(__dirname, "../database/users.json");
+
 
 const user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 
 const userController = {
   login: function (req, res) {
     let htmlPath = path.resolve("./src/views/user/login.ejs");
-    res.render(htmlPath, {user: req.session.usuariologueado});
+    res.render(htmlPath, { user: req.session.usuariologueado });
   },
   processLogin: function (req, res) {
     let error = validationResult(req);
-    if (error.isEmpty()) 
-    {
+    if (error.isEmpty()) {
       const userFilePath = path.join(__dirname, "../database/users.json");
       const user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
       let usuarioAlloguearse = undefined;
-      
+
       for (let i = 0; i < user.length; i++) {
         if (user[i].email == req.body.email) {
           if (bcrypt.compareSync(req.body.password, user[i].password)) {
-            usuarioAlloguearse = user[i].firstName + ' ' + user[i].lastName;
+            usuarioAlloguearse = user[i]
             req.session.usuariologueado = usuarioAlloguearse;
             req.session.idUsuario = user[i].id;
             break;
@@ -34,19 +33,23 @@ const userController = {
 
       if (usuarioAlloguearse == undefined) {
         let htmlPath = path.resolve("./src/views/user/login.ejs");
-        res.render(htmlPath,{errors: [{
-           msg:('credenciales invalidas')
-         }],
-        user : req.session.usuariologueado});
-      }
-      else {
+        res.render(htmlPath, {
+          errors: [
+            {
+              msg: "credenciales invalidas",
+            },
+          ],
+          user: req.session.usuariologueado,
+        });
+      } else {
         res.redirect("../");
       }
-    } 
-      else 
-    {
+    } else {
       let htmlPath = path.resolve("./src/views/user/login.ejs");
-      res.render(htmlPath, { errors: error.errors, user: req.session.usuariologueado });
+      res.render(htmlPath, {
+        errors: error.errors,
+        user: req.session.usuariologueado,
+      });
     }
   },
 
@@ -59,6 +62,11 @@ const userController = {
   //  let htmlPath = path.resolve("./src/views/user/registerUser.ejs");
   //  res.render(htmlPath);
   //},
+  profile: function (req, res) {
+    let htmlPath = path.resolve("./src/views/user/profile.ejs");
+
+    res.render(htmlPath, { user: req.session.usuariologueado });
+  },
 
   storeUser: (req, res) => {
     //res.send(req.body);
@@ -75,7 +83,7 @@ const userController = {
       phone: req.body.Telefono,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      ...req.file
+      ...req.file,
     };
 
     user.push(newUser);
@@ -91,11 +99,11 @@ const userController = {
     res.render(htmlPath, { user: req.session.usuariologueado });
   },
 
-  signOut: function(req, res) {
+  signOut: function (req, res) {
     req.session.destroy(function () {
       res.redirect("/user/login");
     });
-  }
+  },
 };
 
 module.exports = userController;

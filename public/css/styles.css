@@ -9,7 +9,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
@@ -91,7 +91,7 @@ main {
     text-align: center;
     border: solid 1px #183153;
     margin-right: 10px;
-    /* font-weight:bolder */
+    font-weight:bolder
 }
 
 .font-13 {
@@ -148,7 +148,12 @@ main {
 .border-line{
 border: 1px solid rgba(0, 0, 0, .125);
 
+
 }
+.margin10{
+    margin: 10px;
+}
+
 @media (min-width: 480px) {
     .imagen-trabajo {
         height: 200px;

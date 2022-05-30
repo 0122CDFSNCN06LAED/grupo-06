@@ -31,6 +31,6 @@ router.post("/store", uploadFile.single("avatar"), productsController.store);
 router.get("/editHelper/:id", guestMiddleware, productsController.edit);
 router.put("/:id", productsController.update);
 
-router.delete("/delete/:id", productsController.erase);
+router.delete("/delete/:id", guestMiddleware, productsController.erase);
 
 module.exports = router;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-check-out.css">
+    </head>
+
+    <body class="bgGray">
+
+        <%- include("../partials/header.ejs")%>
+
+            <main>
+                <div class="white warranty">
+                    <h2>¡Hola <%=user.firstName%>
+                        <%=user.lastName%>! </h2>
+                </div>
+
+                          
+                    <div class="white warranty center">
+                    <img class=""src="/images/userImage/<%=user.filename%>" alt="Foto-Perfil">
+
+                </div>
+
+            </main>
+
+
+    </body>
+    <%- include("../partials/footer.ejs")%>
+
+</html>

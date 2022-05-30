@@ -106,5 +106,22 @@
     "path": "public\\images\\userImage\\1653175612057_img.jpg",
     "size": 107576,
     "id": 16
+  },
+  {
+    "id": 17,
+    "firstName": "Flavia",
+    "lastName": "Frutos",
+    "phone": "1215121515",
+    "email": "flafrutos@gmail.com",
+    "password": "$2a$10$UPZeZXZaGx7mG27F1poS/urV3YiD.74BcKixE1.b1pTwuUGz5PG2C",
+    "fieldname": "userImage",
+    "originalname": "descargas.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "./public/images/userImage",
+    "filename": "1653850478895_img.jpg",
+    "path": "public\\images\\userImage\\1653850478895_img.jpg",
+    "size": 9986
+    
   }
 ]

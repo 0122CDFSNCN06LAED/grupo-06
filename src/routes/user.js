@@ -13,7 +13,7 @@ const loginValidations = require("../validations/loginValidations.js");
 const urlencoded = require("express");
 
 const guestMiddleware = require("../middleware/guestMiddleware.js");
-
+const authMiddleware = require("../middleware/authMiddleware.js");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -29,13 +29,15 @@ const uploadFile = multer({ storage });
 
 const userController = require("../controllers/userController.js");
 
-router.get("/login", userController.login);
+router.get("/login", authMiddleware, userController.login);
 router.post("/login", validations, userController.processLogin);
 
 
-router.get("/registerUser", userController.register);
+router.get("/registerUser", authMiddleware, userController.register);
+
 //router.get("/registerUserOrHelper", userController.registerUserOrHelper);
 //router.get("/registerUser", userController.addUser);
+router.get("/profile", guestMiddleware, userController.profile);
 
 router.post(
   "/storeUser",
