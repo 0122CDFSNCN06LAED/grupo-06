@@ -66,7 +66,8 @@ const userController = {
   storeUser: (req, res) => {
     const resultValidationUsers = validationResult(req);
     let htmlPath = path.resolve("./src/views/user/registerUser.ejs");
-    if (resultValidationUsers.errors.length > 0) {
+
+    if (resultValidationUsers.errors.length == 0) {
       const lastIndex = user.length - 1;
       const lastUser = user[lastIndex];
       const biggestId = lastUser ? lastUser.id : 0;
@@ -90,6 +91,7 @@ const userController = {
     } else {
       return res.render(htmlPath, {
         errors: resultValidationUsers.mapped(),
+        user: req.session.usuariologueado,
       });
     }
   },
