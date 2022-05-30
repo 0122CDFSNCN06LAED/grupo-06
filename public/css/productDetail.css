@@ -1,10 +1,11 @@
 .no-decoration {
-	text-decoration:none;
+	text-decoration:none;margin-bottom: 0;
 }
 
-.p{
-	margin-bottom: 0;
-}
+
+
+
+
 
 .helper-register{
 	line-height:1
