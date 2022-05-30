@@ -5,8 +5,7 @@ main {
 .description {
     border:none;
     width:100%;
-    margin-left: 5px;
-    margin-right:5px;
+
     border-radius:3px;
     font-size: 12px;
     padding:10px;
@@ -20,7 +19,7 @@ main {
 
 .register-box {
     font-family: roboto;
-    border-radius:5px;
+    border-radius:10px;
     width:300px;
     text-align: center;
     margin-left: auto;
@@ -32,16 +31,20 @@ main {
 
 
 .form-section{
-    /* display:flex; */
+    display:flex;
     flex-wrap:wrap;
     width:100%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .enter-credentials {
     color: black;
     background-color: white;
     font-size: 12px;
-    border: solid 1px #f0f1f3ff;
+    border: solid 1px darkgray;
     border-radius:3px;
     width: 230px;
     padding:5px;
