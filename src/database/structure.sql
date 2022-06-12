@@ -4,12 +4,14 @@ create database helpers_db;
 
 use helpers_db;
 
+drop table if exists profiles;
 create table profiles (
 id int(10) unsigned auto_increment not null,
 name varchar(100) not null,
 primary key (id)
 );
 
+drop table if exists users;
 create table users (
 id int(10) unsigned auto_increment not null,
 first_name varchar(100) not null,
@@ -29,7 +31,7 @@ primary key (id),
 foreign key (perfil_id) references profiles(id)
 );
 
-
+drop table if exists oficios;
 create table oficios (
 id int(10) unsigned auto_increment not null,
 name varchar(100) not null,
@@ -38,6 +40,7 @@ usa_seguro tinyint not null,
 primary key (id)
 );
 
+drop table if exists helpers;
 create table helpers (
 id int(10) unsigned auto_increment not null,
 calle varchar(100) not null,
