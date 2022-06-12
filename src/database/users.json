@@ -298,5 +298,21 @@
     "filename": "1655062218192_img.jpg",
     "path": "public\\images\\userImage\\1655062218192_img.jpg",
     "size": 2413831
+  },
+  {
+    "id": 29,
+    "firstName": "Alec",
+    "lastName": "Coleman",
+    "phone": "1169519090",
+    "email": "acoleman85@gmail.com",
+    "password": "$2a$10$chBiAwsjLFYNgckE4WQALOjyRomHkfjzWKU3mvj17u6DNnYebBqQC",
+    "fieldname": "userImage",
+    "originalname": "IMG_20200307_100650648_copy.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "./public/images/userImage",
+    "filename": "1655074606341_img.jpg",
+    "path": "public\\images\\userImage\\1655074606341_img.jpg",
+    "size": 973728
   }
 ]
