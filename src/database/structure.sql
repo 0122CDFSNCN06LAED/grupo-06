@@ -19,16 +19,17 @@ last_name varchar(100) not null,
 phone bigint not null,
 email varchar(200) not null,
 password varchar(200) not null,
-perfil_id int unsigned not null,
+profile_id int unsigned not null,
 field_name varchar(200),
 original_name varchar(200),
 encoding varchar(100),
 mimetype varchar(100),
 destination varchar(200),
+filename varchar(200),
 path varchar(200),
 size bigint,
 primary key (id),
-foreign key (perfil_id) references profiles(id)
+foreign key (profile_id) references profiles(id)
 );
 
 drop table if exists oficios;
