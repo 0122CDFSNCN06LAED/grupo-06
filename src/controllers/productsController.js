@@ -10,7 +10,7 @@ const db = require("../database/models");
 const productsController = {
   index: (req, res) => {
     let htmlPath = path.resolve("./src/views/products/products.ejs");
-    db.Helper.findAll()
+    db.Helper.findAll({include: ['user']})
       .then((helper) => {
         res.render(htmlPath, {
           products: helper,

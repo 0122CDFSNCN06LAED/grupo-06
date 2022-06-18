@@ -49,10 +49,10 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
     usuario_id: {
-      type: dataTypes.STRING(200),
+      type: dataTypes.BIGINT(10).UNSIGNED,
     },
     oficio_id: {
-      type: dataTypes.STRING(200),
+      type: dataTypes.BIGINT(10).UNSIGNED,
     },
   };
 
@@ -63,7 +63,7 @@ module.exports = (sequelize, dataTypes) => {
 
   const Helper = sequelize.define(alias, columns, config);
 
-  Helper.asocciate = function (models) {
+  Helper.associate = function (models) {
     //un helper pertenece a un user??
     Helper.belongsTo(models.User, {
       as: "user",

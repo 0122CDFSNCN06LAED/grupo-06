@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
 
-    perfil_id: {
+    profile_id: {
       type: dataTypes.BIGINT(10).UNSIGNED,
     },
 
@@ -69,9 +69,9 @@ module.exports = (sequelize, dataTypes) => {
 
   const User = sequelize.define(alias, columns, config);
 
-  User.asocciate = function (models) {
+  User.associate = function (models) {
     //un helper pertenece a un user??
-    User.belongsTo(models.Helper, {
+    User.hasOne(models.Helper, {
       as: "helper",
       foreignKey: "usuario_id",
     });    

@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const Oficio = sequelize.define(alias, columnas, config);
 
-    Oficio.asocciate = function (models) {
+    Oficio.associate = function (models) {
         //un oficio pertenece a varios helpers??
         Oficio.hasMany(models.Helper, {
             as: "helper",

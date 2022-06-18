@@ -22,11 +22,11 @@ module.exports = (sequelize, dataTypes) => {
 
     const Profile = sequelize.define(alias, columnas, config);
 
-    Profile.asocciate = function (models) {
+    Profile.associate = function (models) {
         //un oficio pertenece a varios helpers??
         Profile.hasMany(models.User, {
             as: "user",
-            foreignKey: "perfil_id"
+            foreignKey: "profile_id"
 
         });
 
