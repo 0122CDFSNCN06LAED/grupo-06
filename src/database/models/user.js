@@ -1,93 +1,86 @@
 module.exports = (sequelize, dataTypes) => {
-    //nombre tabla
-    let alias = "User"
-    //columnas y tipos de datos:
-    let columnas = {
-        id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        first_name: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        last_name: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        phone: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+  //nombre tabla
+  let alias = "User";
+  //columnas y tipos de datos:
+  let columns = {
+    id: {
+      type: dataTypes.BIGINT(10).UNSIGNED,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    first_name: {
+      type: dataTypes.STRING(100),
+      allowNull: false,
+    },
+    last_name: {
+      type: dataTypes.STRING(100),
+      allowNull: false,
+    },
+    phone: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+    email: {
+      type: dataTypes.STRING(200),
+      allowNull: false,
+    },
 
-        },
-        email: {
-            type: dataTypes.STRING(200),
-            allowNull: false
-        },
+    password: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
 
-        password: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
+    perfil_id: {
+      type: dataTypes.BIGINT(10).UNSIGNED,
+    },
 
-        perfil_id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+    field_name: {
+      type: dataTypes.STRING(200),
+    },
 
-        },
+    original_name: {
+      type: dataTypes.STRING(200),
+    },
 
-        field_name: {
-            type: dataTypes.STRING(200)
-        },
+    encoding: {
+      type: dataTypes.STRING(200),
+    },
 
-        original_name: {
-            type: dataTypes.STRING(200)
-        },
+    mimetype: {
+      type: dataTypes.STRING(100),
+    },
 
-        encoding: {
-            type: dataTypes.STRING(200)
-        },
+    destination: {
+      type: dataTypes.STRING(200),
+    },
 
-        mimetype: {
-            type: dataTypes.STRING(100)
-        },
+    path: {
+      type: dataTypes.STRING(200),
+    },
+    size: {
+      type: dataTypes.BIGINT,
+    },
+  };
 
-        destination: {
-            type: dataTypes.STRING(200)
-        },
+  let config = {
+    tableName: "users",
+    timestamps: false,
+  };
 
-        path: {
-            type: dataTypes.STRING(200)
-        },
-        size: {
-            type: dataTypes.BIGINT
-        },
+  const User = sequelize.define(alias, columns, config);
 
-    };
+  User.asocciate = function (models) {
+    //un helper pertenece a un user??
+    User.belongsTo(models.Helper, {
+      as: "helper",
+      foreignKey: "usuario_id",
+    });    
 
-    let config={
-        tableName: "users",
-        timestamps: false,
-
-    }
-
-const User= sequelize.define(alias, columnas, config);
-
-User.asocciate= function(models){
-    //un usuario pertenece a un helper??
-    User.belongsTo(models.Helper,{
-        as: "helper",
-        foreignKey: "usuario_id" 
-
+    User.hasMany(models.Profile, {
+      //usuarios pertenecen a un perfil
+      as: "profiles",
+      foreignKey: "profile_id",
     });
-
-    User.belongsTo(models.Profile, {
-        //varios usuarios pertenecen a un perfil
-        as: "profile",
-        foreignKey: "perfil_id"
-    });
-
-    
-}
-
-}
+  };
+  return User
+};
