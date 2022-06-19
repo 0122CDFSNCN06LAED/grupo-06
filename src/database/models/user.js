@@ -54,6 +54,10 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(200),
     },
 
+    filename: {
+      type: dataTypes.STRING(200),
+    },
+
     path: {
       type: dataTypes.STRING(200),
     },

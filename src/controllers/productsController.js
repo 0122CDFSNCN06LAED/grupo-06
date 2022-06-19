@@ -10,7 +10,7 @@ const db = require("../database/models");
 const productsController = {
   index: (req, res) => {
     let htmlPath = path.resolve("./src/views/products/products.ejs");
-    db.Helper.findAll({include: ['user']})
+    db.Helper.findAll({ include: ["user"] })
       .then((helper) => {
         res.render(htmlPath, {
           products: helper,
@@ -35,8 +35,7 @@ const productsController = {
 
   detail: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/productDetail.ejs");
-    db.Helper.findByPk(req.params.id,
-       ).then((helper) => {
+    db.Helper.findByPk(req.params.id, { include: ["user"] }).then((helper) => {
       res.render(htmlPath, {
         product: helper,
         user: req.session.usuariologueado,

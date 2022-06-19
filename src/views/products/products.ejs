@@ -48,7 +48,8 @@
                             
 
                             <div class="card__img_wrapper col-3" height="100%">
-                                <img class="img_card" src="/images/foto-perfil.png" alt="">
+                                <img class="img_card" src="/images/userImage/<%= product.user.filename%>" alt="">
+                          
                             </div>
                             <div class="card__body centerWrap">
                                 <a href="products/detail/<%=product.id%>" class="no-decoration">
@@ -63,7 +64,7 @@
                                 </h4>
                                 <h4 class="blueLetter">
                                     <%= product.tarifaHora%>
-                                    <%= product.tarifa%>
+                                    $<%= product.tarifa%>
                                 </h4>
 
                                 <div class="d-flex flex-row ">

@@ -48,7 +48,7 @@
 				<div class="card row">
 
 					<div class="card__img_wrapper col-3" height="100%">
-						<img class="img_card" src="/images/foto-perfil.png" alt="">
+						<img class="img_card" src="/images/userImage/<%= product.user.filename%>" alt="">
 					</div>
 					<div class="card__body col-8">
 						<%product.id%>
@@ -64,25 +64,25 @@
 									<!-- <%= product.nombre%>
 										<%= product.apellido%>
 											 -->
-									<%= product.first_name%>
-									<%= product.last_name%>
+									<%= product.user.first_name%>
+										<%= product.user.last_name%>
 
 
 								</h3>
 								<h3 class="no-decoration center">
-									<%= product.oficio%> | 
-										<%= product.tarifa%> /h
-											
+									<%= product.oficio%>
+										$<%= product.tarifa%> /h
+
 
 								</h3>
 								<p class="no-decoration">
-										<%= product.descripcion%>
+									<%= product.descripcion%>
 								</p>
-																<h4 class="no-decoration center">
-									<%= product.barrio%> | 
-								<%= product.provincia%>
-						
-											
+								<h4 class="no-decoration center">
+									<%= product.barrio%> |
+										<%= product.provincia%>
+
+
 
 								</h4>
 							</div>
