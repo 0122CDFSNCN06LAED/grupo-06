@@ -31,15 +31,15 @@
 
                         <div class="articulo-trabajo-mas-buscado white blueLetter border-line">
                             <p class="nombre-helper">
-                                <%=helper.nombre%>
-                                    <%=helper.apellido%>
+                                <%=helper.user.first_name%>
+                                    <%=helper.user.last_name%>
                             </p>
-                            <a href="http:/products/detail/<%=helper.id%>"><img class="imagen-trabajo" src="/images/foto-perfil.png" alt="">
+                            <a href="http:/products/detail/<%=helper.id%>"><img class="imagen-trabajo" src="/images/userImage/<%= helper.user.filename%>" alt="">
                             </a><p>
-                                <%=helper.oficio%>
+                                <%=helper.oficio.name%>
                             </p>
                             <p>
-                                <%=helper.tarifaHora%> /h
+                                $<%=helper.tarifa%> /h
                             </p>
                             <div class="interacciones">
                                 <i class="fas fa-heart icon-helper"></i>
