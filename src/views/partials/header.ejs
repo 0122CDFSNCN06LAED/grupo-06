@@ -7,8 +7,10 @@
         <%} %>
         <% if (user) {%>
         <i class="fas fa-user"></i>
-       <a class="blueLetter margin10 no-decoration" href="http:/user/profile"> <p><%= user.firstName %></p></a>
+       <a class="blueLetter margin10 no-decoration" href="http:/user/profile"> <p><%= user.first_name %></p></a>
+        <% if (user.profile_id != 3){%>
         <a class="helper-register " href="/products/registerHelper">Convertite en Helper</a>
+        <% } %>
         <a class="login" href="/user/signOut">Cerrar Sesión</a>
         <% } %>
     </div>
