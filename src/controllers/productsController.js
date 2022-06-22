@@ -179,6 +179,20 @@ const productsController = {
       });
   },
 
+  listOficio: (req, res) => {
+    let htmlPath = path.resolve("./src/views/products/oficios.ejs");
+    db.Oficio.findAll()
+      .then((oficios) => {
+        res.render(htmlPath, {
+          oficios,
+          user: req.session.usuariologueado,
+        });
+      })
+      .catch((err) => {
+        return res.send(err);
+      });
+  },
+
   erase: function (req, res) {
     db.Helper.findOne({
       where: { id: req.params.id },
