@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const {check} = require("express-validator")
+const { check } = require("express-validator");
 const validations = [
   check("email").notEmpty().withMessage("Ingrese Un Usuario"),
   check("email").isEmail().withMessage("Email Invalido"),
@@ -31,7 +31,6 @@ const userController = require("../controllers/userController.js");
 
 router.get("/login", authMiddleware, userController.login);
 router.post("/login", validations, userController.processLogin);
-
 
 router.get("/registerUser", authMiddleware, userController.register);
 
