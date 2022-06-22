@@ -23,27 +23,23 @@
                             <select name="provincia" placeholder="Provincia">
                                 <option value="">Provincia</option>
                                 <% 
-                                    let provincias = [ "Buenos Aires","Córdoba","Santa Fe","Corrientes" ]
+                                    let provincias = [ "Buenos Aires","Córdoba","Santa Fe","Corrientes", "CABA" ]
                                  %> 
                                 <% for (const oneProvincias of provincias){ %>
                                     <option value="<%= oneProvincias %>"> <%= oneProvincias %> </option> 
                                 <% } %>    
                             </select>
 
-                            <input type="text" name="codigo Postal" placeholder="Código Postal"
+                            <input type="text" name="codigoPostal" placeholder="Código Postal"
                                 class="enter-credentials" required>
                         </div>
                         <div class = "form-section">
                             <p class="section-header">Datos de Oficio</p>
                             <input type="text" name="oficio" placeholder="Oficio" class="enter-credentials" required>
-                            <input type="text" name="años-de-Experiencia" placeholder="Años de Experiencia" class="enter-credentials" required>
+                            <input type="text" name="añosDeExperiencia" placeholder="Años de Experiencia" class="enter-credentials" required>
                             <input type="text" name="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials" required>
                             <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
                         </div>
-                            <div>
-                                <label><b>Imagen de perfil:</b></label>
-                                <input type="file" name="avatar" placeholder="cargar imagen" class="enter-credentials" required>
-                            </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
                             <button type="submit" class="submit-button">Registrarse</button>

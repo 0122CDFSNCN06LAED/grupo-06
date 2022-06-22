@@ -61,21 +61,41 @@ const productsController = {
   store: (req, res) => {
     //res.send(req.body);
 
-    const lastIndex = helpers.length - 1;
-    const lastProduct = helpers[lastIndex];
-    const biggestId = lastProduct ? lastProduct.id : 0;
-    const newId = biggestId + 1;
+    db.Helper.create({
+      calle: req.body.calle,
+      numero: req.body.numero,
+      barrio: req.body.barrio,
+      provincia: req.body.provincia,
+      codigo_postal: req.body.codigoPostal,
+      mas_buscados: "0",
+      anos_de_experiencia: req.body.añosDeExperiencia,
+      tarifa: req.body.tarifa,
+      descripcion: req.body.descripcion,
+      usuario_id: req.session.usuariologueado.id,
+      oficio_id: 1
+    });
 
-    const newProduct = {
-      ...req.body,
-      ...req.file,
-      id: newId,
-    };
+    //implementar lógica para ver la lista de oficios
 
-    helpers.push(newProduct);
+    // agregar update a tabla users para cambiar perfil a helper
 
-    const jsonTxt = JSON.stringify(helpers, null, 2);
-    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+
+
+    // const lastIndex = helpers.length - 1;
+    // const lastProduct = helpers[lastIndex];
+    // const biggestId = lastProduct ? lastProduct.id : 0;
+    // const newId = biggestId + 1;
+
+    // const newProduct = {
+    //   ...req.body,
+    //   ...req.file,
+    //   id: newId,
+    // };
+
+    // helpers.push(newProduct);
+
+    // const jsonTxt = JSON.stringify(helpers, null, 2);
+    // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
 
     res.redirect("/products");
   },
