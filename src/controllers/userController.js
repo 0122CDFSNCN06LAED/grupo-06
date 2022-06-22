@@ -16,34 +16,30 @@ const userController = {
   processLogin: function (req, res) {
     let error = validationResult(req);
     if (error.isEmpty()) {
-      const userFilePath = path.join(__dirname, "../database/users.json");
-      const user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
-      let usuarioAlloguearse = undefined;
+      // const userFilePath = path.join(__dirname, "../database/users.json");
+      // const user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 
-      for (let i = 0; i < user.length; i++) {
-        if (user[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, user[i].password)) {
-            usuarioAlloguearse = user[i];
-            req.session.usuariologueado = usuarioAlloguearse;
-            req.session.idUsuario = user[i].id;
-            break;
-          }
+      db.User.findOne({
+        where: { email: req.body.email },
+      }).then((user) => {
+        const check = bcrypt.compareSync(req.body.password, user.password);
+        if (check) {
+          usuarioAlloguearse = user;
+          req.session.usuariologueado = usuarioAlloguearse;
+          req.session.idUsuario = user.id;
+          res.redirect("../");
+        } else {
+          let htmlPath = path.resolve("./src/views/user/login.ejs");
+          res.render(htmlPath, {
+            errors: [
+              {
+                msg: "credenciales invalidas",
+              },
+            ],
+            user: req.session.usuariologueado,
+          });
         }
-      }
-
-      if (usuarioAlloguearse == undefined) {
-        let htmlPath = path.resolve("./src/views/user/login.ejs");
-        res.render(htmlPath, {
-          errors: [
-            {
-              msg: "credenciales invalidas",
-            },
-          ],
-          user: req.session.usuariologueado,
-        });
-      } else {
-        res.redirect("../");
-      }
+      });
     } else {
       let htmlPath = path.resolve("./src/views/user/login.ejs");
       res.render(htmlPath, {
