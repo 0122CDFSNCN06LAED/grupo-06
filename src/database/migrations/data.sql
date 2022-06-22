@@ -15,6 +15,11 @@ INSERT INTO users(first_name,last_name,phone,email,password,field_name,original_
 INSERT INTO users(first_name,last_name,phone,email,password,field_name,original_name,encoding,mimetype,destination,filename,path,size,profile_id) VALUES ('Julian','Wan',2146456789,'juliwan@gmail.com','$2a$10$7C8T9w24vCLVYVWOqW/8X.ZIbJVJj2GUs6WJS4D2CCYO29MYulHxi','userImage','julian-wan-WNoLnJo7tS8-unsplash.jpg','7bit','image/jpeg','./public/images/userImage','1655062179137_img.jpg','public\images\userImage\1655062179137_img.jpg',2107075,3);
 INSERT INTO users(first_name,last_name,phone,email,password,field_name,original_name,encoding,mimetype,destination,filename,path,size,profile_id) VALUES ('Albert','Tesla',78945645,'ellocoalbert@tesla.com','$2a$10$kp3joaBaUf6tuyiJm7Yb6.e2o2T95v4Eko1OrEzXfcODeWoqZVCGu','userImage','albert-dera-ILip77SbmOE-unsplash.jpg','7bit','image/jpeg','./public/images/userImage','1655062218192_img.jpg','public\images\userImage\1655062218192_img.jpg',2413831,2);
 INSERT INTO users(first_name,last_name,phone,email,password,field_name,original_name,encoding,mimetype,destination,filename,path,size,profile_id) VALUES ('Alec','Coleman',1169519090,'acoleman85@gmail.com','$2a$10$chBiAwsjLFYNgckE4WQALOjyRomHkfjzWKU3mvj17u6DNnYebBqQC','userImage','IMG_20200307_100650648_copy.jpg','7bit','image/jpeg','./public/images/userImage','1655074606341_img.jpg','public\images\userImage\1655074606341_img.jpg',973728,1);
+INSERT INTO users(first_name,last_name,phone,email,password,field_name,original_name,encoding,mimetype,destination,filename,path,size,profile_id) VALUES ('Jose Ignacio','Paolini',221555555,'joseignaciopaolini@gmail.com','$2a$10$zcdv90OFV3oR/XuL0y.ALOHuzdCaPPI.UbFICmFLhmu.RAK7BvqzK','userImage','José Ignacio Paolini.jpg','7bit','image/jpeg','./public/images/userImage','1655864042460_img.jpg','public\\images\\userImage\\1655864042460_img.jpg',107576,1);
+
+
+
+
 
 insert into oficios(name, image, usa_seguro) values ('Jardinería', 'bordeadora.jpg', 0);
 insert into oficios(name, image, usa_seguro) values ('Plomería', 'Plomería.jpg', 0);
@@ -29,9 +34,5 @@ INSERT INTO helpers(calle,numero,codigo_postal,provincia,barrio,oficio_id,anos_d
 INSERT INTO helpers(calle,numero,codigo_postal,provincia,barrio,oficio_id,anos_de_experiencia,tarifa,mas_buscados,descripcion,usuario_id) VALUES ('De La Vega',1560,1820,'CABA','Belgrano',2,5,310,1,'Suspendisse potenti. Cras in purus eu magna vulputate luctus.',9);
 INSERT INTO helpers(calle,numero,codigo_postal,provincia,barrio,oficio_id,anos_de_experiencia,mas_buscados,tarifa,descripcion,usuario_id) VALUES ('Guemez',1533,1561,'Santa Fe','Los Pinos',5,15,1,8.89,'Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',10);
 INSERT INTO helpers(calle,numero,codigo_postal,provincia,barrio,oficio_id,anos_de_experiencia,tarifa,mas_buscados, descripcion,usuario_id) VALUES ('Parana',1220,92822,'Buenos Aires','San Fernando',4,14,3.14,0,'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',11);
-INSERT INTO users (first_name,last_name,phone,email,password,profile_id,field_name,original_name,encoding,mimetype,destination,filename,`path`,`size`) VALUES
-	 ('jose ignacio paolini','Paolini',221555555,'joseignaciopaolini@gmail.com','$2a$10$zcdv90OFV3oR/XuL0y.ALOHuzdCaPPI.UbFICmFLhmu.RAK7BvqzK',1,'userImage','José Ignacio Paolini.jpg','7bit','image/jpeg','./public/images/userImage','1655864042460_img.jpg','public\\images\\userImage\\1655864042460_img.jpg',107576);
-
-
 
 
