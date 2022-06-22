@@ -125,30 +125,31 @@ const productsController = {
 
   //let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
   //res.render(htmlPath, {
-  //helper,
+  // helper,
   // user: req.session.usuariologueado,
-  //});
-  // },
-  //update: function (req, res) {
-  //  const id = req.params.id;
-
-  // const helper = helpers.find((p) => id == p.id);
-
-  //Object.assign(helper, {
-  //   ...req.body,
   // });
+  // },
+  update: function (req, res) {
+    const id = req.params.id;
 
-  // const jsonTxt = JSON.stringify(helpers, null, 2);
-  // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+    const helper = helpers.find((p) => id == p.id);
 
-  //  res.redirect("/products/");
-  //},
+    Object.assign(helper, {
+      ...req.body,
+    });
+
+    const jsonTxt = JSON.stringify(helpers, null, 2);
+    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+
+    res.redirect("/products/");
+  },
 
   //Edit Database
 
   edit: function (req, res) {
     db.Helper.findOne({
-      where: { usuario_id: req.session.usuariologueado.id },
+      where: { id: req.params.id },
+      include: ["user", "oficio"],
     }).then((helper) => {
       let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
       res.render(htmlPath, {

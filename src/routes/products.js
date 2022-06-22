@@ -5,7 +5,6 @@ const multer = require("multer");
 
 const guestMiddleware = require("../middleware/guestMiddleware.js");
 
-
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "./public/images/avatars");
@@ -29,7 +28,7 @@ router.get("/registerHelper", guestMiddleware, productsController.add);
 router.post("/store", uploadFile.single("avatar"), productsController.store);
 
 router.get("/editHelper/:id", guestMiddleware, productsController.edit);
-router.put("/:id", productsController.update);
+//router.put("/:id", productsController.update);
 
 router.get("/oficio/:id", productsController.listByOficio);
 
