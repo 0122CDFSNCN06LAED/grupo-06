@@ -56,7 +56,9 @@ const productsController = {
 
   add: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
-    res.render(htmlPath, { user: req.session.usuariologueado });
+    db.Oficio.findAll()
+      .then((oficios) => {
+    res.render(htmlPath, { user: req.session.usuariologueado, oficios: oficios })});
   },
   store: (req, res) => {
     //res.send(req.body);
@@ -72,12 +74,8 @@ const productsController = {
       tarifa: req.body.tarifa,
       descripcion: req.body.descripcion,
       usuario_id: req.session.usuariologueado.id,
-      oficio_id: 1
+      oficio_id: req.body.oficio
     });
-
-    //implementar lógica para ver la lista de oficios
-
-    // agregar update a tabla users para cambiar perfil a helper
 
 
 
