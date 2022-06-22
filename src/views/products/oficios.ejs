@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs")%>
+    <!-- head abierto en include -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/styles-check-out.css">
+    
+
+
+    </head>
+
+    <body class="bgGray">
+        <%- include("../partials/header.ejs")%>
+            <section class="seccion-trabajos-catalogo">
+                <h3 class="section-header">Catálogo de Oficios</h3>
+                <section class="sub-seccion-trabajos-catalogo ">
+    
+                    <%oficios.forEach(help=>{%>
+    
+                        <div class="articulo-trabajo-mas-buscado">
+                            <a href="/products/oficio/<%=help.id%>">
+                                <img class="professionalPicture imagen-trabajo" src="/images/<%=help.image%>"
+                                    alt="oficio <%=help.name%>">
+                            </a>
+                            <div class="interacciones">
+    
+                                <%=help.name%>
+    
+    
+                            </div>
+                        </div>
+    
+    
+                        <% })%>
+    
+                </section>
+                <%- include("../partials/footer.ejs")%>
+    </body>
+    
+    </html>

@@ -43,7 +43,12 @@
 
 
                 <div class="main_container__cards container d-flex flex-column">
+                    <%if(helpers.length< 1 ){ %>
+                        <%- include("../partials/error.ejs")%>
+                    <% } %>
+
                     <%helpers.forEach(product=> { %>
+                        
                         <div class="card row">
 
 

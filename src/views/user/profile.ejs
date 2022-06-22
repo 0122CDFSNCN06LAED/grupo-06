@@ -11,16 +11,20 @@
 
             <main>
                 <div class="white warranty">
-                    <h2>¡Hola <%=user.firstName%>
-                        <%=user.lastName%>! </h2>
+                    <h2>¡Hola <%=user.first_name%>
+                        <%=user.last_name%>! </h2>
                 </div>
-
+                        
                           
                     <div class="white warranty center">
                     <img class="professionalPicture"src="/images/userImage/<%=user.filename%>" alt="Foto-Perfil">
 
                 </div>
-
+                    <div class=" warranty center">
+                      <div> Teléfono: <%=user.phone%></div>
+                        <div>Mail: <%=user.email%></div>  
+                    
+                    </div>
             </main>
 
 

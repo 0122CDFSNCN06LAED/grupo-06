@@ -79,12 +79,11 @@ const productsController = {
       usuario_id: req.session.usuariologueado.id,
       oficio_id: req.body.oficio,
     }).then(() => {
-          db.Helper.findOne({
-            where: { usuario_id: req.session.usuariologueado.id },
-          }).then((helper) => {
-            res.redirect("/products/detail/" + helper.id);
-          });
-
+      db.Helper.findOne({
+        where: { usuario_id: req.session.usuariologueado.id },
+      }).then((helper) => {
+        res.redirect("/products/detail/" + helper.id);
+      });
     });
 
     // si el usuario tiene perfil user - lo actualizo a Helper
@@ -97,10 +96,9 @@ const productsController = {
           {
             where: { id: req.session.usuariologueado.id },
           }
-        )
-          .then(() => {
-            req.session.usuariologueado.profile_id = 3;
-          });
+        ).then(() => {
+          req.session.usuariologueado.profile_id = 3;
+        });
       }
     });
 
@@ -119,7 +117,6 @@ const productsController = {
 
     // const jsonTxt = JSON.stringify(helpers, null, 2);
     // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
-    
   },
 
   edit: function (req, res) {
@@ -149,49 +146,60 @@ const productsController = {
 
   listByOficio: (req, res) => {
     let htmlPath = path.resolve("./src/views/products/listByOficio.ejs");
-   db.Helper.findAll({
-     where: {
-      oficio_id:req.params.id,
-       
-     },
-     
-     include: ["user", "oficio"],
-   })
-     .then((helpers) => {
-       res.render(htmlPath, {
-         helpers,
-         user: req.session.usuariologueado,
-       });
-     })
-     .catch((err) => {
-       return res.send(err);
-     });
+    db.Helper.findAll({
+      where: {
+        oficio_id: req.params.id,
+      },
+
+      include: ["user", "oficio"],
+    })
+      .then((helpers) => {
+        res.render(htmlPath, {
+          helpers,
+          user: req.session.usuariologueado,
+        });
+      })
+      .catch((err) => {
+        return res.send(err);
+      });
+  },
+
+  listOficio: (req, res) => {
+    let htmlPath = path.resolve("./src/views/products/oficios.ejs");
+    db.Oficio.findAll()
+      .then((oficios) => {
+        res.render(htmlPath, {
+          oficios,
+          user: req.session.usuariologueado,
+        });
+      })
+      .catch((err) => {
+        return res.send(err);
+      });
   },
 
   erase: function (req, res) {
-    
     db.Helper.findOne({
       where: { id: req.params.id },
     })
       .then((helperToDelete) => {
         db.Helper.destroy({
           where: { id: req.params.id },
-        })
+        });
       })
       .then(() => {
         res.redirect("/products");
       });
-    }
-    
-    // let productsFilePath = path.join(__dirname, "../database/products.json");
-    // let helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+  },
 
-    // const id = req.params.id;
-    // const helper = helpers.filter((product) => product.id != id);
+  // let productsFilePath = path.join(__dirname, "../database/products.json");
+  // let helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-    // const jsonTxt = JSON.stringify(helper, null, 2);
-    // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+  // const id = req.params.id;
+  // const helper = helpers.filter((product) => product.id != id);
 
+  // const jsonTxt = JSON.stringify(helper, null, 2);
+  // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
 };
 
 module.exports = productsController;

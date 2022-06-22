@@ -32,6 +32,7 @@ router.get("/editHelper/:id", guestMiddleware, productsController.edit);
 router.put("/:id", productsController.update);
 
 router.get("/oficio/:id", productsController.listByOficio);
+router.get("/oficios", productsController.listOficio);
 
 router.delete("/delete/:id", guestMiddleware, productsController.erase);
 
