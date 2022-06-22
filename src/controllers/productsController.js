@@ -78,6 +78,13 @@ const productsController = {
       descripcion: req.body.descripcion,
       usuario_id: req.session.usuariologueado.id,
       oficio_id: req.body.oficio,
+    }).then(() => {
+          db.Helper.findOne({
+            where: { usuario_id: req.session.usuariologueado.id },
+          }).then((helper) => {
+            res.redirect("/products/detail/" + helper.id);
+          });
+
     });
 
     
@@ -91,7 +98,10 @@ const productsController = {
           {
             where: { id: req.session.usuariologueado.id },
           }
-        );
+        )
+          .then(() => {
+            req.session.usuariologueado.profile_id = 3;
+          });
       }
     });
 
@@ -110,8 +120,7 @@ const productsController = {
 
     // const jsonTxt = JSON.stringify(helpers, null, 2);
     // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
-
-    res.redirect("/products");
+    
   },
 
   edit: function (req, res) {
