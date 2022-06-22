@@ -119,29 +119,43 @@ const productsController = {
     // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
   },
 
+  //edit: function (req, res) {
+  //const id = req.params.id;
+  //const helper = helpers.find((p) => id == p.id);
+
+  //let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
+  //res.render(htmlPath, {
+  //helper,
+  // user: req.session.usuariologueado,
+  //});
+  // },
+  //update: function (req, res) {
+  //  const id = req.params.id;
+
+  // const helper = helpers.find((p) => id == p.id);
+
+  //Object.assign(helper, {
+  //   ...req.body,
+  // });
+
+  // const jsonTxt = JSON.stringify(helpers, null, 2);
+  // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+
+  //  res.redirect("/products/");
+  //},
+
+  //Edit Database
+
   edit: function (req, res) {
-    const id = req.params.id;
-    const helper = helpers.find((p) => id == p.id);
-
-    let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
-    res.render(htmlPath, {
-      helper,
-      user: req.session.usuariologueado,
+    db.Helper.findOne({
+      where: { usuario_id: req.session.usuariologueado.id },
+    }).then((helper) => {
+      let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
+      res.render(htmlPath, {
+        helper: helper,
+        user: req.session.usuariologueado,
+      });
     });
-  },
-  update: function (req, res) {
-    const id = req.params.id;
-
-    const helper = helpers.find((p) => id == p.id);
-
-    Object.assign(helper, {
-      ...req.body,
-    });
-
-    const jsonTxt = JSON.stringify(helpers, null, 2);
-    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
-
-    res.redirect("/products/");
   },
 
   listByOficio: (req, res) => {
