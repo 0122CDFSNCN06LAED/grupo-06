@@ -149,17 +149,29 @@ const productsController = {
   },
 
   erase: function (req, res) {
-    let productsFilePath = path.join(__dirname, "../database/products.json");
-    let helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    
+    db.Helper.findOne({
+      where: { id: req.params.id },
+    })
+      .then((helperToDelete) => {
+        db.Helper.destroy({
+          where: { id: req.params.id },
+        })
+      })
+      .then(() => {
+        res.redirect("/products");
+      });
+    }
+    
+    // let productsFilePath = path.join(__dirname, "../database/products.json");
+    // let helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-    const id = req.params.id;
-    const helper = helpers.filter((product) => product.id != id);
+    // const id = req.params.id;
+    // const helper = helpers.filter((product) => product.id != id);
 
-    const jsonTxt = JSON.stringify(helper, null, 2);
-    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
+    // const jsonTxt = JSON.stringify(helper, null, 2);
+    // fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
 
-    res.redirect("/products");
-  },
 };
 
 module.exports = productsController;
