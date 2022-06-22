@@ -87,7 +87,6 @@ const productsController = {
 
     });
 
-    
     // si el usuario tiene perfil user - lo actualizo a Helper
     db.User.findByPk(req.session.usuariologueado.id).then((usuario) => {
       if (usuario.profile_id == 2) {
@@ -146,6 +145,27 @@ const productsController = {
     fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
 
     res.redirect("/products/");
+  },
+
+  listByOficio: (req, res) => {
+    let htmlPath = path.resolve("./src/views/products/listByOficio.ejs");
+   db.Helper.findAll({
+     where: {
+      oficio_id:req.params.id,
+       
+     },
+     
+     include: ["user", "oficio"],
+   })
+     .then((helpers) => {
+       res.render(htmlPath, {
+         helpers,
+         user: req.session.usuariologueado,
+       });
+     })
+     .catch((err) => {
+       return res.send(err);
+     });
   },
 
   erase: function (req, res) {
