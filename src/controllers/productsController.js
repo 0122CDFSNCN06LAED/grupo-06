@@ -56,9 +56,12 @@ const productsController = {
 
   add: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
-    db.Oficio.findAll()
-      .then((oficios) => {
-    res.render(htmlPath, { user: req.session.usuariologueado, oficios: oficios })});
+    db.Oficio.findAll().then((oficios) => {
+      res.render(htmlPath, {
+        user: req.session.usuariologueado,
+        oficios: oficios,
+      });
+    });
   },
   store: (req, res) => {
     //res.send(req.body);
@@ -74,10 +77,23 @@ const productsController = {
       tarifa: req.body.tarifa,
       descripcion: req.body.descripcion,
       usuario_id: req.session.usuariologueado.id,
-      oficio_id: req.body.oficio
+      oficio_id: req.body.oficio,
     });
 
-
+    
+    // si el usuario tiene perfil user - lo actualizo a Helper
+    db.User.findByPk(req.session.usuariologueado.id).then((usuario) => {
+      if (usuario.profile_id == 2) {
+        db.User.update(
+          {
+            profile_id: "3",
+          },
+          {
+            where: { id: req.session.usuariologueado.id },
+          }
+        );
+      }
+    });
 
     // const lastIndex = helpers.length - 1;
     // const lastProduct = helpers[lastIndex];

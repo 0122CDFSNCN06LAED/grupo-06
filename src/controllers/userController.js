@@ -103,7 +103,7 @@ const userController = {
       phone: req.body.Telefono,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      profile_id: 1,
+      profile_id: 2,
       field_name: req.file.fieldname,
       original_name: req.file.originalname,
       encoding: req.file.encoding,
