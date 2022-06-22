@@ -78,7 +78,7 @@ module.exports = (sequelize, dataTypes) => {
     User.hasOne(models.Helper, {
       as: "helper",
       foreignKey: "usuario_id",
-    });    
+    });
 
     User.hasMany(models.Profile, {
       //usuarios pertenecen a un perfil
@@ -86,5 +86,5 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: "profile_id",
     });
   };
-  return User
+  return User;
 };

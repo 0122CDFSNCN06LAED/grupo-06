@@ -5,8 +5,8 @@ const { text } = require("express");
 const { validationResult } = require("express-validator");
 const userFilePath = path.join(__dirname, "../database/users.json");
 
-
 const user = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
+const db = require("../database/models");
 
 const userController = {
   login: function (req, res) {
@@ -23,7 +23,7 @@ const userController = {
       for (let i = 0; i < user.length; i++) {
         if (user[i].email == req.body.email) {
           if (bcrypt.compareSync(req.body.password, user[i].password)) {
-            usuarioAlloguearse = user[i]
+            usuarioAlloguearse = user[i];
             req.session.usuariologueado = usuarioAlloguearse;
             req.session.idUsuario = user[i].id;
             break;
@@ -68,28 +68,51 @@ const userController = {
     res.render(htmlPath, { user: req.session.usuariologueado });
   },
 
-  storeUser: (req, res) => {
-    //res.send(req.body);
+  //storeUser: (req, res) => {
+  //res.send(req.body);
 
-    const lastIndex = user.length - 1;
-    const lastUser = user[lastIndex];
-    const biggestId = lastUser ? lastUser.id : 0;
-    const newUserID = biggestId + 1;
+  //const lastIndex = user.length - 1;
+  //const lastUser = user[lastIndex];
+  //const biggestId = lastUser ? lastUser.id : 0;
+  //const newUserID = biggestId + 1;
 
-    const newUser = {
-      id: newUserID,
-      firstName: req.body.Nombre,
-      lastName: req.body.Apellido,
+  //const newUser = {
+  //id: newUserID,
+  //firstName: req.body.Nombre,
+  //lastName: req.body.Apellido,
+  //phone: req.body.Telefono,
+  //email: req.body.email,
+  //password: bcrypt.hashSync(req.body.password, 10),
+  //...req.file,
+  //};
+
+  //user.push(newUser);
+
+  //const jsonTxt = JSON.stringify(user, null, 2);
+  //fs.writeFileSync(userFilePath, jsonTxt, "utf-8");
+
+  //res.redirect("/user/login");
+  // },
+
+  //creación de usuarios (base de datos)
+
+  storeUser: function (req, res) {
+    db.User.create({
+      first_name: req.body.Nombre,
+      last_name: req.body.Apellido,
       phone: req.body.Telefono,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      ...req.file,
-    };
-
-    user.push(newUser);
-
-    const jsonTxt = JSON.stringify(user, null, 2);
-    fs.writeFileSync(userFilePath, jsonTxt, "utf-8");
+      profile_id: 1,
+      field_name: req.file.fieldname,
+      original_name: req.file.originalname,
+      encoding: req.file.encoding,
+      mimetype: req.file.mimetype,
+      destination: req.file.destination,
+      filename: req.file.filename,
+      path: req.file.path,
+      size: req.file.size,
+    });
 
     res.redirect("/user/login");
   },
