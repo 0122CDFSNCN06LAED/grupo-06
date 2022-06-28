@@ -151,10 +151,13 @@ const productsController = {
       where: { id: req.params.id },
       include: ["user", "oficio"],
     }).then((helper) => {
-      let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
-      res.render(htmlPath, {
-        helper: helper,
-        user: req.session.usuariologueado,
+      db.Oficio.findAll().then((oficios) => {
+        let htmlPath = path.resolve("./src/views/products/editHelper.ejs");
+        res.render(htmlPath, {
+          helper: helper,
+          oficios: oficios,
+          user: req.session.usuariologueado,
+        });
       });
     });
   },
