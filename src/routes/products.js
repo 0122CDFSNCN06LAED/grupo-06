@@ -1,9 +1,15 @@
-const express = require("express");
-const router = express.Router();
+const {Router, urlencoded} = require("express");
+const router =Router();
 const path = require("path");
 const multer = require("multer");
 
+const urlEncoded = urlencoded({
+  extended: false,
+});
+
 const guestMiddleware = require("../middleware/guestMiddleware.js");
+
+const registerHelperValidation = require("../validations/registerHelperValidation")
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -25,7 +31,11 @@ router.get("/detail/:id", productsController.detail);
 
 router.get("/registerHelper", guestMiddleware, productsController.add);
 
-router.post("/store", uploadFile.single("avatar"), productsController.store);
+router.post(
+  "/store",
+  registerHelperValidation,
+  productsController.store
+);
 
 router.get("/editHelper/:id", guestMiddleware, productsController.edit);
 //router.put("/:id", productsController.update);

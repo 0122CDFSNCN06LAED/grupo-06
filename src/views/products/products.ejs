@@ -60,11 +60,12 @@
                                     <!-- <%= product.nombre%>
                                         <%= product.apellido%> -->
                                     <%= product.user.first_name%>
-                                        <%= product.user.last_name%>
+                                    <%= product.user.last_name%>
+                                    <h5 class="blueLetter"><%= product.oficio.name%></h5>
                                 </h4>
                                 <h4 class="blueLetter">
                                     <%= product.tarifaHora%>
-                                    $<%= product.tarifa%>
+                                    $<%= product.tarifa%> /hora
                                 </h4>
 
                                 <div class="d-flex flex-row ">

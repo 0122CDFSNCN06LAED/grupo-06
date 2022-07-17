@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const { text } = require("express");
+const { validationResult } = require("express-validator");
 
 const productsFilePath = path.join(__dirname, "../database/products.json");
 
@@ -10,7 +11,7 @@ const db = require("../database/models");
 const productsController = {
   index: (req, res) => {
     let htmlPath = path.resolve("./src/views/products/products.ejs");
-    db.Helper.findAll({ include: ["user"] })
+    db.Helper.findAll({ include: ["user", "oficio"] })
       .then((helper) => {
         res.render(htmlPath, {
           products: helper,
@@ -56,51 +57,70 @@ const productsController = {
 
   add: function (req, res) {
     let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
+    const errors = req.session.errors;
+    req.session.errors = undefined;
+    
     db.Oficio.findAll().then((oficios) => {
       res.render(htmlPath, {
         user: req.session.usuariologueado,
         oficios: oficios,
+        errors:errors
       });
     });
   },
+
   store: (req, res) => {
     //res.send(req.body);
-
-    db.Helper.create({
-      calle: req.body.calle,
-      numero: req.body.numero,
-      barrio: req.body.barrio,
-      provincia: req.body.provincia,
-      codigo_postal: req.body.codigoPostal,
-      mas_buscados: "0",
-      anos_de_experiencia: req.body.añosDeExperiencia,
-      tarifa: req.body.tarifa,
-      descripcion: req.body.descripcion,
-      usuario_id: req.session.usuariologueado.id,
-      oficio_id: req.body.oficio,
-    }).then(() => {
-      db.Helper.findOne({
-        where: { usuario_id: req.session.usuariologueado.id },
-      }).then((helper) => {
-        res.redirect("/products/detail/" + helper.id);
-      });
-    });
-
-    // si el usuario tiene perfil user - lo actualizo a Helper
-    db.User.findByPk(req.session.usuariologueado.id).then((usuario) => {
-      if (usuario.profile_id == 2) {
-        db.User.update(
-          {
-            profile_id: "3",
-          },
-          {
-            where: { id: req.session.usuariologueado.id },
-          }
-        ).then(() => {
-          req.session.usuariologueado.profile_id = 3;
+    const errors = validationResult(req);
+    if (errors.isEmpty()){
+      db.Helper.create({
+        calle: req.body.calle,
+        numero: req.body.numero,
+        barrio: req.body.barrio,
+        provincia: req.body.provincia,
+        codigo_postal: req.body.codigoPostal,
+        mas_buscados: "0",
+        anos_de_experiencia: req.body.añosDeExperiencia,
+        tarifa: req.body.tarifa,
+        descripcion: req.body.descripcion,
+        usuario_id: req.session.usuariologueado.id,
+        oficio_id: req.body.oficio,
+      }).then(() => {
+        db.Helper.findOne({
+          where: { usuario_id: req.session.usuariologueado.id },
+        }).then((helper) => {
+          res.redirect("/products/detail/" + helper.id);
         });
-      }
-    });
+      });
+
+      // si el usuario tiene perfil user - lo actualizo a Helper
+      db.User.findByPk(req.session.usuariologueado.id).then((usuario) => {
+        if (usuario.profile_id == 2) {
+          db.User.update(
+            {
+              profile_id: "3",
+            },
+            {
+              where: { id: req.session.usuariologueado.id },
+            }
+          ).then(() => {
+            req.session.usuariologueado.profile_id = 3;
+          });
+        }
+      });
+    } else {
+      // let htmlPath = path.resolve("./src/views/products/registerHelper.ejs");
+      // db.Oficio.findAll().then((oficios) => {
+      // res.render(htmlPath, {
+      //   errors: errors.errors,
+      //   user: req.session.usuariologueado,
+      //   oficios: oficios
+      // })})
+      req.session.errors = errors.mapped();
+      res.redirect("/products/registerHelper");
+    };
+
+    
 
     // const lastIndex = helpers.length - 1;
     // const lastProduct = helpers[lastIndex];

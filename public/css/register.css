@@ -40,6 +40,15 @@ main {
     
 }
 
+.register-box .error-message{
+    color: red;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 1px;
+    font-weight: normal;
+    font-size: 12px
+}
+
 .enter-credentials {
     color: black;
     background-color: white;

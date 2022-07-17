@@ -10,15 +10,30 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box white">
-                    <form class="register-form" action="/products/store" method="POST" enctype="multipart/form-data">
+                    <form class="register-form" action="/products/store" method="POST">
                         <div class="form-section">
                             <p class="main-header">Registro de Helper</p>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Dirección</p>
-                            <input type="text" name="calle" placeholder="Calle" class="enter-credentials" required>
-                            <input type="text" name="numero" placeholder="Numero" class="enter-credentials" required>
-                            <input type="text" name="barrio" placeholder="Barrio" class="enter-credentials" required>
+                            <input type="text" name="calle" placeholder="Calle" class="enter-credentials">
+                                <% if (errors && errors.calle) { %>
+                                    <p class="error-message">
+                                        <%= errors.calle.msg%>
+                                    </p>
+                                <% } %>
+                            <input type="text" name="numero" placeholder="Numero" class="enter-credentials" >
+                                <% if (errors && errors.numero) { %>
+                                    <p class="error-message">
+                                                <%= errors.numero.msg%>
+                                    </p>
+                                <% } %>
+                            <input type="text" name="barrio" placeholder="Barrio" class="enter-credentials">
+                                <% if (errors && errors.barrio) { %>
+                                    <p class="error-message">
+                                        <%= errors.barrio.msg%>
+                                    </p>
+                                <% } %>
                             <!-- <label><b>Seleccione una provincia</b></label> -->
                             <select name="provincia" placeholder="Provincia">
                                 <option value="">Provincia</option>
@@ -29,9 +44,18 @@
                                     <option value="<%= oneProvincias %>"> <%= oneProvincias %> </option> 
                                 <% } %>    
                             </select>
-
+                                <% if (errors && errors.provincia) { %>
+                                    <p class="error-message">
+                                        <%= errors.provincia.msg%>
+                                    </p>
+                                <% } %>
                             <input type="text" name="codigoPostal" placeholder="Código Postal"
-                                class="enter-credentials" required>
+                                class="enter-credentials">
+                                <% if (errors && errors.codigoPostal) { %>
+                                    <p class="error-message">
+                                        <%= errors.codigoPostal.msg%>
+                                    </p>
+                                <% } %>
                         </div>
                         <div class = "form-section">
                             <p class="section-header">Datos de Oficio</p>
@@ -43,10 +67,30 @@
                                         </option>
                                     <% }) %>
                             </select>
+                                <% if (errors && errors.oficio) { %>
+                                    <p class="error-message">
+                                        <%= errors.oficio.msg%>
+                                    </p>
+                                <% } %>
                             <!-- <input type="text" name="oficio" placeholder="Oficio" class="enter-credentials" required> -->
-                            <input type="text" name="añosDeExperiencia" placeholder="Años de Experiencia" class="enter-credentials" required>
-                            <input type="text" name="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials" required>
+                            <input type="text" name="añosDeExperiencia" placeholder="Años de Experiencia" class="enter-credentials">
+                                <% if (errors && errors.añosDeExperiencia) { %>
+                                    <p class="error-message">
+                                        <%= errors.añosDeExperiencia.msg%>
+                                    </p>
+                                <% } %>
+                            <input type="text" name="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials">
+                                <% if (errors && errors.tarifa) { %>
+                                    <p class="error-message">
+                                        <%= errors.tarifa.msg%>
+                                    </p>
+                                <% } %>
                             <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
+                                <% if (errors && errors.descripcion) { %>
+                                    <p class="error-message">
+                                        <%= errors.descripcion.msg%>
+                                    </p>
+                                <% } %>
                         </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
