@@ -93,24 +93,33 @@ const userController = {
   //creación de usuarios (base de datos)
 
   storeUser: function (req, res) {
-    db.User.create({
-      first_name: req.body.Nombre,
-      last_name: req.body.Apellido,
-      phone: req.body.Telefono,
-      email: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 10),
-      profile_id: 2,
-      field_name: req.file.fieldname,
-      original_name: req.file.originalname,
-      encoding: req.file.encoding,
-      mimetype: req.file.mimetype,
-      destination: req.file.destination,
-      filename: req.file.filename,
-      path: req.file.path,
-      size: req.file.size,
-    });
+    const errors = validationResult(req);
+    let htmlPath = path.resolve("./src/views/user/registerUser.ejs");
+    if (errors.isEmpty()) {
+      db.User.create({
+        first_name: req.body.Nombre,
+        last_name: req.body.Apellido,
+        phone: req.body.Telefono,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        profile_id: 2,
+        field_name: req.file.fieldname,
+        original_name: req.file.originalname,
+        encoding: req.file.encoding,
+        mimetype: req.file.mimetype,
+        destination: req.file.destination,
+        filename: req.file.filename,
+        path: req.file.path,
+        size: req.file.size,
+      });
 
-    res.redirect("/user/login");
+      res.redirect("/user/login");
+    } else {
+      return res.render(htmlPath, {
+        errors: errors.mapped(),
+        user: req.session.usuariologueado,
+      });
+    }
   },
 
   registerUserOrHelper: function (req, res) {
