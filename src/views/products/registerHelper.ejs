@@ -57,7 +57,7 @@
                                     </p>
                                 <% } %>
                         </div>
-                        <div class = "form-section">
+                        <div class = "form-section" id="form-section-oficio">
                             <p class="section-header">Datos de Oficio</p>
                             <select name="oficio" placeholder="Oficio">
                                 <option value="">Oficio</option>
@@ -73,24 +73,30 @@
                                     </p>
                                 <% } %>
                             <!-- <input type="text" name="oficio" placeholder="Oficio" class="enter-credentials" required> -->
-                            <input type="text" name="añosDeExperiencia" placeholder="Años de Experiencia" class="enter-credentials">
+                            <input type="text" name="añosDeExperiencia" id="añosDeExperiencia" placeholder="Años de Experiencia" class="enter-credentials">
                                 <% if (errors && errors.añosDeExperiencia) { %>
                                     <p class="error-message">
                                         <%= errors.añosDeExperiencia.msg%>
                                     </p>
                                 <% } %>
-                            <input type="text" name="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials">
+                            <p class='error-message-front' id='error-message-añosDeExperiencia' style="display:none">Los años de experiencia son un campo obligatorio
+                            </p>
+
+                            <input type="text" name="tarifa" id="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials">
                                 <% if (errors && errors.tarifa) { %>
                                     <p class="error-message">
                                         <%= errors.tarifa.msg%>
                                     </p>
                                 <% } %>
+                            <p class='error-message-front' id='error-message-tarifa' style="display:none">El monto de tarifa es un campo obligatorio</p>
+
                             <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
                                 <% if (errors && errors.descripcion) { %>
                                     <p class="error-message">
                                         <%= errors.descripcion.msg%>
                                     </p>
                                 <% } %>
+                            <p class='error-message-front' id='error-message-descripcion' style="display:none">La descripción debe tener más de 20 caracteres</p>
                         </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
