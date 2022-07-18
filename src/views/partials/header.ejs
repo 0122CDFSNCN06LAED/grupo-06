@@ -6,7 +6,9 @@
         <a class="register" href="/user/registerUser">Registrarse</a>
         <%} %>
         <% if (user) {%>
-        <i class="fas fa-user"></i>
+        <!-- <i class="fas fa-user"></i> -->
+        <img height="35px" style="border-radius:10px"src="/images/userImage/<%=user.filename%>" alt="Foto-Perfil">
+
        <a class="blueLetter margin10 no-decoration" href="http:/user/profile"> <p><%= user.first_name %></p></a>
         <% if (user.profile_id != 3){%>
         <a class="helper-register " href="/products/registerHelper">Convertite en Helper</a>
