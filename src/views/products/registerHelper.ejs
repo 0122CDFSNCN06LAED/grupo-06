@@ -16,24 +16,31 @@
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Dirección</p>
-                            <input type="text" name="calle" placeholder="Calle" class="enter-credentials">
+                            <input type="text" name="calle" id= "calle" placeholder="Calle" class="enter-credentials">
                                 <% if (errors && errors.calle) { %>
                                     <p class="error-message">
                                         <%= errors.calle.msg%>
                                     </p>
                                 <% } %>
-                            <input type="text" name="numero" placeholder="Numero" class="enter-credentials" >
+                            <p class='error-message-front' id='error-message-calle' style="display:none">La calle es un campo obligatorio
+                            </p>
+                            
+                            <input type="text" name="numero" id="numero" placeholder="Numero" class="enter-credentials" >
                                 <% if (errors && errors.numero) { %>
                                     <p class="error-message">
                                                 <%= errors.numero.msg%>
                                     </p>
                                 <% } %>
-                            <input type="text" name="barrio" placeholder="Barrio" class="enter-credentials">
+                            <p class='error-message-front' id='error-message-numero' style="display:none">El número de calle es un campo obligatorio</p>
+                            <p class='error-message-front' id='error-message-numero-numero' style="display:none">El número de calle debe ser un número</p>
+                            <input type="text" name="barrio" id="barrio" placeholder="Barrio" class="enter-credentials">
                                 <% if (errors && errors.barrio) { %>
                                     <p class="error-message">
                                         <%= errors.barrio.msg%>
                                     </p>
                                 <% } %>
+                            <p class='error-message-front' id='error-message-barrio' style="display:none">El barrio es un campo obligatorio</p>
+
                             <!-- <label><b>Seleccione una provincia</b></label> -->
                             <select name="provincia" placeholder="Provincia">
                                 <option value="">Provincia</option>
@@ -49,13 +56,16 @@
                                         <%= errors.provincia.msg%>
                                     </p>
                                 <% } %>
-                            <input type="text" name="codigoPostal" placeholder="Código Postal"
+                            <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Código Postal"
                                 class="enter-credentials">
                                 <% if (errors && errors.codigoPostal) { %>
                                     <p class="error-message">
                                         <%= errors.codigoPostal.msg%>
                                     </p>
                                 <% } %>
+                                <p class='error-message-front' id='error-message-codigoPostal' style="display:none">El código postal debe ser un número de 4 dígitos</p>
+                                <p class='error-message-front' id='error-message-codigoPostal-numero' style="display:none">El código postal debe ser un número</p>
+
                         </div>
                         <div class = "form-section" id="form-section-oficio">
                             <p class="section-header">Datos de Oficio</p>
@@ -79,8 +89,8 @@
                                         <%= errors.añosDeExperiencia.msg%>
                                     </p>
                                 <% } %>
-                            <p class='error-message-front' id='error-message-añosDeExperiencia' style="display:none">Los años de experiencia son un campo obligatorio
-                            </p>
+                            <p class='error-message-front' id='error-message-añosDeExperiencia' style="display:none">Los años de experiencia son un campo obligatorio</p>
+                            <p class='error-message-front' id='error-message-añosDeExperiencia-numero' style="display:none">Los años de experiencia deben ser un número</p>
 
                             <input type="text" name="tarifa" id="tarifa" placeholder="Tarifa por Hora (en $)" class="enter-credentials">
                                 <% if (errors && errors.tarifa) { %>
@@ -89,7 +99,7 @@
                                     </p>
                                 <% } %>
                             <p class='error-message-front' id='error-message-tarifa' style="display:none">El monto de tarifa es un campo obligatorio</p>
-
+                            <p class='error-message-front' id='error-message-tarifa-numero' style="display:none">El monto de tarifa debe ser un número</p>
                             <textarea name="descripcion" placeholder = "Descripcion de Oficios Disponibles" cols="30" rows="10" class = "description"></textarea>
                                 <% if (errors && errors.descripcion) { %>
                                     <p class="error-message">
