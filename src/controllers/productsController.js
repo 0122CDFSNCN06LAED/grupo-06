@@ -167,6 +167,8 @@ const productsController = {
   //Edit Database
 
   edit: function (req, res) {
+    const errors = req.session.errors;
+    req.session.errors = undefined;
     db.Helper.findOne({
       where: { id: req.params.id },
       include: ["user", "oficio"],
@@ -177,6 +179,7 @@ const productsController = {
           helper: helper,
           oficios: oficios,
           user: req.session.usuariologueado,
+          errors: errors
         });
       });
     });

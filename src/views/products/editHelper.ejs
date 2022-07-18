@@ -13,52 +13,140 @@
                     <form class="register-form" action="/products/<%= helper.id %>?_method=PUT" method="POST">
                         <div class="form-section">
                             <p class="main-header">Editar Datos</p>
-                            <p class="main-header"><%= helper.user.first_name + ' ' + helper.user.last_name %></p>                            
+                            <p class="main-header">
+                                <%= helper.user.first_name + ' ' + helper.user.last_name %>
+                            </p>
                         </div>
                         <div class="form-section">
                             <p class="section-header">Datos de Dirección</p>
                             <label for="">Calle</label>
-                            <input type="text" name="calle" value="<%= helper.calle %>" class="enter-credentials" required>
-                            <label for="">Numero</label>
-                            <input type="text" name="numero" value="<%= helper.numero %>" class="enter-credentials" required>
-                            <label for="">Barrio</label>
-                            <input type="text" name="barrio" value="<%= helper.barrio %>" class="enter-credentials" required>
-                            <label for="">Provincia</label>
-                            <input type="text" name="provincia" value="<%= helper.provincia %>" class="enter-credentials"
-                                required>
-                                <label for="">CP</label>
-                            <input type="text" name="codigoPostal" value="<%= helper.codigo_postal %>"
-                                class="enter-credentials" required>
+                            <input type="text" name="calle" id="calle" value="<%= helper.calle %>" placeholder="Calle" class="enter-credentials">
+                            <% if (errors && errors.calle) { %>
+                                <p class="error-message">
+                                    <%= errors.calle.msg%>
+                                </p>
+                                <% } %>
+                                    <p class='error-message-front' id='error-message-calle' style="display:none">La calle es un campo
+                                        obligatorio
+                                    </p>
+                                                    <label for="">Numero</label>
+
+                                    <input type="text" name="numero" id="numero" placeholder="Numero" value="<%= helper.numero %>" class="enter-credentials">
+                                    <% if (errors && errors.numero) { %>
+                                        <p class="error-message">
+                                            <%= errors.numero.msg%>
+                                        </p>
+                                        <% } %>
+                                            <p class='error-message-front' id='error-message-numero' style="display:none">El número de calle es
+                                                un campo obligatorio</p>
+                                            <p class='error-message-front' id='error-message-numero-numero' style="display:none">El número de
+                                                calle debe ser un número</p>
+                                                                        <label for="">Barrio</label>
+
+                                                <input type="text" name="barrio" id="barrio" value="<%= helper.barrio %>" placeholder="Barrio" class="enter-credentials">
+                                            <% if (errors && errors.barrio) { %>
+                                                <p class="error-message">
+                                                    <%= errors.barrio.msg%>
+                                                </p>
+                                                <% } %>
+                                                    <p class='error-message-front' id='error-message-barrio' style="display:none">El barrio es
+                                                        un campo obligatorio</p>
+                        
+                                                    <!-- <label><b>Seleccione una provincia</b></label> -->
+                                                    <label for="">Provincia</label>
+                                                    <select name="provincia" class="enter-credentials">
+                                                        <option value=""><%= helper.provincia %></option>
+                                                        <% let provincias=[ "Buenos Aires" ,"Córdoba","Santa Fe","Corrientes", "CABA" ] %>
+                                                            <% for (const oneProvincias of provincias){ %>
+                                                                <option value="<%= oneProvincias %>">
+                                                                    <%= oneProvincias %>
+                                                                </option>
+                                                                <% } %>
+                                                    </select>
+                                                    <% if (errors && errors.provincia) { %>
+                                                        <p class="error-message">
+                                                            <%= errors.provincia.msg%>
+                                                        </p>
+                                                        <% } %>
+                                                                                        <label for="">Código Postal</label>
+
+                                                            <input type="text" name="codigoPostal" value="<%= helper.codigo_postal %>" id="codigoPostal" placeholder="Código Postal"
+                                                                class="enter-credentials">
+                                                            <% if (errors && errors.codigoPostal) { %>
+                                                                <p class="error-message">
+                                                                    <%= errors.codigoPostal.msg%>
+                                                                </p>
+                                                                <% } %>
+                                                                    <p class='error-message-front' id='error-message-codigoPostal'
+                                                                        style="display:none">El código postal debe ser un número de 4 dígitos
+                                                                    </p>
+                                                                    <p class='error-message-front' id='error-message-codigoPostal-numero'
+                                                                        style="display:none">El código postal debe ser un número</p>
+                        
                         </div>
-                        <div class="form-section">
+                        <div class="form-section" id="form-section-oficio">
                             <p class="section-header">Datos de Oficio</p>
-                            <label for="">Oficio</label>
-                            
                             <select name="oficio" placeholder="Oficio">
                                 <option value="">Oficio</option>
                                 <% oficios.forEach(oficio=>{ %>
-                                    <option  <%= helper.oficio.id == oficio.id? "selected" : "" %>  value="<%= oficio.id %>">
+                                    <option value="<%= oficio.id %>">
                                         <%= oficio.name %>
                                     </option>
                                     <% }) %>
                             </select>
-                            <label for="">Años de Experiencia</label>
-                            <input type="text" name="anosExperiencia" value= "<%= helper.anos_de_experiencia %>"
-                                class="enter-credentials" required>
-                                <label for="">Tarifa</label>
-                            <input type="text" name="tarifaHora" value="<%= helper.tarifa%>"
-                                class="enter-credentials" required>
-                                <label for="">Calle</label>
-                            <textarea name="descripcion" cols="10" rows="4" class="description"><%= helper.descripcion %></textarea>
+                            <% if (errors && errors.oficio) { %>
+                                <p class="error-message">
+                                    <%= errors.oficio.msg%>
+                                </p>
+                                <% } %>
+                                    <!-- <input type="text" name="oficio" placeholder="Oficio" class="enter-credentials" required> -->
+                                                                <label for="">Años de Experiencia</label>
+
+                                    <input type="text" name="añosDeExperiencia" id="añosDeExperiencia" value= "<%= helper.anos_de_experiencia %>" placeholder="Años de Experiencia"
+                                        class="enter-credentials">
+                                    <% if (errors && errors.añosDeExperiencia) { %>
+                                        <p class="error-message">
+                                            <%= errors.añosDeExperiencia.msg%>
+                                        </p>
+                                        <% } %>
+                                            <p class='error-message-front' id='error-message-añosDeExperiencia' style="display:none">Los años de
+                                                experiencia son un campo obligatorio</p>
+                                            <p class='error-message-front' id='error-message-añosDeExperiencia-numero' style="display:none">Los
+                                                años de experiencia deben ser un número</p>
+                                                        <label for="">Tarifa</label>
+
+                                            <input type="text" name="tarifa" id="tarifa" value="<%= helper.tarifa%>" placeholder="Tarifa por Hora (en $)"
+                                                class="enter-credentials">
+                                            <% if (errors && errors.tarifa) { %>
+                                                <p class="error-message">
+                                                    <%= errors.tarifa.msg%>
+                                                </p>
+                                                <% } %>
+                                                    <p class='error-message-front' id='error-message-tarifa' style="display:none">El monto de
+                                                        tarifa es un campo obligatorio</p>
+                                                    <p class='error-message-front' id='error-message-tarifa-numero' style="display:none">El
+                                                        monto de tarifa debe ser un número</p>
+                                                                                                        <label for="" style="margin-bottom:4px">Descripción</label>
+
+                                                        <textarea name="descripcion" placeholder="Descripcion de Oficios Disponibles" cols="30"
+                                                        rows="10" class="description"><%= helper.descripcion %></textarea>
+                                                    <% if (errors && errors.descripcion) { %>
+                                                        <p class="error-message">
+                                                            <%= errors.descripcion.msg%>
+                                                        </p>
+                                                        <% } %>
+                                                            <p class='error-message-front' id='error-message-descripcion' style="display:none">
+                                                                La descripción debe tener más de 20 caracteres</p>
                         </div>
                         <div class="button-section">
                             <button type="reset" class="reset-button">Reestablecer</button>
-                            <button type="submit" class="submit-button">Guardar Cambios</button>
+                            <button type="submit" class="submit-button">Registrarse</button>
                         </div>
                     </form>
                 </div>
             </main>
             <%- include("../partials/footer.ejs")%>
+        <script src="/js/registerHelper.js"></script>
     </body>
 
 </html>
