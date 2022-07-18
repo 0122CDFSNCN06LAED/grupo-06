@@ -19,21 +19,21 @@
 
 
                             <article class="professional white">
-                                       <img class="professionalPicture blueLetter" src="/images/foto-perfil.png"
+                                       <img class="professionalPicture blueLetter" src="/images/userImage/<%= product.user.filename%>"
                                     alt="Foto perfil">
               
-                                    <p class="margin10"><%=helper.nombre%>
-                                    <%=helper.apellido%></p>
-                                   <p class="margin10"><%=helper.tarifaHora%></p> 
-                                   <p class="margin10"><%= helper.barrio%></p> 
-                                   <p class="margin10"><%= helper.provincia%></p> 
+                                   <p class="margin10"><%=product.user.first_name%>
+                                    <%=product.user.last_name%></p>
+                                   <p class="margin10"><%=product.tarifa%></p> 
+                                   <p class="margin10"><%= product.barrio%></p> 
+                                   <p class="margin10"><%= product.provincia%></p> 
                              
                                     
-                                    <p class="margin10"><%= helper.descripcion%></p>
+                                    <p class="margin10"><%= product.descripcion%></p>
 
                                     <p class="contact  white">Datos de contacto</p>
-                                    <i class="blueLetter fab fa-whatsapp"></i> <%= helper.telefono%>
-                                    <i class="blueLetter fas fa-envelope"></i> email@email.com
+                                    <i class="blueLetter fab fa-whatsapp"></i> <%= product.user.phone%>
+                                    <i class="blueLetter fas fa-envelope"></i> <%=product.user.email%>
 
                             </article>
 

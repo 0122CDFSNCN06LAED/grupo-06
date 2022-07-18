@@ -33,11 +33,11 @@ const mainController = {
   },
   checkout: function (req, res) {
     let htmlPath = path.resolve("./src/views/main/check-out.ejs");
-    const helpers = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    const id = req.params.id;
-    const helper = helpers.find((h) => h.id == id);
-
-    res.render(htmlPath, { helper: helper, user: req.session.usuariologueado });
+    db.Helper.findByPk(req.params.id, { include: ["user"] }).then((helper) => {
+      res.render(htmlPath, {
+        product: helper,
+        user: req.session.usuariologueado,
+      })});
   },
   info: function (req, res) {
     let htmlPath = path.resolve("./src/views/main/quienes-somos.ejs");
