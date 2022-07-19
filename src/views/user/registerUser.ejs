@@ -10,11 +10,14 @@
         <%- include("../partials/header.ejs")%>
             <main>
                 <div class="register-box white">
+                    <div class="error-message" id="erroes">
+                        <ul></ul>
+                    </div>
                     <form class="register-form" action="/user/storeUser" method="POST" enctype="multipart/form-data">
                         <div class="form-section">
                             <p class="main-header">Registro de Usuario</p>
                             <p class="section-header">Datos Personales</p>
-                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" >
+                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" id="Nombre">
 
                             <% if(locals.errors && errors.Nombre){ %>
                                 <p class="error-message">
@@ -22,7 +25,7 @@
                                 </p>
                                 <% } %>
 
-                            <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials"
+                            <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials" id="Apellido"
                                 >
 
                                 <% if(locals.errors && errors.Apellido){ %>
@@ -33,7 +36,7 @@
 
 
                             <input type="text" name="Telefono" placeholder="Teléfono de Contacto"
-                                class="enter-credentials" >
+                                class="enter-credentials" id="Telefono" >
 
                                 <% if(locals.errors && errors.Telefono){ %>
                                     <p class="error-message">
@@ -57,7 +60,7 @@
 
                         <div class="form-section">
                             <p class="section-header">Usuario y Contraseña</p>
-                            <input type="mail" name="email" placeholder="Correo" class="enter-credentials" >
+                            <input type="mail" name="email" placeholder="Correo" class="enter-credentials" id="mail" >
 
                             <% if(locals.errors && errors.email){ %>
                                 <p class="error-message">
@@ -67,7 +70,7 @@
 
 
                             <input type="mail" name="confirmEmail" placeholder="Confirmar Correo"
-                                class="enter-credentials" >
+                                class="enter-credentials" id="confirmEmail" >
 
                                 <% if(locals.errors && errors.confirmEmail){ %>
                                     <p class="error-message">
@@ -76,7 +79,7 @@
                                     <% } %>
 
 
-                            <input type="password" name="password" placeholder="Contraseña" class="enter-credentials"
+                            <input type="password" name="password" placeholder="Contraseña" class="enter-credentials" id="password"
                                 >
 
                                 <% if(locals.errors && errors.password){ %>
@@ -86,7 +89,7 @@
                                     <% } %>
 
                             <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña"
-                                class="enter-credentials" >
+                                class="enter-credentials" id="confirmPassword">
 
                                 <% if(locals.errors && errors.confirmPassword){ %>
                                     <p class="error-message">
