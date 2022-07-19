@@ -39,6 +39,17 @@ const userController = {
             user: req.session.usuariologueado,
           });
         }
+      })
+      .catch(() => {
+        let htmlPath = path.resolve("./src/views/user/login.ejs");
+        res.render(htmlPath, {
+          errors: [
+            {
+              msg: "credenciales invalidas",
+            },
+          ],
+          user: req.session.usuariologueado,
+        });
       });
     } else {
       let htmlPath = path.resolve("./src/views/user/login.ejs");
