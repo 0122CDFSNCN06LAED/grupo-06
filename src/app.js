@@ -21,7 +21,9 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({
-  secret: 'helper crud'
+  secret: 'helper crud',
+  resave: false,
+  saveUninitialized: false
 }))
 
 const rutasUser = require("./routes/user");
@@ -32,6 +34,9 @@ app.use("/products", rutasProducts);
 
 const rutasMain = require("./routes/main");
 app.use("/", rutasMain);
+
+const rutasUserAPI = require("./routes/api/apiUsersRouter")
+app.use("/api/users", rutasUserAPI);
 
 
 app.listen(3000, () => {
