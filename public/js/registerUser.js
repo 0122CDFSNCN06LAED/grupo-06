@@ -12,10 +12,10 @@ window.addEventListener("load", function () {
     }
 
     let apellido = document.querySelector("#Apellido");
-    if (nombre.value == "") {
+    if (apellido.value == "") {
       errores.push("Debes escribir un apellido");
-    } else if (nombre.value.length < 2) {
-      errores.push("Debes escribir más de 2 caracteres");
+    } else if (apellido.value.length < 2) {
+      errores.push("Debes escribir más de 2 caracteres"); 
     }
 
     let telefono = document.querySelector("#Telefono");

@@ -40,9 +40,6 @@ window.addEventListener("load", function () {
       }
       
     } 
-    else {
-
-      form.submit();
-    }
+  
   });
 });
