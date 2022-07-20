@@ -7,40 +7,48 @@
 
     </head>
 
-    <body class = "bgGray"> 
+    <body class="bgGray">
         <%- include("../partials/header.ejs")%>
-                <main>
-       
-
-            <% if (typeof errors != "undefined") { %>
-                <p style="color:red">ERROR</p>
-                <ul>
-                    <% for (let i = 0; i < errors.length; i++) { %>
-                        <li>
-                            <%= errors[i].msg%>
-                        </li>
-
-                        <% } %>
-                </ul>
-                 <% } %>
-                    <div class="login-box white">
-                        <form class="login-form" method = "POST" action="/user/login">
-                            <input type="text" name="email" placeholder="Usuario" class="enter-credentials" required>
-                            <input type="password" name="password" placeholder="Contraseña" class="enter-credentials"
-                                required>
-                            <input type="checkbox" class="checkbox-password" name="remember-password">
-                            <label for="remember-password" class="remember-password">Recordar mi usuario</label>
-                            <button type="submit">Ingresar</button>
-                        </form>
-                        <a href="" class="login-text">¿Olvidó su contraseña/usuario?</a>
-                        <p>¿Aún no eres usuario?</p>
-                        <button type="button"><a href="/user/registerUser">Registrate</a></button>
-                    </div>
-                </main>
+        
 
 
+                <% if (typeof errors !="undefined" ) { %>
+                    <p style="color:red">ERROR</p>
+                    <ul>
+                        <% for (let i=0; i < errors.length; i++) { %>
+                            <li>
+                                <%= errors[i].msg%>
+                            </li>
 
-                <%- include("../partials/footer.ejs")%>
+                            <% } %>
+                    </ul>
+                    <% } %>
+                        <div class="login-box white">
+                            <form class="login-form" method="POST" action="/user/login">
+                                <input type="text" name="email" placeholder="Usuario" class="enter-credentials"
+                                    id="email">
+                                <div style="width: 300px;height: 20px;color: red; font-size:10px" class="errorName"></div>
+                                <input type="password" name="password" placeholder="Contraseña"
+                                    class="enter-credentials" id="password">
+                                <div style="width: 300px;height: 20px; color: red; font-size:10px"
+                                    class="errorPassword"></div>
+                                <input type="checkbox" class="checkbox-password" name="remember-password"
+                                    id="remember-password">
+                                <label for="remember-password" class="remember-password">Recordar mi usuario</label>
+                                <button id="submit" type="submit">Ingresar</button>
+                            </form>
+                            <a href="" class="login-text">¿Olvidó su contraseña/usuario?</a>
+                            <p>¿Aún no eres usuario?</p>
+                            <button type="submit"><a href="/user/registerUser">Registrate</a></button>
+                        </div>
+               
+           
+
+
+
+            <%- include("../partials/footer.ejs")%>
+
+                <script src="/js/login.js"></script>
     </body>
 
 </html>

@@ -101,7 +101,7 @@ main {
 }
 .login-section {
     display: flex;
-    width: 85;
+    /* width: 85px; */
     justify-content: right;
     align-items: center;
     margin-left: auto;
