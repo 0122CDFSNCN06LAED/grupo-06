@@ -3,54 +3,58 @@ window.addEventListener("load", function () {
 
   formulario.addEventListener("submit", function (e) {
     let errores = [];
+    let ulerrores = document.querySelector("#errores");
+    ulerrores.innerHTML = "";
 
     let nombre = document.querySelector("#Nombre");
     if (nombre.value == "") {
       errores.push("Debes escribir un nombre");
-    } else if (nombre.value.length < 2) {
+    }
+    if (nombre.value.length < 2) {
       errores.push("Debes escribir más de 2 caracteres");
     }
 
     let apellido = document.querySelector("#Apellido");
-    if (nombre.value == "") {
+    if (apellido.value == "") {
       errores.push("Debes escribir un apellido");
-    } else if (nombre.value.length < 2) {
+    }
+    if (apellido.value.length < 2) {
       errores.push("Debes escribir más de 2 caracteres");
     }
 
     let telefono = document.querySelector("#Telefono");
-    if (nombre.value == "") {
+    if (telefono.value == "") {
       errores.push("Debes escribir un telefono");
-    } else if (nombre.value.length < 2) {
+    }
+    if (telefono.value.length < 2) {
       errores.push("Debes escribir más de 2 telefono");
     }
 
     let mail = document.querySelector("#mail");
-    if (nombre.value == "") {
+    if (mail.value == "") {
       errores.push("Debes escribir un mail");
     }
 
     let confirmEmail = document.querySelector("#confirmEmail");
-    if (nombre.value == "") {
+    if (confirmEmail.value == "") {
       errores.push("Debes escribir nuevamente el mail");
     }
 
     let password = document.querySelector("#password");
-    if (nombre.value == "") {
+    if (password.value == "") {
       errores.push("Debes escribir una contraseña");
     }
 
     let confirmPassword = document.querySelector("#confirmPassword");
-    if (nombre.value == "") {
+    if (confirmPassword.value == "") {
       errores.push("Debes escribir un nuevamente la contraseña");
     }
 
     if (errores.length > 0) {
       e.preventDefault();
 
-      let ulerroes = document.querySelector("#erroes");
-      for (let i = 0; i < errores.length; index++) {
-        ulerroes.innerHTML += "<li>" + errores[i] + "</li>";
+      for (let i = 0; i < errores.length; i++) {
+        ulerrores.innerHTML += "<li>" + errores[i] + "</li>";
       }
     }
   });
