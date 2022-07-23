@@ -38,7 +38,7 @@ router.post(
 );
 
 router.get("/editHelper/:id", guestMiddleware, productsController.edit);
-//router.put("/:id", productsController.update);
+router.put("/:id", registerHelperValidation,productsController.update);
 
 router.get("/oficio/:id", productsController.listByOficio);
 router.get("/oficios", productsController.listOficio);

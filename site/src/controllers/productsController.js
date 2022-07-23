@@ -152,16 +152,25 @@ const productsController = {
   update: function (req, res) {
     const id = req.params.id;
 
-    const helper = helpers.find((p) => id == p.id);
-
-    Object.assign(helper, {
-      ...req.body,
+    db.Helper.update(
+      {
+        calle: req.body.calle,
+        numero: req.body.numero,
+        barrio: req.body.barrio,
+        provincia: req.body.provincia,
+        codigo_postal: req.body.codigoPostal,
+        anos_de_experiencia: req.body.añosDeExperiencia,
+        oficio: req.body.oficio,
+        tarifa: req.body.tarifa,
+        descripcion: req.body.descripcion,
+      },
+      {
+        where: { id: id },
+      }
+    ).then((helper) => {
+      res.redirect("/products/detail/" + id);
     });
 
-    const jsonTxt = JSON.stringify(helpers, null, 2);
-    fs.writeFileSync(productsFilePath, jsonTxt, "utf-8");
-
-    res.redirect("/products/");
   },
 
   //Edit Database
