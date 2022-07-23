@@ -29,6 +29,18 @@ const userAPIController = {
       res.json(respuesta);
     });}
 //  agregar método para traer detalle
-};
+,
+detail: (req,res) => {
+  db.User.findByPk(req.params.id, {attributes: ["id","first_name","last_name", "phone","email", 
+  [db.User.sequelize.fn("CONCAT","/images/userImage/",db.User.sequelize.col("filename")),"user_image"]]})
+  .then((users) => {
+    let respuesta = {
+      users
+    };
+    res.json(respuesta)
+  })
+}
+}
+
 
 module.exports = userAPIController;
