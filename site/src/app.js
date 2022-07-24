@@ -2,10 +2,13 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const methodOverride = require("method-override");
+const cors = require("cors");
+
 
 const session = require('express-session')
 const {check} = require("express-validator")
 
+app.use(cors("*"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

@@ -3,7 +3,7 @@ import UsersInDb from "./UsersInDb";
 
 export default function UsersInDbCard() {
   return (
-    <BigCard title="Genres in database">
+    <BigCard title="Users in database">
       <UsersInDb />
     </BigCard>
   );

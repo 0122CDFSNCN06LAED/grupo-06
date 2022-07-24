@@ -16,8 +16,8 @@ function MainContent() {
           <Switch>
             <Route path="/" exact component={DashboardContent} />
             <Route path="/users" component={UsersInDbCard} />
-            <Route path="/last-movie" component={LastMovieInDb} />
-            <Route path="/movies" component={MoviesList} />
+            {/* <Route path="/last-movie" component={LastMovieInDb} />
+            <Route path="/movies" component={MoviesList} /> */}
           </Switch>
         </div>
       </div>

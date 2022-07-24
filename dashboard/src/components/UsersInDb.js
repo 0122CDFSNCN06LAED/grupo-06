@@ -4,7 +4,7 @@ class UsersInDb extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      genres: null,
+      users: null,
       bgColor: "",
     };
   }
@@ -20,7 +20,9 @@ class UsersInDb extends Component {
           return (
             <div key={user.id} className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">{user.name}</div>
+                <div className="card-body">{user.full_name}<br/>
+                <p>{user.email}</p>
+                </div>
               </div>
             </div>
           );
@@ -33,7 +35,7 @@ class UsersInDb extends Component {
     const response = await fetch("http://localhost:3000/api/users");
     const usersListData = await response.json();
     this.setState({
-      users: usersListData.data,
+      users: usersListData.users,
     });
   }
 }

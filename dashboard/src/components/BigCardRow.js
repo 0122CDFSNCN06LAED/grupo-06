@@ -1,4 +1,4 @@
-import GenresInDbCard from "./UsersInDBCard";
+import UsersInDbCard from "./UsersInDBCard";
 import LastMovieInDb from "./LastMovieCard";
 
 function BigCardRow() {
@@ -6,7 +6,7 @@ function BigCardRow() {
     <div className="row">
       {/* <!-- Last Movie in DB --> */}
       <LastMovieInDb />
-      <GenresInDbCard />
+      <UsersInDbCard />
     </div>
   );
 }
