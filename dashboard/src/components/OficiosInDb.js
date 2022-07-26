@@ -21,11 +21,10 @@ class OficiosInDb extends Component {
             <div key={oficio.id} className="col-lg-6 mb-4">
               <div className="card bg-info text-white shadow">
                 <div className="card-body">
-                  {oficio.name}
-                  <br />
+                  <h5 style={{paddingBottom: '5px'}}>{oficio.name}</h5>
                   Usa Seguro:{" "}
                   {(() => {
-                    if (oficio.usa_seguro == 0) {
+                    if (oficio.usa_seguro == 1) {
                       return "Si";
                     } else {
                       return "No";

@@ -3,7 +3,7 @@ import UsersInDb from "./UsersInDb";
 
 export default function UsersInDbCard() {
   return (
-    <BigCard title="Users in database">
+    <BigCard title="Usuarios">
       <UsersInDb />
     </BigCard>
   );

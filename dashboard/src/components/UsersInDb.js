@@ -19,15 +19,18 @@ class UsersInDb extends Component {
         {this.state.users.map((user) => {
           return (
             <div key={user.id} className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
+              <div className="card bg-white text-primary shadow">
                 <div className="card-body">
                   <img
                     src={"http://localhost:3000/" + user.user_image}
-                    style={{ borderRadius: "10px", height: "60px", marginBottom:'10px' }}
+                    style={{
+                      borderRadius: "10px",
+                      height: "80px",
+                      marginBottom: "10px",
+                    }}
                   ></img>
                   <br />
-                  {user.full_name}
-                  <br />
+                  <h5 className="center">{user.full_name}</h5>
                   <p>{user.email}</p>
                 </div>
               </div>

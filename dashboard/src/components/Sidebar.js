@@ -11,14 +11,14 @@ function SideBar() {
     >
       {/* <!-- Sidebar - Brand --> */}
       {
-        <a
+        <NavLink
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/"
+          to="/"
         >
           <div className="sidebar-brand-icon">
             <img className="w-100" src={logo} alt="Digital House" />
           </div>
-        </a>
+        </NavLink>
       }
 
       {/* <!-- Divider --> */}
@@ -28,7 +28,7 @@ function SideBar() {
       <li className="nav-item ">
         <NavLink className="nav-link" to="/" exact activeClassName="active">
           <i className="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard - Helpers</span>
+          <span>Dashboard</span>
         </NavLink>
       </li>
 
@@ -36,21 +36,21 @@ function SideBar() {
       <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div className="sidebar-heading">Actions</div>
+      <div className="sidebar-heading">Navegación</div>
 
       {/* <!-- Nav Item - Pages --> */}
       <li className="nav-item">
-        <NavLink className="nav-link" to="/genres" activeClassName="active">
-          <i className="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+        <NavLink className="nav-link" to="/users" activeClassName="active">
+          <i className="fas fa-fw fa-user"></i>
+          <span>Usuarios</span>
         </NavLink>
       </li>
 
       {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
-        <NavLink className="nav-link" to="/last-movie" activeClassName="active">
-          <i className="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span>
+        <NavLink className="nav-link" to="/oficios" activeClassName="active">
+          <i className="fas fa-fw fa-briefcase"></i>
+          <span>Oficios</span>
         </NavLink>
       </li>
 
@@ -58,7 +58,7 @@ function SideBar() {
       <li className="nav-item">
         <NavLink className="nav-link" to="/movies" activeClassName="active">
           <i className="fas fa-fw fa-table"></i>
-          <span>Tables</span>
+          <span>Helpers</span>
         </NavLink>
       </li>
 

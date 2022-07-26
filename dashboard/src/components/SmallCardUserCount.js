@@ -5,7 +5,7 @@ class UsersInDbCount extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Users in database",
+      title: "Usuarios en base de datos",
       value: null,
       icon: "fa-user",
       color: "success",

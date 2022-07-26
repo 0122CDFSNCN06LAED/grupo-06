@@ -2,8 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import DashboardContent from "./DashboardContent";
 import Footer from "./Footer";
 import UsersInDbCard from "./UsersInDBCard";
-import LastMovieInDb from "./LastMovieCard";
-import MoviesList from "./MoviesList";
+import OficiosInDbCard from "./OficiosInDBCard";
 import TopBar from "./TopBar";
 
 function MainContent() {
@@ -16,8 +15,7 @@ function MainContent() {
           <Switch>
             <Route path="/" exact component={DashboardContent} />
             <Route path="/users" component={UsersInDbCard} />
-            {/* <Route path="/last-movie" component={LastMovieInDb} />
-            <Route path="/movies" component={MoviesList} /> */}
+            <Route path="/oficios" component={OficiosInDbCard} />
           </Switch>
         </div>
       </div>

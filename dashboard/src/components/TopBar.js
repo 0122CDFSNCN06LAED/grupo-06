@@ -1,4 +1,4 @@
-import avatar from "../assets/1655061301728_img.PNG";
+import avatar from "../assets/1655062154540_img.jpg";
 
 function TopBar() {
   return (
@@ -18,9 +18,9 @@ function TopBar() {
           <a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
             <i className="fas fa-bell fa-fw"></i>
             {/* <!-- Counter - Alerts --> */}
-            {/* <span className="badge badge-danger badge-counter">3+</span>
+        {/* <span className="badge badge-danger badge-counter">3+</span>
           </a>
-        </li> */} 
+        </li> */}
 
         {/* <!-- Nav Item - Messages --> */}
         {/* <li className="nav-item dropdown no-arrow mx-1">
@@ -31,7 +31,7 @@ function TopBar() {
           >
             <i className="fas fa-envelope fa-fw"></i>
             {/* <!-- Counter - Messages --> */}
-            {/* <span className="badge badge-danger badge-counter">7</span>
+        {/* <span className="badge badge-danger badge-counter">7</span>
           </a>
         </li>  */}
 
@@ -40,15 +40,15 @@ function TopBar() {
         {/* <!-- Nav Item - User Information --> */}
         <li className="nav-item dropdown no-arrow">
           <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-            <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-              Carolina Hernandez
-            </span>
             <img
-              className="img-profile rounded-circle"
+              // className="img-profile "
               src={avatar}
-              alt="Jordan Walke - Creador de React"
-              width="60"
+              style={{ borderRadius: "10px", height: "50px", marginRight:'15px'}}
+              alt="Franco Rubik - Helper"
             />
+            <span className="mr-2 d-none d-lg-inline text-gray-600 small">
+              Franco Rubik
+            </span>
           </a>
         </li>
       </ul>

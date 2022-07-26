@@ -3,7 +3,7 @@ import OficiosInDb from "./OficiosInDb";
 
 export default function OficiosInDbCard() {
   return (
-    <BigCard title="Oficios in database">
+    <BigCard title="Oficios">
       <OficiosInDb />
     </BigCard>
   );

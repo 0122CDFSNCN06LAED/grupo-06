@@ -5,7 +5,7 @@ class OficiosInDbCount extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Oficios in database",
+      title: "Oficios en base de datos",
       value: null,
       icon: "fa-briefcase",
       color: "warning",
