@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../assets/logo4.png";
+import logo from "../assets/logo-white.png";
 
 function SideBar() {
   return (
