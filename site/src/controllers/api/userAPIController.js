@@ -17,8 +17,20 @@ const userAPIController = {
         ],
         "email",
         [
-          db.User.sequelize.fn("CONCAT", "localhost:3000/api/users/",db.User.sequelize.col("id")),
+          db.User.sequelize.fn(
+            "CONCAT",
+            "localhost:3000/api/users/",
+            db.User.sequelize.col("id")
+          ),
           "detail_url",
+        ],
+        [
+          db.User.sequelize.fn(
+            "CONCAT",
+            "/images/userImage/",
+            db.User.sequelize.col("filename")
+          ),
+          "user_image",
         ],
       ],
     }).then((users) => {

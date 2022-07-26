@@ -1,3 +1,5 @@
+import avatar from "../assets/1655061301728_img.PNG";
+
 function TopBar() {
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -12,16 +14,16 @@ function TopBar() {
       {/* <!-- Topbar Navbar --> */}
       <ul className="navbar-nav ml-auto">
         {/* <!-- Nav Item - Alerts --> */}
-        <li className="nav-item dropdown no-arrow mx-1">
+        {/* <li className="nav-item dropdown no-arrow mx-1">
           <a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
             <i className="fas fa-bell fa-fw"></i>
             {/* <!-- Counter - Alerts --> */}
-            <span className="badge badge-danger badge-counter">3+</span>
+            {/* <span className="badge badge-danger badge-counter">3+</span>
           </a>
-        </li>
+        </li> */} 
 
         {/* <!-- Nav Item - Messages --> */}
-        <li className="nav-item dropdown no-arrow mx-1">
+        {/* <li className="nav-item dropdown no-arrow mx-1">
           <a
             className="nav-link dropdown-toggle"
             href="/"
@@ -29,9 +31,9 @@ function TopBar() {
           >
             <i className="fas fa-envelope fa-fw"></i>
             {/* <!-- Counter - Messages --> */}
-            <span className="badge badge-danger badge-counter">7</span>
+            {/* <span className="badge badge-danger badge-counter">7</span>
           </a>
-        </li>
+        </li>  */}
 
         <div className="topbar-divider d-none d-sm-block"></div>
 
@@ -39,11 +41,11 @@ function TopBar() {
         <li className="nav-item dropdown no-arrow">
           <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
             <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-              Jordan Walke
+              Carolina Hernandez
             </span>
             <img
               className="img-profile rounded-circle"
-              src="assets/images/jordan-walke.png"
+              src={avatar}
               alt="Jordan Walke - Creador de React"
               width="60"
             />

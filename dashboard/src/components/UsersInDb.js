@@ -20,8 +20,15 @@ class UsersInDb extends Component {
           return (
             <div key={user.id} className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">{user.full_name}<br/>
-                <p>{user.email}</p>
+                <div className="card-body">
+                  <img
+                    src={"http://localhost:3000/" + user.user_image}
+                    style={{ borderRadius: "10px", height: "60px", marginBottom:'10px' }}
+                  ></img>
+                  <br />
+                  {user.full_name}
+                  <br />
+                  <p>{user.email}</p>
                 </div>
               </div>
             </div>

@@ -5674,7 +5674,7 @@ button.bg-success:hover {
   background-color: #169b6b !important;
 }
 .bg-info {
-  background-color: #36b9cc !important;
+  background-color: #183153 !important;
 }
 a.bg-info:focus,
 a.bg-info:hover,
@@ -8832,9 +8832,9 @@ a:focus {
   background-size: cover;
 }
 .bg-gradient-secondary {
-  background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
-  background-size: cover;
+    background-color: #183153;
+    background-image: linear-gradient(180deg, #183153 10%, #60616f 100%);
+    background-size: cover;
 }
 .bg-gradient-success {
   background-color: #1cc88a;
