@@ -41,7 +41,8 @@ app.use("/", rutasMain);
 const rutasUserAPI = require("./routes/api/apiUsersRouter")
 app.use("/api/users", rutasUserAPI);
 
-
+const rutasHelperApi = require("./routes/api/apiHelpersRouter");
+app.use("/api/helpers", rutasHelperApi);
 
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
