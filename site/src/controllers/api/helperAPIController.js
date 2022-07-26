@@ -5,39 +5,40 @@ const helperAPIController = {
     db.Helper.findAll({
       // include: ["user"],
     }).then((helper) => {
-      db.User.findAll({
-        attributes: [
-          "id",
-          [
-            db.User.sequelize.fn(
-              "CONCAT",
-              db.User.sequelize.col("first_name"),
-              " ",
-              db.User.sequelize.col("last_name")
-            ),
-            "full_name",
-          ],
-          "email",
-          [
-            db.User.sequelize.fn(
-              "CONCAT",
-              "localhost:3000/api/helper/",
-              db.User.sequelize.col("id")
-            ),
-            "detail_url",
-          ],
-        ],
-      }).then((user) => {
+      // db.User.findAll({
+      //   attributes: [
+      //     "id",
+      //     [
+      //       db.User.sequelize.fn(
+      //         "CONCAT",
+      //         db.User.sequelize.col("first_name"),
+      //         " ",
+      //         db.User.sequelize.col("last_name")
+      //       ),
+      //       "full_name",
+      //     ],
+      //     "email",
+      //     [
+      //       db.User.sequelize.fn(
+      //         "CONCAT",
+      //         "localhost:3000/api/helper/",
+      //         db.User.sequelize.col("id")
+      //       ),
+      //       "detail_url",
+      //     ],
+      //   ],
+      // }).then((user) => {
         let respuesta = {
           count: helper.length,
 
           helper,
-          user,
+          //user,
         };
         res.json(respuesta);
       });
-    });
-  },
-};
+    }
+    //);
+  };
+//};
 
 module.exports = helperAPIController;
