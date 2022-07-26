@@ -33,6 +33,16 @@ const userAPIController = {
           "user_image",
         ],
       ],
+      order: [
+        [
+          db.User.sequelize.fn(
+            "CONCAT",
+            db.User.sequelize.col("first_name"),
+            " ",
+            db.User.sequelize.col("last_name")
+          )
+        ],
+      ],
     }).then((users) => {
       let respuesta = {
         count: users.length,
