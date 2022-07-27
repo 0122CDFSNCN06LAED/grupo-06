@@ -123,6 +123,67 @@ const helperAPIController = {
       };
       res.json(respuesta);
     });
+  },
+
+  detail: (req, res) => {
+    db.Helper.findByPk(req.params.id, {
+      include: [
+        {
+          model: db.User,
+          attributes: [],
+          as: "user",
+        },
+        {
+          model: db.Oficio,
+          attributes: [],
+          as: "oficio",
+        },
+      ],
+      limit: 1,
+      order: [["id", "DESC"]],
+      attributes: [
+        [db.Helper.sequelize.col("helper.id"), "Id"],
+        [
+          db.Helper.sequelize.fn(
+            "CONCAT",
+            db.Helper.sequelize.col("user.first_name"),
+            " ",
+            db.Helper.sequelize.col("user.last_name")
+          ),
+          "full_name",
+        ],
+        [db.Helper.sequelize.col("oficio.name"), "nombre_oficio"],
+        "calle",
+        "numero",
+        "barrio",
+        "provincia",
+        "descripcion",
+        "anos_de_experiencia",
+        "tarifa",
+        [
+          db.Helper.sequelize.fn(
+            "CONCAT",
+            "localhost:3000/products/detail/",
+            db.Helper.sequelize.col("helper.id")
+          ),
+          "detail_url",
+        ],
+        [
+          db.Helper.sequelize.fn(
+            "CONCAT",
+            "/images/userImage/",
+            db.Helper.sequelize.col("user.filename")
+          ),
+          "user_image",
+        ],
+      ],
+    })
+    .then((helper) => {
+      let respuesta = {
+        helper
+      };
+      res.json(respuesta)
+    })
   }
 };
 

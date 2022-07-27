@@ -5,6 +5,6 @@ const apiHelperController = require("../../controllers/api/helperAPIController")
 
 router.get("/", apiHelperController.list);
 router.get("/last", apiHelperController.lastHelper);
-//router.get("/:id", apiHelperController.detail);
+router.get("/:id", apiHelperController.detail);
 
 module.exports = router;
