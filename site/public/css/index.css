@@ -57,6 +57,12 @@
   border-radius: 10px;
   height: 200px;
   margin-top: 20px;
+  /* object-fit: cover; */
+    /* width: 150px; */
+}
+.img-helper{
+  object-fit: cover;
+  width: 150px;
 }
 
 .articulo-trabajo-mas-buscado {
