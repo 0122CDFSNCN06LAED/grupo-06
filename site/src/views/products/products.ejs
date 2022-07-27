@@ -4,13 +4,13 @@
 <%- include("../partials/head.ejs")%>
 
     <!-- head abierto en include -->
-   
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
- <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
     </head>
 
 
@@ -45,45 +45,48 @@
                 <div class="main_container__cards container d-flex flex-column">
                     <%products.forEach(product=> { %>
                         <div class="card row">
-                            
+
 
                             <div class="card__img_wrapper col-3" height="100%">
                                 <img class="img_card" src="/images/userImage/<%= product.user.filename%>" alt="">
-                          
+
                             </div>
                             <div class="card__body centerWrap">
                                 <a href="products/detail/<%=product.id%>" class="no-decoration">
 
-                                ⭐⭐⭐⭐⭐
+                                    ⭐⭐⭐⭐⭐
 
-                                <h4 class="blueLetter">
-                                    <!-- <%= product.nombre%>
+                                    <h4 class="blueLetter">
+                                        <!-- <%= product.nombre%>
                                         <%= product.apellido%> -->
-                                    <%= product.user.first_name%>
-                                    <%= product.user.last_name%>
-                                    <h5 class="blueLetter"><%= product.oficio.name%></h5>
-                                </h4>
-                                <h4 class="blueLetter">
-                                    <%= product.tarifaHora%>
-                                    $<%= product.tarifa%> /hora
-                                </h4>
+                                        <%= product.user.first_name%>
+                                            <%= product.user.last_name%>
+                                                <h5 class="blueLetter">
+                                                    <%= product.oficio.name%>
+                                                </h5>
+                                    </h4>
+                                    <h4 class="blueLetter">
+                                        <%= product.tarifaHora%>
+                                            $<%= product.tarifa%> /hora
+                                    </h4>
 
-                                <div class="d-flex flex-row ">
-                                    <a class="blueLetter" href="/check-out/<%=product.id%>"><i
-                                            class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
+                                    <div class="d-flex flex-row ">
+                                        <a class="blueLetter" href="/check-out/<%=product.id%>"><i
+                                                class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
 
-                                            <%if (product.user.profile_id == 1){%>
-     <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
-                                        <button type="submit" class="white no-border">
-                                            <i class="fas fa-trash-alt icon-trash"></i>
-                                        </button>
-                                    </form>
-                                    <a href="/products/editHelper/<%= product.id%>"><i
-                                            class="fas fa-pen blueLetter icon-helper"></i></a>
+                             
+                                            <form action="/products/delete/<%=product.id %>?_method=DELETE"
+                                                method="POST">
+                                                <button type="submit" class="white no-border">
+                                                    <i class="fas fa-trash-alt icon-trash"></i>
+                                                </button>
+                                            </form>
+                                            <a href="/products/editHelper/<%= product.id%>"><i
+                                                    class="fas fa-pen blueLetter icon-helper"></i></a>
 
-                                         <%  }%>
-                               
-                                </div>
+                                        
+
+                                    </div>
                             </div>
 
 
