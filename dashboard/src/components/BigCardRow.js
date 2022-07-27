@@ -1,6 +1,7 @@
 import UsersInDbCard from "./UsersInDBCard";
 import LastMovieInDb from "./LastMovieCard";
 import OficiosInDbCard from "./OficiosInDBCard";
+import HelpersInDbCard from "./HelpersInDBCard";
 
 function BigCardRow() {
   return (
@@ -8,6 +9,7 @@ function BigCardRow() {
       {/* <!-- Last Movie in DB --> */}
       {/* <LastMovieInDb /> */}
       <UsersInDbCard />
+      <HelpersInDbCard />
       <OficiosInDbCard />
     </div>
   );

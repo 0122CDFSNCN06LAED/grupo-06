@@ -1,6 +1,7 @@
 import SmallCard from "./SmallCard";
 import SmallCardUserCount from "./SmallCardUserCount"
 import SmallCardOficioCount from "./SmallCardOficioCount"
+import SmallCardHelperCount from "./SmallCardHelperCount"
 
 // const statistics = [
 //   {
@@ -30,6 +31,7 @@ function SmallCardRow() {
         return <SmallCard key={stat.title} {...stat} />;
       })} */}
       <SmallCardUserCount />
+      <SmallCardHelperCount />
       <SmallCardOficioCount />
     </div>
   );

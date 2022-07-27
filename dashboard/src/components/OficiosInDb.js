@@ -18,18 +18,11 @@ class OficiosInDb extends Component {
       <div className={`row ${this.state.bgColor}`}>
         {this.state.oficios.map((oficio) => {
           return (
-            <div key={oficio.id} className="col-lg-6 mb-4">
+            <div key={oficio.id_oficio} className="col-lg-6 mb-4">
               <div className="card bg-info text-white shadow">
                 <div className="card-body">
-                  <h5 style={{paddingBottom: '5px'}}>{oficio.name}</h5>
-                  Usa Seguro:{" "}
-                  {(() => {
-                    if (oficio.usa_seguro == 1) {
-                      return "Si";
-                    } else {
-                      return "No";
-                    }
-                  })()}
+                  <h5 style={{paddingBottom: '5px'}}>{oficio.nombre_oficio}</h5>
+                  Cantidad: {oficio.countOficios}
                 </div>
               </div>
             </div>
@@ -40,10 +33,10 @@ class OficiosInDb extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch("http://localhost:3000/api/oficios");
+    const response = await fetch("http://localhost:3000/api/helpers");
     const oficiosListData = await response.json();
     this.setState({
-      oficios: oficiosListData.oficios,
+      oficios: oficiosListData.group,
     });
   }
 }

@@ -3,6 +3,7 @@ import DashboardContent from "./DashboardContent";
 import Footer from "./Footer";
 import UsersInDbCard from "./UsersInDBCard";
 import OficiosInDbCard from "./OficiosInDBCard";
+import HelpersInDbCard from "./HelpersInDBCard";
 import TopBar from "./TopBar";
 
 function MainContent() {
@@ -16,6 +17,7 @@ function MainContent() {
             <Route path="/" exact component={DashboardContent} />
             <Route path="/users" component={UsersInDbCard} />
             <Route path="/oficios" component={OficiosInDbCard} />
+            <Route path="/helpers" component={HelpersInDbCard} />
           </Switch>
         </div>
       </div>

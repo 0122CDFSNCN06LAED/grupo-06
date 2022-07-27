@@ -46,19 +46,19 @@ function SideBar() {
         </NavLink>
       </li>
 
+      {/* <!-- Nav Item - Tables --> */}
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/helpers" activeClassName="active">
+          <i className="fas fa-hands-helping"></i>
+          <span>Helpers</span>
+        </NavLink>
+      </li>
+
       {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
         <NavLink className="nav-link" to="/oficios" activeClassName="active">
           <i className="fas fa-fw fa-briefcase"></i>
           <span>Oficios</span>
-        </NavLink>
-      </li>
-
-      {/* <!-- Nav Item - Tables --> */}
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/movies" activeClassName="active">
-          <i className="fas fa-fw fa-table"></i>
-          <span>Helpers</span>
         </NavLink>
       </li>
 
