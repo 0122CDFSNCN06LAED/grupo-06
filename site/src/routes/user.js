@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const { check } = require("express-validator");
+const { check, body, validationResult } = require("express-validator");
+const db = require("../database/models");
 const validationRegister = [
   check("Nombre")
     .notEmpty()
@@ -44,8 +45,19 @@ const validationRegister = [
     .withMessage("Debes escribir un mail válido")
     .bail()
     .notEmpty()
-    .withMessage("Debes escribir un mail"),
-  //check("email").), #agregar que no sea un mail ya agregado*
+    .withMessage("Debes escribir un mail")
+    .bail()
+    .custom((value, { req }) => {
+      return db.User.findOne({
+        where: {
+          email: req.body.email,
+        },
+      }).then((user) => {
+        if (user) {
+          return Promise.reject("email ya existe");
+        }
+      });
+    }),
 
   check("confirmEmail")
     .isEmail()
@@ -53,7 +65,6 @@ const validationRegister = [
     .bail()
     .notEmpty()
     .withMessage("Debes escribir un mail"),
-  //check("confirm-email") *
 
   check("password")
     .notEmpty()
