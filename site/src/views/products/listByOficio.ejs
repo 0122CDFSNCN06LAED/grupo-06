@@ -78,13 +78,17 @@
                                 <div class="d-flex flex-row ">
                                     <a class="blueLetter" href="/check-out/<%=product.id%>"><i
                                             class="fas fa-shopping-cart icon-helper blueLetter"></i></a>
-                                    <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+
+                                         <%if (product.user.profile_id==1) {%>
+                                             <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
                                         <button type="submit" class="white no-border">
                                             <i class="fas fa-trash-alt icon-trash"></i>
                                         </button>
                                     </form>
                                     <a href="/products/editHelper/<%= product.id%>"><i
-                                            class="fas fa-pen blueLetter icon-helper"></i></a>
+                                            class="fas fa-pen blueLetter icon-helper"></i></a> 
+                                        <% } %>  
+                                  
                                 </div>
                             </div>
 
