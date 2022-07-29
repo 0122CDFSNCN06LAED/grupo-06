@@ -34,12 +34,14 @@ class OficiosInDbCardPie extends Component {
                 outerRadius={100}
                 innerRadius={40}
                 fill="#183153"
+                label
               >
                 {this.state.oficios.map((entry, index) => (
                   <Cell fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
               <Tooltip />
+              <Legend />
             </PieChart>
           </ResponsiveContainer>
           <div className="col-lg-6 mb-4" width="100%"></div>
