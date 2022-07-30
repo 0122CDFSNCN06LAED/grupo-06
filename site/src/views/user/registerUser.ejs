@@ -17,7 +17,8 @@
                         <div class="form-section">
                             <p class="main-header">Registro de Usuario</p>
                             <p class="section-header">Datos Personales</p>
-                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" id="Nombre">
+                            <input type="text" name="Nombre" placeholder="Nombre" class="enter-credentials" id="Nombre"
+                            value="<% locals.oldData ? oldData.Nombre : null %>">
 
                             <% if(locals.errors && errors.Nombre){ %>
                                 <p class="error-message">
@@ -26,7 +27,7 @@
                                 <% } %>
 
                             <input type="text" name="Apellido" placeholder="Apellido" class="enter-credentials" id="Apellido"
-                                >
+                                value="<% locals.oldData ? oldData.Apellido : null %>">
 
                                 <% if(locals.errors && errors.Apellido){ %>
                                     <p class="error-message">
@@ -36,7 +37,7 @@
 
 
                             <input type="text" name="Telefono" placeholder="Teléfono de Contacto"
-                                class="enter-credentials" id="Telefono" >
+                                class="enter-credentials" id="Telefono" value="<% locals.oldData ? oldData.Telefono : null %>">
 
                                 <% if(locals.errors && errors.Telefono){ %>
                                     <p class="error-message">
@@ -60,7 +61,8 @@
 
                         <div class="form-section">
                             <p class="section-header">Usuario y Contraseña</p>
-                            <input type="mail" name="email" placeholder="Correo" class="enter-credentials" id="mail" >
+                            <input type="mail" name="email" placeholder="Correo" class="enter-credentials" id="mail" 
+                            value="<% locals.oldData ? oldData.mail : null %>">
 
                             <% if(locals.errors && errors.email){ %>
                                 <p class="error-message">
@@ -69,8 +71,8 @@
                                 <% } %>
 
 
-                            <input type="mail" name="confirmEmail" placeholder="Confirmar Correo"
-                                class="enter-credentials" id="confirmEmail" >
+                            <input type="mail" name="confirmEmail" placeholder="Confirmar Correo" class="enter-credentials" id="confirmEmail" 
+                            value="<% locals.oldData ? oldData.confirmEmail : null %>">
 
                                 <% if(locals.errors && errors.confirmEmail){ %>
                                     <p class="error-message">

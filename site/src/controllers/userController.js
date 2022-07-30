@@ -21,14 +21,27 @@ const userController = {
 
       db.User.findOne({
         where: { email: req.body.email },
-      }).then((user) => {
-        const check = bcrypt.compareSync(req.body.password, user.password);
-        if (check) {
-          usuarioAlloguearse = user;
-          req.session.usuariologueado = usuarioAlloguearse;
-          req.session.idUsuario = user.id;
-          res.redirect("../");
-        } else {
+      })
+        .then((user) => {
+          const check = bcrypt.compareSync(req.body.password, user.password);
+          if (check) {
+            usuarioAlloguearse = user;
+            req.session.usuariologueado = usuarioAlloguearse;
+            req.session.idUsuario = user.id;
+            res.redirect("../");
+          } else {
+            let htmlPath = path.resolve("./src/views/user/login.ejs");
+            res.render(htmlPath, {
+              errors: [
+                {
+                  msg: "credenciales invalidas",
+                },
+              ],
+              user: req.session.usuariologueado,
+            });
+          }
+        })
+        .catch(() => {
           let htmlPath = path.resolve("./src/views/user/login.ejs");
           res.render(htmlPath, {
             errors: [
@@ -38,19 +51,7 @@ const userController = {
             ],
             user: req.session.usuariologueado,
           });
-        }
-      })
-      .catch(() => {
-        let htmlPath = path.resolve("./src/views/user/login.ejs");
-        res.render(htmlPath, {
-          errors: [
-            {
-              msg: "credenciales invalidas",
-            },
-          ],
-          user: req.session.usuariologueado,
         });
-      });
     } else {
       let htmlPath = path.resolve("./src/views/user/login.ejs");
       res.render(htmlPath, {
@@ -128,6 +129,7 @@ const userController = {
     } else {
       return res.render(htmlPath, {
         errors: errors.mapped(),
+        oldData: req.body,
         user: req.session.usuariologueado,
       });
     }
