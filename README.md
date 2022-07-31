@@ -7,13 +7,6 @@ Por medio de la plataforma, llegaremos a nuestros dos tipos de público objetivo
 Como propuesta de valor para nuestro público, brindaremos a los prestadores de servicio, un lugar donde ofrecer su trabajo a miles de potenciales clientes y por el lado de aquellos que deseen contratarlos, disponer de una amplia y detallada oferta de profesionales. 
 
 
-## Quienes somos
-
-- José Ignacio Paolini: Licenciado en Administración, con formación en Data Science y Data Analytics. Actualmente trabajando como Analista de Inventario Regional en Pedidos Ya. También posee experiencia en implementación de sistemas de Gestión Documental y Personal en el ámbito del Gobierno de la Provincia de Buenos Aires.
-- Flavia Frutos: Lleva 11 años trabajando como empleada administrativa en una concesionaria. Sin experiencia en el ámbito de desarrollo, pero con muchas ganas de aprender.
-- Alexander Coleman: 10+ años de experiencia trabajando en consultoría en tecnología. Originalmente Lic. en Economía, ahora formándose como padre primerizo.
-- Isabel Restrepo: Profesional en Negocios Internacionales, egresada de la Universidad de Medellín en el año 2021 cuenta con dos años de experiencia en el área de ventas y logística DFI, actualmente trabaja en una ferretería, llamada Mega Center, ubicada en el barrio Loma de los Bernal, en Medellín.
-
 ## Definiciones de Modelo de Negocios, Modelo Canvas y Plataforma Multilateral
 
 - “Un modelo de negocios nos permite definir la forma en que una organización genera, entrega y captura valor” (Osterwalder,2011, p. 14)
@@ -27,6 +20,13 @@ Hemos plasmado nuestras ideas en un Modelo Canvas, donde se encuentran detallado
 ### Canvas:
 
 ![_hazte_premium_descarga_alta_resolucion_designed_with_EDIT org](https://user-images.githubusercontent.com/100170383/158075610-201f9896-e655-4a71-ae50-25b9700ad523.jpg)
+
+## Quienes somos
+
+- José Ignacio Paolini: Licenciado en Administración, con formación en Data Science y Data Analytics. Actualmente trabajando como Analista de Inventario Regional en Pedidos Ya. También posee experiencia en implementación de sistemas de Gestión Documental y Personal en el ámbito del Gobierno de la Provincia de Buenos Aires.
+- Flavia Frutos: Lleva 11 años trabajando como empleada administrativa en una concesionaria. Sin experiencia en el ámbito de desarrollo, pero con muchas ganas de aprender.
+- Alexander Coleman: 10+ años de experiencia trabajando en consultoría en tecnología. Originalmente Lic. en Economía, ahora formándose como padre primerizo.
+- Isabel Restrepo: Profesional en Negocios Internacionales, egresada de la Universidad de Medellín en el año 2021 cuenta con dos años de experiencia en el área de ventas y logística DFI, actualmente trabaja en una ferretería, llamada Mega Center, ubicada en el barrio Loma de los Bernal, en Medellín.
 
 ## Sitios Web de Referencia
 
