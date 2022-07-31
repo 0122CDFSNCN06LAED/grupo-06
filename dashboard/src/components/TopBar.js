@@ -1,4 +1,4 @@
-import avatar from "../assets/1655062154540_img.jpg";
+import avatar from "../assets/1653175612057_img.jpg";
 
 function TopBar() {
   return (
@@ -44,10 +44,10 @@ function TopBar() {
               // className="img-profile "
               src={avatar}
               style={{ borderRadius: "10px", height: "50px", marginRight:'15px'}}
-              alt="Franco Rubik - Helper"
+              alt="José Ignacio Paolini - Helper"
             />
             <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-              Franco Rubik
+              José Ignacio Paolini
             </span>
           </a>
         </li>
