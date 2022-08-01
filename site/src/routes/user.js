@@ -27,7 +27,7 @@ const validationRegister = [
 
   check("userImage").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".jpg", ".png", ".gif"];
+    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
     let fileExtensions = path.extname(file.originalname);
     if (!file) {
       throw new Error("Tienes que subir una imagen");
