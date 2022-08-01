@@ -1,3 +1,5 @@
+![Helpers](/docs/img/logo4.png)
+
 # Trabajo Integrador - Grupo 6
 
 En el presente trabajo, desarrollaremos un sitio web en sobre el cual se montará un Modelo de Negocio de Plataforma Multilateral, a través de la cual, se conectarán personas que deseen ofrecer sus servicios de diferentes oficios y personas que requieran los mismos; provistos por personas de confianza y con comprobada reputación.
@@ -6,6 +8,13 @@ Por medio de la plataforma, llegaremos a nuestros dos tipos de público objetivo
 
 Como propuesta de valor para nuestro público, brindaremos a los prestadores de servicio, un lugar donde ofrecer su trabajo a miles de potenciales clientes y por el lado de aquellos que deseen contratarlos, disponer de una amplia y detallada oferta de profesionales. 
 
+## Instrucciones
+
+1. Inicializar base de datos.
+2. Correr `npm install` para la carpeta `site`
+3. Correr `npm install`para la carpeta `dashboard`
+4. Correr `npm start` para la carpeta `site`
+5. Correr `npm start` para la carpeta `dashboard`
 
 ## Definiciones de Modelo de Negocios, Modelo Canvas y Plataforma Multilateral
 
