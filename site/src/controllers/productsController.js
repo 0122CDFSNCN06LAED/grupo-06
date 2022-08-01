@@ -151,23 +151,30 @@ const productsController = {
   // },
   update: function (req, res) {
     const id = req.params.id;
-
-    db.Helper.update(
-      {
-        calle: req.body.calle,
-        numero: req.body.numero,
-        barrio: req.body.barrio,
-        provincia: req.body.provincia,
-        codigo_postal: req.body.codigoPostal,
-        anos_de_experiencia: req.body.añosDeExperiencia,
-        oficio: req.body.oficio,
-        tarifa: req.body.tarifa,
-        descripcion: req.body.descripcion,
-      },
-      {
-        where: { id: id },
+    db.Oficio.findOne({
+      where: {
+        name: req.body.oficio
       }
-    ).then((helper) => {
+    })
+    .then((oficio) => {
+      db.Helper.update(
+        {
+          calle: req.body.calle,
+          numero: req.body.numero,
+          barrio: req.body.barrio,
+          provincia: req.body.provincia,
+          codigo_postal: req.body.codigoPostal,
+          anos_de_experiencia: req.body.añosDeExperiencia,
+          oficio_id: oficio.id,
+          tarifa: req.body.tarifa,
+          descripcion: req.body.descripcion,
+        },
+        {
+          where: { id: id },
+        }
+      );
+    })
+    .then((helper) => {
       res.redirect("/products/detail/" + id);
     });
 

@@ -86,10 +86,11 @@
                         </div>
                         <div class="form-section" id="form-section-oficio">
                             <p class="section-header">Datos de Oficio</p>
+                            <label for="">Oficio</label>
                             <select name="oficio" placeholder="Oficio">
-                                <option value="">Oficio</option>
+                                <option value=""><%= helper.oficio.name %></option>
                                 <% oficios.forEach(oficio=>{ %>
-                                    <option value="<%= oficio.id %>">
+                                    <option value="<%= oficio.name %>">
                                         <%= oficio.name %>
                                     </option>
                                     <% }) %>
